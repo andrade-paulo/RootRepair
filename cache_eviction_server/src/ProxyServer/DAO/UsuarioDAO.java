@@ -1,4 +1,4 @@
-package model.DAO;
+package ProxyServer.DAO;
 
 import java.io.File;
 import java.io.FileInputStream;
@@ -12,7 +12,7 @@ import model.entities.Usuario;
 
 public class UsuarioDAO {
     private AVL<Usuario> usuarios;
-    private final String ARQUIVO = "src/database/usuarios.dat"; 
+    private final String ARQUIVO = "src/ProxyServer/database/usuarios.dat"; 
 
     public UsuarioDAO() {
         usuarios = new AVL<>();
