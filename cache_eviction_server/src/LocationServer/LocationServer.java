@@ -6,38 +6,46 @@ import java.io.DataOutputStream;
 
 import java.net.ServerSocket;
 import java.net.Socket;
+import java.util.Scanner;
 
 
-
-// Accepts connections from clients and sends them the location of the server. Use threads to handle multiple clients.
 class LocationServer {
     private static final int PORT = 5000;
 
-    public static final String proxyAdress = "localhost";
-    public static final int proxyPort = 5001;
+    private static String proxyAdress;
+    private static int proxyPort;
 
 
     public static void main(String[] args) {
         try (ServerSocket serverSocket = new ServerSocket(PORT);) {
             System.out.println("\r\n" + //
                                 "============================================================\r\n" + //
-                                "  _____             _     _____                  _      \r\n" + //
-                                " |  __ \\           | |   |  __ \\                (_)     \r\n" + //
-                                " | |__) |___   ___ | |_  | |__) |___ _ __   __ _ _ _ __ \r\n" + //
-                                " |  _  // _ \\ / _ \\| __| |  _  // _ \\ '_ \\ / _` | | '__|\r\n" + //
-                                " | | \\ \\ (_) | (_) | |_  | | \\ \\  __/ |_) | (_| | | |   \r\n" + //
-                                " |_|  \\_\\___/ \\___/ \\__| |_|  \\_\\___| .__/ \\__,_|_|_|   \r\n" + //
-                                "                                    | |                 \r\n" + //
-                                "                                    |_|                 \r\n" + //
+                                "   _____             _     _____                  _      \r\n" + //
+                                "  |  __ \\           | |   |  __ \\                (_)     \r\n" + //
+                                "  | |__) |___   ___ | |_  | |__) |___ _ __   __ _ _ _ __ \r\n" + //
+                                "  |  _  // _ \\ / _ \\| __| |  _  // _ \\ '_ \\ / _` | | '__|\r\n" + //
+                                "  | | \\ \\ (_) | (_) | |_  | | \\ \\  __/ |_) | (_| | | |   \r\n" + //
+                                "  |_|  \\_\\___/ \\___/ \\__| |_|  \\_\\___| .__/ \\__,_|_|_|   \r\n" + //
+                                "                                     | |                 \r\n" + //
+                                "                                     |_|                 \r\n" + //
                                 "============================================================\r\n" + //
                                 "\n");
 
             
             System.out.println("Location Server started on port " + PORT + "\n");
 
+            System.out.println("-=- Proxy server configuration -=-");
+            Scanner scanner = new Scanner(System.in);
+            System.out.print("Enter the proxy server address: ");
+            proxyAdress = scanner.nextLine();
+            System.out.print("Enter the proxy server port: ");
+            proxyPort = scanner.nextInt();
+            scanner.close();
+
+            System.out.println("\nLocation server up and running!\n");
             while (true) {
                 Socket clientSocket = serverSocket.accept();
-                System.out.println("----------------------------------------------------------");
+                System.out.println("\n----------------------------------------------------------");
                 System.out.println("Client connected from " + clientSocket.getInetAddress().getHostAddress());
 
                 Thread clientThread = new Thread(new ClientHandler(clientSocket));
@@ -46,6 +54,15 @@ class LocationServer {
         } catch (IOException e) {
             e.printStackTrace();
         }
+    }
+
+
+    public static String getProxyAdress() {
+        return proxyAdress;
+    }
+
+    public static int getProxyPort() {
+        return proxyPort;
     }
 }
 
@@ -69,14 +86,14 @@ class ClientHandler implements Runnable {
                 System.out.println("   -> Client's key is valid. Sending proxy location...");
 
                 // Send the location of the server to the client
-                out.writeUTF(LocationServer.proxyAdress);
-                out.writeInt(LocationServer.proxyPort);
+                out.writeUTF(LocationServer.getProxyAdress());
+                out.writeInt(LocationServer.getProxyPort());
             } else {
-                System.out.println("WARNING! Client's key is not recognized: " + message);
+                System.out.println("   -> WARNING! Client's key is not recognized: " + message);
             }
             
             clientSocket.close();
-            System.out.println("----------------------------------------------------------\n");
+            System.out.println("----------------------------------------------------------");
         } catch (IOException e) {
             e.printStackTrace();
         }

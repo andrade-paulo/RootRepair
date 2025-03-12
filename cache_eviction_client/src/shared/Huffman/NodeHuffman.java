@@ -1,6 +1,8 @@
-package datastructures.Huffman;
+package shared.Huffman;
 
-public class NodeHuffman {
+public class NodeHuffman implements java.io.Serializable {
+    private static final long serialVersionUID = 1L;
+
     int freq;
     char caractere;
     NodeHuffman esquerda;

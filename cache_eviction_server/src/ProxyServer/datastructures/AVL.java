@@ -1,24 +1,31 @@
-package datastructures;
+package ProxyServer.datastructures;
 
 import java.io.Serializable;
 import java.util.Iterator;
 import java.util.Stack;
+import java.util.concurrent.locks.Lock;
+import java.util.concurrent.locks.ReentrantLock;
 
-import model.DAO.LogDAO;
+import ProxyServer.model.DAO.LogDAO;
 
 public class AVL<T> implements Serializable, Iterable<T> {
-    Node<T> raiz = null;
-    int size = 0;
+    private Node<T> raiz = null;
+    private final Lock lock = new ReentrantLock();
 
     static private final long serialVersionUID = 1L;
 
     public AVL() {}
 
     public void order() {
-        order(raiz);
+        lock.lock();
+        try {
+            order(raiz);
+        } finally {
+            lock.unlock();
+        }
     }
 
-    public void order(Node<T> tree) {
+    private void order(Node<T> tree) {
         if (tree == null) {
             return;
         }
@@ -29,7 +36,12 @@ public class AVL<T> implements Serializable, Iterable<T> {
     }
 
     public void insert(long key, T data) {
-        raiz = insert(raiz, key, data);
+        lock.lock();
+        try {
+            raiz = insert(raiz, key, data);
+        } finally {
+            lock.unlock();
+        }
     }
 
     private Node<T> insert(Node<T> tree, long key, T data) {
@@ -54,10 +66,15 @@ public class AVL<T> implements Serializable, Iterable<T> {
     }
 
     public void remove(long key) throws Exception {
-        remove(raiz, key);
+        lock.lock();
+        try {
+            raiz = remove(raiz, key);
+        } finally {
+            lock.unlock();
+        }
     }
     
-    public Node<T> remove(Node<T> tree, long key) throws Exception {
+    private Node<T> remove(Node<T> tree, long key) throws Exception {
         if (tree == null) {
             throw new Exception("Node not found");
         }
@@ -183,7 +200,12 @@ public class AVL<T> implements Serializable, Iterable<T> {
     }
 
     public T search(long key) {
-        return search(raiz, key);
+        lock.lock();
+        try {
+            return search(raiz, key);
+        } finally {
+            lock.unlock();
+        }
     }
 
     private T search(Node<T> tree, long key) {
@@ -199,7 +221,12 @@ public class AVL<T> implements Serializable, Iterable<T> {
     }
     
     public T getLast() {
-        return getLast(raiz);
+        lock.lock();
+        try {
+            return getLast(raiz);
+        } finally {
+            lock.unlock();
+        }
     }
 
     private T getLast(Node<T> tree) {
@@ -219,7 +246,12 @@ public class AVL<T> implements Serializable, Iterable<T> {
     }
 
     public int high() {
-        return high(raiz);
+        lock.lock();
+        try {
+            return high(raiz);
+        } finally {
+            lock.unlock();
+        }
     }
 
     private int high(Node<T> tree) {
@@ -228,15 +260,30 @@ public class AVL<T> implements Serializable, Iterable<T> {
     }
 
     public boolean isEmpty() {
-        return raiz == null;
+        lock.lock();
+        try {
+            return raiz == null;
+        } finally {
+            lock.unlock();
+        }
     }
 
     public int countNodes() {
-        return countNodes(raiz);
+        lock.lock();
+        try {
+            return countNodes(raiz);
+        } finally {
+            lock.unlock();
+        }
     }
 
     public T getRaiz() {
-        return raiz.data;
+        lock.lock();
+        try {
+            return raiz.data;
+        } finally {
+            lock.unlock();
+        }
     }
 
     private int countNodes(Node<T> tree) {
@@ -246,7 +293,12 @@ public class AVL<T> implements Serializable, Iterable<T> {
 
     @Override
     public Iterator<T> iterator() {
-        return new AVLIterator<T>(raiz);
+        lock.lock();
+        try {
+            return new AVLIterator<T>(raiz);
+        } finally {
+            lock.unlock();
+        }
     }
 
     @SuppressWarnings("hiding")

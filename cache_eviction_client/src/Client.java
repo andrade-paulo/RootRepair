@@ -2,14 +2,16 @@ import java.io.DataInputStream;
 import java.io.DataOutputStream;
 import java.io.ObjectInputStream;
 import java.io.ObjectOutputStream;
-import java.net.Socket;
 import java.io.IOException;
 
-import model.DAO.LogDAO;
+import java.net.Socket;
+import java.util.Scanner;
+
+import modelo.DAO.LogDAO;
+import shared.Message;
 
 public class Client {
-    private static final String locationAdress = "localhost";
-    private static final int locationServerPort = 5000;
+    public static Scanner scanner = new Scanner(System.in);
 
 
     public static void main(String[] args) throws Exception {
@@ -18,6 +20,25 @@ public class Client {
         // Connect to location server and get the proxy adress and port
         String proxyAdress = "";
         int proxyPort = 0;
+
+        System.out.println("\r\n" + //
+                                "============================================================\r\n" + //
+                                "   _____             _     _____                  _      \r\n" + //
+                                "  |  __ \\           | |   |  __ \\                (_)     \r\n" + //
+                                "  | |__) |___   ___ | |_  | |__) |___ _ __   __ _ _ _ __ \r\n" + //
+                                "  |  _  // _ \\ / _ \\| __| |  _  // _ \\ '_ \\ / _` | | '__|\r\n" + //
+                                "  | | \\ \\ (_) | (_) | |_  | | \\ \\  __/ |_) | (_| | | |   \r\n" + //
+                                "  |_|  \\_\\___/ \\___/ \\__| |_|  \\_\\___| .__/ \\__,_|_|_|   \r\n" + //
+                                "                                     | |                 \r\n" + //
+                                "                                     |_|                 \r\n" + //
+                                "============================================================\r\n" + //
+                                "\n");
+
+        System.out.print("Enter the location server adress: ");
+        String locationAdress = scanner.nextLine();
+
+        System.out.print("Enter the location server port: ");
+        int locationServerPort = scanner.nextInt();
 
         try (Socket locationSocket = new Socket(locationAdress, locationServerPort);
              DataInputStream locationIn = new DataInputStream(locationSocket.getInputStream());
@@ -30,7 +51,7 @@ public class Client {
             // Log the proxy adress and port
             LogDAO.addLog("[LOCATION SERVER] Proxy running on " + proxyAdress + ":" + proxyPort);
         } catch (IOException e) {
-            System.out.println("Error. Could not connect to the location server.");
+            System.out.println("\nError. Could not connect to the location server.");
             e.printStackTrace();
         }
 
@@ -50,11 +71,17 @@ public class Client {
                 } else {
                     System.out.println("\nVolte sempre!");
                 }
+
+                // Send close message to the proxy server
+                proxyOut.writeObject(new Message("CLOSE"));
+                proxyOut.flush();
             } catch (IOException e) {
-                System.out.println("Error. Could not connect to the proxy server.");
+                System.out.println("\nError. Could not connect to the proxy server.");
                 e.printStackTrace();
             }
         }
+
+        scanner.close();
     }
 
     

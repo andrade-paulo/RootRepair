@@ -1,16 +1,18 @@
-package model;
+package shared;
 
-import model.entities.OrdemServico;
-import model.entities.Usuario;
-import datastructures.Huffman.ArvoreHuffman;
-import model.DAO.LogDAO;
+import modelo.DAO.LogDAO;
+import modelo.entities.OrdemServico;
+import modelo.entities.Usuario;
+import shared.Huffman.ArvoreHuffman;
 
 import java.util.Date;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.Locale;
 
-public class Message {
+public class Message implements java.io.Serializable {
+    private static final long serialVersionUID = 1L;
+    
     private String content;
     private ArvoreHuffman arvore;
     private boolean isCompressed;
@@ -181,13 +183,15 @@ public class Message {
         OrdemServico[] ordens = new OrdemServico[splited.length / 6];
         int j = 0;
 
-        for (int i = 0; i < splited.length; i += 6) {
+        for (int i = 0; i < splited.length-1; i += 6) {
             // Transforma a string em um objeto OrdemServico
             int codigo = Integer.parseInt(splited[i]);
             String titulo = splited[i + 1];
             String descricao = splited[i + 2];
             String nome = splited[i + 3];
             String cpf = splited[i + 4];
+
+            //System.out.println("\n\n-------------------------\n" + codigo + " - " + titulo + " - " + descricao + "\n-------------------------\n\n");
 
             // Parse data e.g.: Thu Oct 24 23:34:10 BRT 2024
             SimpleDateFormat formatter = new SimpleDateFormat("EEE MMM d HH:mm:ss zzz yyyy", Locale.ENGLISH);
@@ -231,13 +235,23 @@ public class Message {
     
     public String getInstrucao() {
         // Checa se a mensagem está comprimida
-        if (isCompressed) arvore.descomprimir(this.content);
+        if (isCompressed) this.content = arvore.descomprimir(this.content);
         isCompressed = false;
 
-        try {
-            return this.content.split("[|]")[6];
-        } catch (Exception e) {
-            return this.content.split("[|]")[1];
-        }
+        String[] spplited_array = this.content.split("[|]");
+
+        // Last element will be the instruction
+        return spplited_array[spplited_array.length - 1];
     }
+
+    public String getCPF() {
+        // Checa se a mensagem está comprimida
+        if (isCompressed) this.content = arvore.descomprimir(this.content);
+        isCompressed = false;
+
+        // splited array
+        String[] splited = this.content.split("[|]");
+
+        return splited[0];
+    } 
 }

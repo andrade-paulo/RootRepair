@@ -1,24 +1,26 @@
-import java.util.Scanner;
-
-import model.DAO.KMP;
-import model.DAO.LogDAO;
-import model.entities.Usuario;
-import model.entities.OrdemServico;
+import modelo.DAO.KMP;
+import modelo.DAO.LogDAO;
+import modelo.entities.OrdemServico;
+import modelo.entities.Usuario;
 
 
 public class View {
     private static Usuario usuario;
-    private static Scanner scanner = new Scanner(System.in);
     
     public View() {}
 
     public static boolean realizarLogin() {
         System.out.println(Color.CYAN + "Bem-vindo ao sistema de Ordem de Serviço!" + Color.RESET);
 
+        // Check if there's something in the buffer
+        if (Client.scanner.hasNextLine()) {
+            Client.scanner.nextLine();
+        }
+
         System.out.print("Digite seu nome: ");
-        String nome = scanner.nextLine();
+        String nome = Client.scanner.nextLine();
         System.out.print("Digite seu CPF (apenas números): ");
-        String cpf = scanner.nextLine();
+        String cpf = Client.scanner.nextLine();
         
         if (nome.isEmpty() || cpf.isEmpty()) {
             limparTela();
@@ -38,7 +40,7 @@ public class View {
         } catch (Exception e) {
             System.out.print("Usuario não encontrado. Deseja se cadastrar? (s/n): ");
 
-            String resposta = scanner.nextLine();
+            String resposta = Client.scanner.nextLine();
             
             if (resposta.equals("s") || resposta.equals("S")) {
                 usuario = new Usuario(nome, cpf);
@@ -52,7 +54,6 @@ public class View {
                 System.out.println(Color.GREEN + "Usuario cadastrado com sucesso!" + Color.RESET);
             } else {
                 System.out.println("Saindo do programa...");
-                scanner.close();
                 System.exit(0);
                 return false;
             }
@@ -78,8 +79,8 @@ public class View {
             System.out.println("0. Sair do sistema");
             System.out.print("Escolha uma opção: ");
             
-            escolha = scanner.nextInt();
-            scanner.nextLine();
+            escolha = Client.scanner.nextInt();
+            Client.scanner.nextLine();
             
             switch (escolha) {
                 case 1:
@@ -117,18 +118,16 @@ public class View {
             
             System.out.println();
         } while (escolha != 0);
-
-        scanner.close();
     }
 
     private static void cadastrarOS() throws Exception {
         limparTela();
 
         System.out.print("Título do Serviço: ");
-        String titulo = scanner.nextLine();
+        String titulo = Client.scanner.nextLine();
 
         System.out.print("Descrição do Serviço: ");
-        String descricao = scanner.nextLine();
+        String descricao = Client.scanner.nextLine();
 
         OrdemServico ordemServico = new OrdemServico(titulo, descricao, usuario);
         Controller.addOrdemServico(ordemServico);
@@ -140,7 +139,7 @@ public class View {
         limparTela();
         
         System.out.print("Código da Ordem de Serviço: ");
-        int codigo = scanner.nextInt();
+        int codigo = Client.scanner.nextInt();
 
         try {
             OrdemServico ordemServico = Controller.getOrdemServico(codigo);
@@ -154,7 +153,7 @@ public class View {
         limparTela();
         
         System.out.print("Código da Ordem de Serviço: ");
-        int codigo = scanner.nextInt();
+        int codigo = Client.scanner.nextInt();
 
         try {
             Controller.removerOrdemServico(codigo);
@@ -168,18 +167,18 @@ public class View {
         limparTela();
         
         System.out.print("Código da Ordem de Serviço: ");
-        int codigo = scanner.nextInt();
-        scanner.nextLine();
+        int codigo = Client.scanner.nextInt();
+        Client.scanner.nextLine();
 
         try {
             OrdemServico ordemServico = Controller.getOrdemServico(codigo);
             System.out.println("Deixe em branco para manter o valor atual.");
 
             System.out.print("Título do Serviço: ");
-            String titulo = scanner.nextLine();
+            String titulo = Client.scanner.nextLine();
 
             System.out.print("Descrição do Serviço: ");
-            String descricao = scanner.nextLine();
+            String descricao = Client.scanner.nextLine();
             
             if (!titulo.isEmpty()) {
                 ordemServico.setTitulo(titulo);
@@ -224,6 +223,11 @@ public class View {
             } else {
                 System.out.println(Color.CYAN + todasOS.length + " Ordens de Serviço encontradas:" + Color.RESET);
             }
+
+            for (OrdemServico os : todasOS) {
+                System.out.println(os + "\n");
+            }
+
         } catch (Exception e) {
             System.out.println(Color.RED + "Oops! Nenhuma Ordem de Serviço encontrada." + Color.RESET);
             return;
@@ -235,7 +239,7 @@ public class View {
         limparTela();
         
         System.out.print("Digite a sua busca: ");
-        String palavra = scanner.nextLine();
+        String palavra = Client.scanner.nextLine();
 
         try {
             System.out.println("\nResultados da busca:");

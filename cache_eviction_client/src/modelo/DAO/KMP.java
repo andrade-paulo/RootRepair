@@ -1,4 +1,4 @@
-package model.DAO;
+package modelo.DAO;
 
 public class KMP {
     @SuppressWarnings("unused")

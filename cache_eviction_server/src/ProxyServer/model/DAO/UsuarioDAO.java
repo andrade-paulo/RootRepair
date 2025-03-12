@@ -1,4 +1,4 @@
-package ProxyServer.DAO;
+package ProxyServer.model.DAO;
 
 import java.io.File;
 import java.io.FileInputStream;
@@ -7,34 +7,35 @@ import java.io.IOException;
 import java.io.ObjectInputStream;
 import java.io.ObjectOutputStream;
 
-import datastructures.AVL;
-import model.entities.Usuario;
+import ProxyServer.datastructures.AVL;
+import ProxyServer.model.entities.Usuario;
 
 public class UsuarioDAO {
     private AVL<Usuario> usuarios;
-    private final String ARQUIVO = "src/ProxyServer/database/usuarios.dat"; 
+    private final String ARQUIVO = "src/ProxyServer/database/usuarios.dat";
 
     public UsuarioDAO() {
         usuarios = new AVL<>();
         carregarArquivo();
     }
 
-    public void addCliente(Usuario usuario) {
-        try {
-            getCliente(usuario.getCpf());
-            throw new Exception("Cliente já cadastrado");
-        } catch (Exception e) {
-            usuarios.insert(usuario.getCodigo(), usuario);
-            updateArquivo();
+    public void addUsuario(Usuario usuario) {
+        // Check if the user already exists
+        if (usuarios.search(usuario.getCodigo()) != null) {
+            return;
         }
+
+        usuarios.insert(usuario.getCodigo(), usuario);
+        LogDAO.addLog("[USUARIO] Usuário " + usuario.getNome() + " adicionado"); 
+        updateArquivo();
     }
 
-    public Usuario getCliente(int codigo) throws Exception {
+    public Usuario getUsuario(int codigo) throws Exception {
         Usuario usuario = usuarios.search(codigo);
         return usuario;
     }
 
-    public Usuario getCliente(String cpf) throws Exception {
+    public Usuario getUsuario(String cpf) throws Exception {
         Usuario usuario = usuarios.search(Integer.parseInt(cpf));
         
         if (usuario == null) {
@@ -44,18 +45,22 @@ public class UsuarioDAO {
         return usuario;
     }
 
-    public void removerCliente(int codigo) throws Exception {
+    public void removerUsuario(int codigo) throws Exception {
         try {
             usuarios.remove(codigo);
         } catch (Exception e) {
             throw new Exception("Cliente não encontrado");
         }
 
+        LogDAO.addLog("[USUARIO] Usuário " + codigo + " removido");
+
         updateArquivo();
     }
 
-    public void updateCliente(Usuario usuario) {
+    public void updateUsuario(Usuario usuario) {
         usuarios.insert(usuario.getCodigo(), usuario);
+
+        LogDAO.addLog("[USUARIO] Usuário " + usuario.getNome() + " atualizado");
         updateArquivo();
     }
 

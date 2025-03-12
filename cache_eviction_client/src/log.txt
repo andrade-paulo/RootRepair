@@ -1,4 +1,252 @@
-2025-03-11 10:07:04: [LOCATION SERVER] Proxy running on localhost:5001
-2025-03-11 10:07:35: [LOCATION SERVER] Proxy running on localhost:5001
-2025-03-11 10:09:02: [LOCATION SERVER] Proxy running on localhost:5001
-2025-03-11 10:10:47: [LOCATION SERVER] Proxy running on localhost:5001
+2025-03-12 01:42:58: [LOCATION SERVER] Proxy running on 127.0.0.1:5001
+2025-03-12 01:42:59: [MESSAGE] Usuário 123 comprimido com instrução LOGIN
+2025-03-12 01:43:01: [MESSAGE] Ordem de Serviço comprimida com instrução SELECT_ALL
+2025-03-12 01:55:55: [MESSAGE] Ordem de Serviço comprimida com instrução CLOSE
+2025-03-12 01:58:22: [LOCATION SERVER] Proxy running on 127.0.0.1:5001
+2025-03-12 01:58:25: [MESSAGE] Usuário 333 comprimido com instrução LOGIN
+2025-03-12 01:58:42: [LOCATION SERVER] Proxy running on 127.0.0.1:5001
+2025-03-12 01:58:45: [MESSAGE] Usuário 123 comprimido com instrução LOGIN
+2025-03-12 01:58:53: [MESSAGE] Ordem de Serviço 1 comprimida com instrução INSERT
+2025-03-12 01:58:56: [MESSAGE] Usuário 123 comprimido com instrução SELECTBYUSER
+2025-03-12 02:06:21: [LOCATION SERVER] Proxy running on 127.0.0.1:5001
+2025-03-12 02:06:24: [MESSAGE] Usuário 123 comprimido com instrução LOGIN
+2025-03-12 02:06:32: [MESSAGE] Ordem de Serviço 1 comprimida com instrução INSERT
+2025-03-12 02:06:33: [MESSAGE] Usuário 123 comprimido com instrução SELECTBYUSER
+2025-03-12 02:06:55: [MESSAGE] Ordem de Serviço comprimida com instrução SELECTALL
+2025-03-12 02:07:05: [MESSAGE] Ordem de Serviço comprimida com instrução CLOSE
+2025-03-12 02:08:14: [LOCATION SERVER] Proxy running on 127.0.0.1:5001
+2025-03-12 02:08:17: [MESSAGE] Usuário 123 comprimido com instrução LOGIN
+2025-03-12 02:08:24: [MESSAGE] Ordem de Serviço 1 comprimida com instrução INSERT
+2025-03-12 02:08:26: [MESSAGE] Ordem de Serviço comprimida com instrução SELECTALL
+2025-03-12 02:08:42: [MESSAGE] Ordem de Serviço comprimida com instrução CLOSE
+2025-03-12 02:09:43: [LOCATION SERVER] Proxy running on 127.0.0.1:5001
+2025-03-12 02:09:46: [MESSAGE] Usuário 123 comprimido com instrução LOGIN
+2025-03-12 02:09:54: [MESSAGE] Ordem de Serviço comprimida com instrução SELECTALL
+2025-03-12 02:09:59: [MESSAGE] Ordem de Serviço comprimida com instrução CLOSE
+2025-03-12 02:10:22: [LOCATION SERVER] Proxy running on 127.0.0.1:5001
+2025-03-12 02:10:24: [MESSAGE] Usuário 123 comprimido com instrução LOGIN
+2025-03-12 02:10:26: [MESSAGE] Ordem de Serviço comprimida com instrução SELECTALL
+2025-03-12 02:14:26: [MESSAGE] Ordem de Serviço comprimida com instrução CLOSE
+2025-03-12 02:14:32: [LOCATION SERVER] Proxy running on 127.0.0.1:5001
+2025-03-12 02:14:34: [MESSAGE] Usuário 123 comprimido com instrução LOGIN
+2025-03-12 02:14:36: [MESSAGE] Ordem de Serviço comprimida com instrução SELECTALL
+2025-03-12 02:15:02: [MESSAGE] Ordem de Serviço comprimida com instrução CLOSE
+2025-03-12 02:15:18: [LOCATION SERVER] Proxy running on 127.0.0.1:5001
+2025-03-12 02:15:20: [MESSAGE] Usuário 123 comprimido com instrução LOGIN
+2025-03-12 02:15:24: [MESSAGE] Ordem de Serviço comprimida com instrução SELECTALL
+2025-03-12 02:16:04: [MESSAGE] Ordem de Serviço comprimida com instrução CLOSE
+2025-03-12 02:16:13: [LOCATION SERVER] Proxy running on 127.0.0.1:5001
+2025-03-12 02:16:15: [MESSAGE] Usuário 123 comprimido com instrução LOGIN
+2025-03-12 02:16:16: [MESSAGE] Ordem de Serviço comprimida com instrução SELECTALL
+2025-03-12 02:17:41: [MESSAGE] Ordem de Serviço comprimida com instrução CLOSE
+2025-03-12 02:17:48: [LOCATION SERVER] Proxy running on 127.0.0.1:5001
+2025-03-12 02:17:50: [MESSAGE] Usuário 123 comprimido com instrução LOGIN
+2025-03-12 02:17:51: [MESSAGE] Ordem de Serviço comprimida com instrução SELECTALL
+2025-03-12 02:18:20: [MESSAGE] Ordem de Serviço comprimida com instrução CLOSE
+2025-03-12 02:18:31: [LOCATION SERVER] Proxy running on 127.0.0.1:5001
+2025-03-12 02:18:32: [MESSAGE] Usuário 123 comprimido com instrução LOGIN
+2025-03-12 02:18:33: [MESSAGE] Ordem de Serviço comprimida com instrução SELECTALL
+2025-03-12 02:18:37: [MESSAGE] Ordem de Serviço comprimida com instrução SELECTALL
+2025-03-12 02:18:42: [MESSAGE] Usuário 123 comprimido com instrução SELECTBYUSER
+2025-03-12 02:18:44: [MESSAGE] Ordem de Serviço comprimida com instrução SELECTALL
+2025-03-12 02:18:49: [MESSAGE] Usuário 123 comprimido com instrução SELECTBYUSER
+2025-03-12 02:19:00: [MESSAGE] Ordem de Serviço comprimida com instrução SELECTALL
+2025-03-12 02:19:05: [MESSAGE] Ordem de Serviço 1 comprimida com instrução INSERT
+2025-03-12 02:19:05: [MESSAGE] Ordem de Serviço comprimida com instrução SELECTALL
+2025-03-12 02:19:11: [MESSAGE] Ordem de Serviço 2 comprimida com instrução SELECT
+2025-03-12 02:19:15: [MESSAGE] Ordem de Serviço 1 comprimida com instrução SELECT
+2025-03-12 02:19:17: [MESSAGE] Ordem de Serviço 3 comprimida com instrução SELECT
+2025-03-12 02:19:19: [MESSAGE] Ordem de Serviço 2 comprimida com instrução SELECT
+2025-03-12 02:19:26: [MESSAGE] Ordem de Serviço comprimida com instrução SELECTALL
+2025-03-12 02:19:49: [MESSAGE] Ordem de Serviço comprimida com instrução CLOSE
+2025-03-12 02:51:04: [LOCATION SERVER] Proxy running on 127.0.0.1:5001
+2025-03-12 02:51:06: [MESSAGE] Usuário 123 comprimido com instrução LOGIN
+2025-03-12 02:51:14: [MESSAGE] Ordem de Serviço comprimida com instrução SELECTALL
+2025-03-12 02:51:23: [MESSAGE] Ordem de Serviço 1 comprimida com instrução INSERT
+2025-03-12 02:51:25: [MESSAGE] Ordem de Serviço comprimida com instrução SELECTALL
+2025-03-12 02:51:29: [MESSAGE] Ordem de Serviço 2 comprimida com instrução INSERT
+2025-03-12 02:51:30: [MESSAGE] Ordem de Serviço comprimida com instrução SELECTALL
+2025-03-12 02:51:32: [MESSAGE] Ordem de Serviço 1 comprimida com instrução SELECT
+2025-03-12 02:51:34: [MESSAGE] Ordem de Serviço 2 comprimida com instrução SELECT
+2025-03-12 02:52:31: [MESSAGE] Ordem de Serviço comprimida com instrução CLOSE
+2025-03-12 02:52:40: [LOCATION SERVER] Proxy running on 127.0.0.1:5001
+2025-03-12 02:52:42: [MESSAGE] Usuário 123 comprimido com instrução LOGIN
+2025-03-12 02:52:46: [MESSAGE] Ordem de Serviço 1 comprimida com instrução INSERT
+2025-03-12 02:52:48: [MESSAGE] Ordem de Serviço comprimida com instrução SELECTALL
+2025-03-12 02:52:53: [MESSAGE] Ordem de Serviço comprimida com instrução SELECTALL
+2025-03-12 02:52:57: [MESSAGE] Ordem de Serviço 2 comprimida com instrução INSERT
+2025-03-12 02:52:57: [MESSAGE] Ordem de Serviço comprimida com instrução SELECTALL
+2025-03-12 02:53:00: [MESSAGE] Ordem de Serviço 1 comprimida com instrução SELECT
+2025-03-12 02:53:01: [MESSAGE] Ordem de Serviço 2 comprimida com instrução SELECT
+2025-03-12 02:53:03: [MESSAGE] Ordem de Serviço 0 comprimida com instrução SELECT
+2025-03-12 02:54:18: [MESSAGE] Ordem de Serviço comprimida com instrução CLOSE
+2025-03-12 02:54:35: [LOCATION SERVER] Proxy running on 127.0.0.1:5001
+2025-03-12 02:54:37: [MESSAGE] Usuário 123 comprimido com instrução LOGIN
+2025-03-12 02:54:40: [MESSAGE] Ordem de Serviço comprimida com instrução SELECTALL
+2025-03-12 02:54:50: [MESSAGE] Ordem de Serviço 1 comprimida com instrução INSERT
+2025-03-12 02:54:51: [MESSAGE] Ordem de Serviço comprimida com instrução SELECTALL
+2025-03-12 02:55:03: [MESSAGE] Ordem de Serviço 2 comprimida com instrução INSERT
+2025-03-12 02:55:04: [MESSAGE] Ordem de Serviço comprimida com instrução SELECTALL
+2025-03-12 02:55:06: [MESSAGE] Ordem de Serviço 3 comprimida com instrução SELECT
+2025-03-12 02:57:32: [MESSAGE] Ordem de Serviço comprimida com instrução CLOSE
+2025-03-12 02:57:43: [LOCATION SERVER] Proxy running on 127.0.0.1:5001
+2025-03-12 02:57:45: [MESSAGE] Usuário 123 comprimido com instrução LOGIN
+2025-03-12 02:57:46: [MESSAGE] Ordem de Serviço comprimida com instrução SELECTALL
+2025-03-12 02:57:49: [MESSAGE] Ordem de Serviço 1 comprimida com instrução INSERT
+2025-03-12 02:57:52: [MESSAGE] Ordem de Serviço 2 comprimida com instrução INSERT
+2025-03-12 02:57:53: [MESSAGE] Ordem de Serviço comprimida com instrução SELECTALL
+2025-03-12 02:57:54: [MESSAGE] Ordem de Serviço 2 comprimida com instrução SELECT
+2025-03-12 02:57:55: [MESSAGE] Ordem de Serviço 1 comprimida com instrução SELECT
+2025-03-12 02:57:58: [MESSAGE] Ordem de Serviço comprimida com instrução SELECTALL
+2025-03-12 02:57:59: [MESSAGE] Usuário 123 comprimido com instrução SELECTBYUSER
+2025-03-12 02:58:02: [MESSAGE] Ordem de Serviço comprimida com instrução SELECTALL
+2025-03-12 02:58:04: [MESSAGE] Ordem de Serviço 4 comprimida com instrução SELECT
+2025-03-12 03:00:44: [LOCATION SERVER] Proxy running on 127.0.0.1:5001
+2025-03-12 03:00:46: [MESSAGE] Usuário 123 comprimido com instrução LOGIN
+2025-03-12 03:00:56: [LOCATION SERVER] Proxy running on 127.0.0.1:5001
+2025-03-12 03:01:00: [MESSAGE] Usuário 123 comprimido com instrução LOGIN
+2025-03-12 03:01:01: [MESSAGE] Ordem de Serviço comprimida com instrução SELECTALL
+2025-03-12 03:01:02: [MESSAGE] Usuário 123 comprimido com instrução SELECTBYUSER
+2025-03-12 03:01:07: [MESSAGE] Ordem de Serviço 1 comprimida com instrução INSERT
+2025-03-12 03:01:10: [MESSAGE] Ordem de Serviço 2 comprimida com instrução INSERT
+2025-03-12 03:01:10: [MESSAGE] Ordem de Serviço comprimida com instrução SELECTALL
+2025-03-12 03:01:12: [MESSAGE] Ordem de Serviço 2 comprimida com instrução SELECT
+2025-03-12 03:01:14: [MESSAGE] Ordem de Serviço 1 comprimida com instrução SELECT
+2025-03-12 03:01:18: [MESSAGE] Ordem de Serviço 1 comprimida com instrução SELECT
+2025-03-12 03:02:22: [MESSAGE] Ordem de Serviço comprimida com instrução CLOSE
+2025-03-12 03:02:31: [LOCATION SERVER] Proxy running on 127.0.0.1:5001
+2025-03-12 03:02:33: [MESSAGE] Usuário 123 comprimido com instrução LOGIN
+2025-03-12 03:02:34: [MESSAGE] Ordem de Serviço comprimida com instrução SELECTALL
+2025-03-12 03:02:38: [MESSAGE] Ordem de Serviço 1 comprimida com instrução INSERT
+2025-03-12 03:02:39: [MESSAGE] Ordem de Serviço 1 comprimida com instrução SELECT
+2025-03-12 03:02:58: [MESSAGE] Ordem de Serviço 2 comprimida com instrução SELECT
+2025-03-12 03:04:29: [LOCATION SERVER] Proxy running on 127.0.0.1:5001
+2025-03-12 03:04:31: [MESSAGE] Usuário 123 comprimido com instrução LOGIN
+2025-03-12 03:04:34: [MESSAGE] Ordem de Serviço 1 comprimida com instrução INSERT
+2025-03-12 03:04:35: [MESSAGE] Ordem de Serviço comprimida com instrução SELECTALL
+2025-03-12 03:04:38: [MESSAGE] Ordem de Serviço 2 comprimida com instrução INSERT
+2025-03-12 03:04:40: [MESSAGE] Ordem de Serviço comprimida com instrução SELECTALL
+2025-03-12 03:04:42: [MESSAGE] Ordem de Serviço 1 comprimida com instrução SELECT
+2025-03-12 03:04:43: [MESSAGE] Ordem de Serviço 2 comprimida com instrução SELECT
+2025-03-12 03:04:46: [MESSAGE] Ordem de Serviço 3 comprimida com instrução SELECT
+2025-03-12 03:06:41: [LOCATION SERVER] Proxy running on 127.0.0.1:5001
+2025-03-12 03:06:44: [MESSAGE] Usuário 123 comprimido com instrução LOGIN
+2025-03-12 03:06:46: [MESSAGE] Ordem de Serviço comprimida com instrução SELECTALL
+2025-03-12 03:06:50: [MESSAGE] Ordem de Serviço 1 comprimida com instrução INSERT
+2025-03-12 03:06:51: [MESSAGE] Ordem de Serviço 1 comprimida com instrução SELECT
+2025-03-12 03:06:52: [MESSAGE] Ordem de Serviço 2 comprimida com instrução SELECT
+2025-03-12 03:07:57: [MESSAGE] Ordem de Serviço comprimida com instrução CLOSE
+2025-03-12 03:08:04: [LOCATION SERVER] Proxy running on 127.0.0.1:5001
+2025-03-12 03:08:06: [MESSAGE] Usuário 123 comprimido com instrução LOGIN
+2025-03-12 03:08:08: [MESSAGE] Ordem de Serviço comprimida com instrução SELECTALL
+2025-03-12 03:08:09: [MESSAGE] Ordem de Serviço 2 comprimida com instrução SELECT
+2025-03-12 03:08:13: [MESSAGE] Ordem de Serviço comprimida com instrução SELECTALL
+2025-03-12 03:08:13: [MESSAGE] Usuário 123 comprimido com instrução SELECTBYUSER
+2025-03-12 03:09:54: [LOCATION SERVER] Proxy running on 127.0.0.1:5001
+2025-03-12 03:10:02: [MESSAGE] Usuário 123 comprimido com instrução LOGIN
+2025-03-12 03:10:03: [MESSAGE] Ordem de Serviço comprimida com instrução SELECTALL
+2025-03-12 03:10:07: [MESSAGE] Ordem de Serviço 1 comprimida com instrução INSERT
+2025-03-12 03:10:08: [MESSAGE] Ordem de Serviço comprimida com instrução SELECTALL
+2025-03-12 03:10:11: [MESSAGE] Usuário 123 comprimido com instrução SELECTBYUSER
+2025-03-12 03:10:13: [MESSAGE] Ordem de Serviço comprimida com instrução SELECTALL
+2025-03-12 03:11:05: [MESSAGE] Ordem de Serviço comprimida com instrução CLOSE
+2025-03-12 03:11:36: [LOCATION SERVER] Proxy running on 127.0.0.1:5001
+2025-03-12 03:11:38: [MESSAGE] Usuário 123 comprimido com instrução LOGIN
+2025-03-12 03:11:40: [MESSAGE] Ordem de Serviço comprimida com instrução SELECTALL
+2025-03-12 03:11:58: [LOCATION SERVER] Proxy running on 127.0.0.1:5001
+2025-03-12 03:11:59: [MESSAGE] Usuário 123 comprimido com instrução LOGIN
+2025-03-12 03:12:00: [MESSAGE] Ordem de Serviço comprimida com instrução SELECTALL
+2025-03-12 03:12:03: [MESSAGE] Ordem de Serviço 1 comprimida com instrução INSERT
+2025-03-12 03:12:04: [MESSAGE] Ordem de Serviço comprimida com instrução SELECTALL
+2025-03-12 03:12:07: [MESSAGE] Ordem de Serviço 2 comprimida com instrução SELECT
+2025-03-12 03:12:09: [MESSAGE] Ordem de Serviço 1 comprimida com instrução SELECT
+2025-03-12 03:12:11: [MESSAGE] Usuário 123 comprimido com instrução SELECTBYUSER
+2025-03-12 03:13:12: [LOCATION SERVER] Proxy running on 127.0.0.1:5001
+2025-03-12 03:13:14: [MESSAGE] Usuário 123 comprimido com instrução LOGIN
+2025-03-12 03:13:14: [MESSAGE] Ordem de Serviço comprimida com instrução SELECTALL
+2025-03-12 03:13:17: [MESSAGE] Ordem de Serviço 1 comprimida com instrução INSERT
+2025-03-12 03:13:17: [MESSAGE] Ordem de Serviço comprimida com instrução SELECTALL
+2025-03-12 03:13:19: [MESSAGE] Ordem de Serviço 1 comprimida com instrução SELECT
+2025-03-12 03:13:20: [MESSAGE] Usuário 123 comprimido com instrução SELECTBYUSER
+2025-03-12 03:13:21: [MESSAGE] Ordem de Serviço comprimida com instrução SELECTALL
+2025-03-12 03:13:22: [MESSAGE] Usuário 123 comprimido com instrução SELECTBYUSER
+2025-03-12 03:15:09: [LOCATION SERVER] Proxy running on 127.0.0.1:5001
+2025-03-12 03:15:11: [MESSAGE] Usuário 123 comprimido com instrução LOGIN
+2025-03-12 03:15:14: [MESSAGE] Ordem de Serviço 1 comprimida com instrução INSERT
+2025-03-12 03:15:15: [MESSAGE] Ordem de Serviço comprimida com instrução SELECTALL
+2025-03-12 03:15:16: [MESSAGE] Ordem de Serviço 1 comprimida com instrução SELECT
+2025-03-12 03:15:17: [MESSAGE] Ordem de Serviço comprimida com instrução SELECTALL
+2025-03-12 03:15:18: [MESSAGE] Usuário 123 comprimido com instrução SELECTBYUSER
+2025-03-12 03:16:24: [LOCATION SERVER] Proxy running on 127.0.0.1:5001
+2025-03-12 03:16:26: [MESSAGE] Usuário 123 comprimido com instrução LOGIN
+2025-03-12 03:16:29: [MESSAGE] Ordem de Serviço 1 comprimida com instrução INSERT
+2025-03-12 03:16:29: [MESSAGE] Ordem de Serviço comprimida com instrução SELECTALL
+2025-03-12 03:16:31: [MESSAGE] Ordem de Serviço 1 comprimida com instrução SELECT
+2025-03-12 03:16:32: [MESSAGE] Ordem de Serviço 2 comprimida com instrução SELECT
+2025-03-12 03:16:33: [MESSAGE] Ordem de Serviço comprimida com instrução SELECTALL
+2025-03-12 03:16:34: [MESSAGE] Usuário 123 comprimido com instrução SELECTBYUSER
+2025-03-12 03:17:15: [LOCATION SERVER] Proxy running on 127.0.0.1:5001
+2025-03-12 03:17:16: [MESSAGE] Usuário 123 comprimido com instrução LOGIN
+2025-03-12 03:17:19: [MESSAGE] Ordem de Serviço 1 comprimida com instrução INSERT
+2025-03-12 03:17:19: [MESSAGE] Ordem de Serviço comprimida com instrução SELECTALL
+2025-03-12 03:17:21: [MESSAGE] Ordem de Serviço 1 comprimida com instrução SELECT
+2025-03-12 03:17:22: [MESSAGE] Ordem de Serviço 2 comprimida com instrução SELECT
+2025-03-12 03:17:23: [MESSAGE] Ordem de Serviço comprimida com instrução SELECTALL
+2025-03-12 03:17:23: [MESSAGE] Usuário 123 comprimido com instrução SELECTBYUSER
+2025-03-12 03:18:03: [LOCATION SERVER] Proxy running on 127.0.0.1:5001
+2025-03-12 03:18:04: [MESSAGE] Usuário 123 comprimido com instrução LOGIN
+2025-03-12 03:18:06: [MESSAGE] Ordem de Serviço 1 comprimida com instrução INSERT
+2025-03-12 03:18:07: [MESSAGE] Ordem de Serviço comprimida com instrução SELECTALL
+2025-03-12 03:18:08: [MESSAGE] Ordem de Serviço 1 comprimida com instrução SELECT
+2025-03-12 03:18:09: [MESSAGE] Ordem de Serviço comprimida com instrução SELECTALL
+2025-03-12 03:18:09: [MESSAGE] Usuário 123 comprimido com instrução SELECTBYUSER
+2025-03-12 03:21:41: [LOCATION SERVER] Proxy running on 127.0.0.1:5001
+2025-03-12 03:21:43: [MESSAGE] Usuário 123 comprimido com instrução LOGIN
+2025-03-12 03:21:45: [MESSAGE] Ordem de Serviço 1 comprimida com instrução INSERT
+2025-03-12 03:21:47: [MESSAGE] Ordem de Serviço comprimida com instrução SELECTALL
+2025-03-12 03:21:49: [MESSAGE] Ordem de Serviço 1 comprimida com instrução SELECT
+2025-03-12 03:21:50: [MESSAGE] Usuário 123 comprimido com instrução SELECTBYUSER
+2025-03-12 03:22:00: [MESSAGE] Usuário 321 comprimido com instrução LOGIN
+2025-03-12 03:22:01: [MESSAGE] Usuário 321 comprimido com instrução INSERTUSER
+2025-03-12 03:22:03: [MESSAGE] Usuário 321 comprimido com instrução SELECTBYUSER
+2025-03-12 03:22:04: [MESSAGE] Ordem de Serviço comprimida com instrução SELECTALL
+2025-03-12 03:22:08: [MESSAGE] Ordem de Serviço 2 comprimida com instrução INSERT
+2025-03-12 03:22:09: [MESSAGE] Usuário 321 comprimido com instrução SELECTBYUSER
+2025-03-12 03:22:10: [MESSAGE] Ordem de Serviço comprimida com instrução SELECTALL
+2025-03-12 03:22:12: [MESSAGE] Ordem de Serviço 1 comprimida com instrução SELECT
+2025-03-12 03:22:13: [MESSAGE] Ordem de Serviço 2 comprimida com instrução SELECT
+2025-03-12 03:22:15: [MESSAGE] Ordem de Serviço 4 comprimida com instrução SELECT
+2025-03-12 03:22:18: [MESSAGE] Ordem de Serviço 1 comprimida com instrução DELETE
+2025-03-12 03:22:20: [MESSAGE] Ordem de Serviço comprimida com instrução SELECTALL
+2025-03-12 03:22:21: [MESSAGE] Usuário 321 comprimido com instrução SELECTBYUSER
+2025-03-12 03:22:27: [MESSAGE] Ordem de Serviço 2 comprimida com instrução SELECT
+2025-03-12 03:22:32: [MESSAGE] Ordem de Serviço 2 comprimida com instrução UPDATE
+2025-03-12 03:22:34: [MESSAGE] Ordem de Serviço comprimida com instrução SELECTALL
+2025-03-12 03:54:26: [MESSAGE] Ordem de Serviço comprimida com instrução CLOSE
+2025-03-12 04:03:03: [LOCATION SERVER] Proxy running on 127.0.0.1:5001
+2025-03-12 04:03:07: [MESSAGE] Usuário 321 comprimido com instrução LOGIN
+2025-03-12 04:03:10: [MESSAGE] Ordem de Serviço 1 comprimida com instrução INSERT
+2025-03-12 04:03:16: [MESSAGE] Ordem de Serviço comprimida com instrução SELECTALL
+2025-03-12 04:03:17: [MESSAGE] Usuário 321 comprimido com instrução SELECTBYUSER
+2025-03-12 04:03:20: [MESSAGE] Ordem de Serviço 1 comprimida com instrução SELECT
+2025-03-12 04:03:21: [MESSAGE] Ordem de Serviço 3 comprimida com instrução SELECT
+2025-03-12 04:03:24: [MESSAGE] Ordem de Serviço 1 comprimida com instrução SELECT
+2025-03-12 04:03:27: [MESSAGE] Ordem de Serviço 1 comprimida com instrução UPDATE
+2025-03-12 04:03:28: [MESSAGE] Ordem de Serviço comprimida com instrução SELECTALL
+2025-03-12 04:03:31: [MESSAGE] Ordem de Serviço 1 comprimida com instrução DELETE
+2025-03-12 04:03:33: [MESSAGE] Ordem de Serviço comprimida com instrução SELECTALL
+2025-03-12 04:03:33: [MESSAGE] Usuário 321 comprimido com instrução SELECTBYUSER
+2025-03-12 04:03:58: [MESSAGE] Ordem de Serviço comprimida com instrução CLOSE
+2025-03-12 04:04:46: [LOCATION SERVER] Proxy running on 127.0.0.1:5001
+2025-03-12 04:04:48: [MESSAGE] Usuário 123 comprimido com instrução LOGIN
+2025-03-12 04:04:52: [MESSAGE] Usuário 123 comprimido com instrução LOGIN
+2025-03-12 04:04:53: [MESSAGE] Ordem de Serviço comprimida com instrução SELECTALL
+2025-03-12 04:04:54: [MESSAGE] Usuário 123 comprimido com instrução SELECTBYUSER
+2025-03-12 04:04:56: [MESSAGE] Ordem de Serviço 1 comprimida com instrução INSERT
+2025-03-12 04:04:56: [MESSAGE] Ordem de Serviço comprimida com instrução SELECTALL
+2025-03-12 04:04:59: [MESSAGE] Ordem de Serviço comprimida com instrução CLOSE
+2025-03-12 04:05:06: [LOCATION SERVER] Proxy running on 127.0.0.1:5001
+2025-03-12 04:05:08: [MESSAGE] Usuário 123 comprimido com instrução LOGIN
+2025-03-12 04:05:09: [MESSAGE] Ordem de Serviço comprimida com instrução SELECTALL
+2025-03-12 04:05:12: [MESSAGE] Usuário 123 comprimido com instrução SELECTBYUSER
+2025-03-12 04:05:13: [MESSAGE] Ordem de Serviço comprimida com instrução CLOSE

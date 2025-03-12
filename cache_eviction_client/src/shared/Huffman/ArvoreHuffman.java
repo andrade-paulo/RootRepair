@@ -1,6 +1,8 @@
-package datastructures.Huffman;
+package shared.Huffman;
 
-public class ArvoreHuffman{
+public class ArvoreHuffman implements java.io.Serializable {
+    private static final long serialVersionUID = 1L;
+
     public NodeHuffman raiz;
     private char[] caracteres;
     private String[] codigos;

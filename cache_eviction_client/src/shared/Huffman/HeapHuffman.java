@@ -1,7 +1,9 @@
-package datastructures.Huffman;
+package shared.Huffman;
 
 // Lista de prioridades para a árvore de Huffman
-public class HeapHuffman {
+public class HeapHuffman implements java.io.Serializable {
+    private static final long serialVersionUID = 1L;
+
     private NodeHuffman[] heap;
     private int capacidade;
     private int tamanho;

@@ -1,8 +1,8 @@
 import java.io.ObjectInputStream;
 import java.io.ObjectOutputStream;
 
-import model.Message;
-import model.entities.*;
+import shared.Message;
+import modelo.entities.*;
 
 public class Controller {
     private static ObjectOutputStream out;
@@ -18,17 +18,18 @@ public class Controller {
     // Usuários
     public static void addUsuario(Usuario usuario) throws Exception {
         try {
-            Message request = new Message(usuario, "INSERT");
+            Message request = new Message(usuario, "INSERTUSER");
             out.writeObject(request);
             out.flush();
         } catch (Exception e) {
+            System.out.println(e);
             throw new Exception("Erro ao adicionar Usuario");
         }
     }
 
     public static Usuario getUsuario(String cpf) throws Exception {
         try {
-            Message request = new Message(cpf, "SELECT");
+            Message request = new Message(cpf, "LOGIN");
             out.writeObject(request);
             out.flush();
             Message response = (Message) in.readObject();
@@ -77,6 +78,11 @@ public class Controller {
             out.writeObject(request);
             out.flush();
             Message response = (Message) in.readObject();
+
+            if (response.getInstrucao().equals("NOTFOUND")) {
+                throw new Exception("Ordem de Servico nao encontrada");
+            }
+
             return response.getOrdem();
         } catch (Exception e) {
             throw new Exception("Ordem de Servico nao encontrada");
@@ -108,12 +114,13 @@ public class Controller {
 
     public static OrdemServico[] getOrdensByUsuario(Usuario usuario) throws Exception {
         try {
-            Message request = new Message(usuario, "SELECT_BY_USER");
+            Message request = new Message(usuario, "SELECTBYUSER");
             out.writeObject(request);
             out.flush();
             Message response = (Message) in.readObject();
             return response.getOrdensServicos();
         } catch (Exception e) {
+            System.out.println(e);
             throw new Exception("Ordens de Servico nao encontradas");
         }
     }
@@ -121,12 +128,13 @@ public class Controller {
 
     public static OrdemServico[] getAllOrdemServicos() throws Exception {
         try {
-            Message request = new Message("SELECT_ALL");
+            Message request = new Message("SELECTALL");
             out.writeObject(request);
             out.flush();
             Message response = (Message) in.readObject();
             return response.getOrdensServicos();
         } catch (Exception e) {
+            System.out.println(e);
             throw new Exception("Ordens de Servico nao encontradas");
         }
     }

@@ -1,4 +1,4 @@
-package model.entities;
+package ProxyServer.model.entities;
 
 import java.io.Serializable;
 
