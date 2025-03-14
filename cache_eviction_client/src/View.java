@@ -64,7 +64,7 @@ public class View {
 
     public static void showMenu() throws Exception {
         limparTela();
-        int escolha = 0;
+        String escolha = "";
         
         do {
             System.out.println(Color.CYAN + "Menu principal - " + usuario.getNome() + Color.RESET);
@@ -79,37 +79,37 @@ public class View {
             System.out.println("0. Sair do sistema");
             System.out.print("Escolha uma opção: ");
             
-            escolha = Client.scanner.nextInt();
-            Client.scanner.nextLine();
+            escolha = Client.scanner.nextLine();
             
             switch (escolha) {
-                case 1:
+                case "1":
                     cadastrarOS();
                     break;
-                case 2:
+                case "2":
                     listarMeusOS();
                     break;
-                case 3:
+                case "3":
                     listarTodosOS();
                     break;
-                case 4:
+                case "4":
                     buscarOS();
                     break;
-                case 5:
+                case "5":
                     removerOS();
                     break;
-                case 6:
+                case "6":
                     atualizarOS();
                     break;
-                case 7:
+                case "7":
                     usuario = null;
                     realizarLogin();
                     break;
-                case 8:
+                case "8":
                     buscarLog();
                     break;
-                case 0:
+                case "0":
                     System.out.println("Saindo do sistema...");
+                    escolha = "0";
                     break;
                 default:
                     System.out.println(Color.RED + "Opção inválida. Tente novamente." + Color.RESET);
@@ -117,7 +117,7 @@ public class View {
             }
             
             System.out.println();
-        } while (escolha != 0);
+        } while (escolha != "0");
     }
 
     private static void cadastrarOS() throws Exception {
@@ -202,7 +202,7 @@ public class View {
             OrdemServico[] meusOS = Controller.getOrdensByUsuario(usuario);
             System.out.println(Color.CYAN + "Minhas Ordens de Serviço:" + Color.RESET);
             for (OrdemServico os : meusOS) {
-                System.out.println(os);
+                System.out.println(os + "\n");
             }
         } catch (Exception e) {
             System.out.println(Color.RED + "Oops! Nenhuma Ordem de Serviço encontrada." + Color.RESET);

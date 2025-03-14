@@ -1,11 +1,11 @@
-package model.DAO;
+package ApplicationServer.model.DAO;
 
 import java.io.*;
 import java.util.Date;
 
 public class LogDAO {
     static private String log;
-    private static final String ARQUIVO = "src/database/log.txt"; 
+    private static final String ARQUIVO = "src/ApplicationServer/database/log.txt"; 
 
     public LogDAO() {
         loadLog();

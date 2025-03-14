@@ -4,7 +4,7 @@ import java.io.Serializable;
 import java.util.concurrent.locks.Lock;
 import java.util.concurrent.locks.ReentrantLock;
 
-import ProxyServer.model.entities.OrdemServico;
+import shared.entities.OrdemServico;
 
 
 public class CacheHeap implements Serializable {

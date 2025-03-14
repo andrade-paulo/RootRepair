@@ -1,9 +1,8 @@
 package shared;
 
-import ProxyServer.model.entities.OrdemServico;
-import ProxyServer.model.entities.Usuario;
+import shared.entities.OrdemServico;
+import shared.entities.Usuario;
 import shared.Huffman.ArvoreHuffman;
-import ProxyServer.model.DAO.LogDAO;
 
 import java.util.Date;
 import java.text.ParseException;
@@ -13,7 +12,7 @@ import java.util.Locale;
 public class Message implements java.io.Serializable {
     private static final long serialVersionUID = 1L;
     
-    private String content;
+    public String content;
     private ArvoreHuffman arvore;
     private boolean isCompressed;
     
@@ -33,8 +32,6 @@ public class Message implements java.io.Serializable {
         // Comprime a mensagem
         this.content = arvore.comprimir(content);
         this.isCompressed = true;
-
-        LogDAO.addLog("[MESSAGE] Ordem de Serviço comprimida com instrução " + instrucao);
     }
 
 
@@ -54,8 +51,6 @@ public class Message implements java.io.Serializable {
         // Comprime a mensagem
         this.content = arvore.comprimir(content);
         this.isCompressed = true;
-
-        LogDAO.addLog("[MESSAGE] Ordem de Serviço " + ordem.getCodigo() + " comprimida com instrução " + instrucao);
     }
 
 
@@ -74,8 +69,6 @@ public class Message implements java.io.Serializable {
         // Comprime a mensagem
         this.content = arvore.comprimir(content);
         this.isCompressed = true;
-
-        LogDAO.addLog("[MESSAGE] Ordem de Serviço " + codigo + " comprimida com instrução " + instrucao);
     }
 
 
@@ -87,6 +80,7 @@ public class Message implements java.io.Serializable {
                 "|" + ordem.getUsuario().getNome() + "|" + ordem.getUsuario().getCpf() + "|" + ordem.getHora() + "|";
             }
         }
+
         this.content += instrucao;
         this.arvore = new ArvoreHuffman();
 
@@ -101,8 +95,6 @@ public class Message implements java.io.Serializable {
         // Comprime a mensagem
         this.content = arvore.comprimir(content);
         this.isCompressed = true;
-
-        LogDAO.addLog("[MESSAGE] Ordem de Serviço comprimida com instrução " + instrucao);
     }
 
 
@@ -122,8 +114,6 @@ public class Message implements java.io.Serializable {
         // Comprime a mensagem
         this.content = arvore.comprimir(content);
         this.isCompressed = true;
-
-        LogDAO.addLog("[COMPRESS] Usuario " + usuario.getCpf() + " comprimido com instrução " + instrucao);
     }
 
     public Message(String cpf, String instrucao) {
@@ -141,8 +131,6 @@ public class Message implements java.io.Serializable {
         // Comprime a mensagem
         this.content = arvore.comprimir(content);
         this.isCompressed = true;
-
-        LogDAO.addLog("[COMPRESS] Usuario " + cpf + " comprimido com instrução " + instrucao);
     }
 
 
@@ -185,8 +173,10 @@ public class Message implements java.io.Serializable {
 
         OrdemServico[] ordens = new OrdemServico[splited.length / 6];
         int j = 0;
+        
+        if (ordens.length == 0) return ordens;
 
-        for (int i = 0; i < splited.length; i += 6) {
+        for (int i = 0; i < splited.length-1; i += 6) {
             // Transforma a string em um objeto OrdemServico
             int codigo = Integer.parseInt(splited[i]);
             String titulo = splited[i + 1];

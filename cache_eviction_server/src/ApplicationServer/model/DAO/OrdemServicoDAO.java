@@ -1,117 +1,146 @@
-package model.DAO;
+package ApplicationServer.model.DAO;
 
-import client.Client;
-import model.entities.OrdemServico;
-import model.entities.Usuario;
-import server.Message;
-import server.Server;
+import java.io.File;
+import java.io.FileInputStream;
+import java.io.FileOutputStream;
+import java.io.IOException;
+import java.io.ObjectInputStream;
+import java.io.ObjectOutputStream;
+
+import ApplicationServer.datastructures.Hash;
+import shared.entities.OrdemServico;
+import shared.entities.Usuario;
+
 
 public class OrdemServicoDAO {
+    private Hash<OrdemServico> ordensServico;
     private int ocupacao;
-    private Server server;
-    private Client client;
 
+    private final String ARQUIVO = "src/ApplicationServer/database/database.dat";
+    private final int TAMANHO_INICIAL = 100; 
+    
     public OrdemServicoDAO() {
-        server = new Server();
-        client = new Client();
-
-        if (server.isEmpty()) {
-            OrdemServico.setContador(0);
-            ocupacao = 0;
-        } else {
-            OrdemServico.setContador(server.getUltimo().getCodigo());
-            ocupacao = server.getOcupacao();
-        }
+        ordensServico = new Hash<>(TAMANHO_INICIAL);
+        carregarArquivo();
+        ocupacao = ordensServico.getOcupacao();
     }
 
 
-    public void addOrdemServico(OrdemServico ordemServico) throws Exception {
-        Message mensagem = new Message(ordemServico, "INSERT");
-        server.requestByOrdem(mensagem);
+    public OrdemServico[] selectAll() {
+        LogDAO.addLog("[DB SELECT] Selecionando todas as Ordens de Serviço");
 
+        return ordensServico.getAllOrdens();
+    }
+
+
+    public OrdemServico[] listarOS(Usuario usuario) {
+        LogDAO.addLog("[DB SELECT] Selecionando Ordens de Serviço do Usuário " + usuario.getNome());
+        return ordensServico.getOrdensByUsuario(usuario);
+    }
+
+
+    public void addOrdemServico(OrdemServico ordem) {
+        // Update the code of the new order
+        ordem.setCodigo(ordensServico.getOcupacao() + 1);
+        ordensServico.inserir(ordem.getCodigo(), ordem);
         ocupacao++;
+
+        LogDAO.addLog("[DB INSERT] Ordem de Serviço " + ordem.getCodigo() + ", ocupação: " + ocupacao + "/" + ordensServico.getTamanho());
+        
+        updateArquivo();
     }
 
 
-    public OrdemServico getOrdemServico(int codigo) throws Exception {
-        // Não há necessidade de consultar o arquivo, pois sempre vai estar atualizado
-        OrdemServico ordemServico = client.getOrdemServico(codigo);
-
-        if (ordemServico == null) {
-            // Dispara mensagem de request ao server
-            Message request = new Message(codigo, "SELECT");
-            ordemServico = server.requestByCodigo(request);
-
-            if (ordemServico == null) {
-                throw new Exception("Ordem de Serviço não encontrada");
-            }
-
-            // Dispara mensagem de reply ao client
-            Message reply = new Message(ordemServico, "INSERT");
-            client.replyByOrdem(reply);
-        } else {
-            return ordemServico;
-        }
+    public OrdemServico getOrdemServico(int codigo) {
+        OrdemServico ordemServico = ordensServico.buscar(codigo);
         
+        if (ordemServico == null) {
+            LogDAO.addLog("[DB MISS] Ordem de Serviço " + codigo + " não encontrada");
+            return null;
+        }
+
+        LogDAO.addLog("[DB HIT] Ordem de Serviço " + codigo + " encontrada");
         return ordemServico;
     }
 
 
-    public void removerOrdemServico(int codigo) throws Exception {
-        OrdemServico ordemRemovida;
+    public boolean updateOrdemServico(OrdemServico ordem) {
+        if (ordensServico.buscar(ordem.getCodigo()) == null) {
+            LogDAO.addLog("[DB MISS] Ordem de Serviço " + ordem.getCodigo() + " não encontrada");
+            return false;
+        }
 
+        ordensServico.inserir(ordem.getCodigo(), ordem);
+        LogDAO.addLog("[DB UPDATE] Ordem de Serviço " + ordem.getCodigo() + " atualizada");
+
+        updateArquivo();
+        return true;
+    }
+
+
+    public OrdemServico deleteOrdemServico(int codigo) {
         try {
-            Message request = new Message(codigo, "DELETE");
-            ordemRemovida = server.requestByCodigo(request);
+            OrdemServico ordem = ordensServico.remover(codigo);
+            ocupacao--;
+            
+            LogDAO.addLog("[DB DELETE] Ordem de Serviço " + codigo + ", ocupação: " + ocupacao + "/" + ordensServico.getTamanho());
+            
+            updateArquivo();
+            
+            return ordem;
         } catch (Exception e) {
-            throw new Exception("Ordem de Serviço não encontrada");
-        }
-        
-        ocupacao--;
-        
-        // Remove from cache
-        try{
-            Message reply = new Message(ordemRemovida, "DELETE");
-            client.replyByOrdem(reply);
-        } catch (Exception e) {
-            LogDAO.addLog("[CACHE DELETE] Ordem de Serviço " + codigo + " não encontrada");
+            LogDAO.addLog("[DB MISS] Ordem de Serviço " + codigo + " não encontrada");
+            return null;
         }
     }
 
 
-    public void updateOrdemServico(OrdemServico ordemServico) throws Exception {
+    private void updateArquivo() {
         try {
-            Message request = new Message(ordemServico, "UPDATE");
-            server.requestByOrdem(request);
-        } catch (Exception e) {
-            throw new Exception("Ordem de Serviço não encontrada");
+            FileOutputStream file = new FileOutputStream(ARQUIVO);
+            ObjectOutputStream out = new ObjectOutputStream(file);
+            out.writeObject(ordensServico);
+            out.close();
+            file.close();
+        } catch (IOException e) {
+            e.printStackTrace();
         }
+    }
+    
 
+    @SuppressWarnings("unchecked")
+    public void carregarArquivo() {
+        // Carregar arquivo binário "database.dat" e preencher Hash com as OSs
         try {
-            Message reply = new Message(ordemServico, "UPDATE");
-            client.replyByOrdem(reply);
-        } catch (Exception e) {
-            LogDAO.addLog("[CACHE UPDATE] Ordem de Serviço " + ordemServico.getCodigo() + " não encontrada");
+            File file = new File(ARQUIVO);
+            if (!file.exists()) {
+                file.createNewFile();
+            } else {
+                FileInputStream fileIn = new FileInputStream(ARQUIVO);
+                ObjectInputStream objectIn = new ObjectInputStream(fileIn);
+                ordensServico = (Hash<OrdemServico>) objectIn.readObject();
+                objectIn.close();
+                fileIn.close();
+            }
+        } catch (IOException | ClassNotFoundException e) {
+            e.printStackTrace();
         }
     }
 
 
-    public void clearCache() {
-        client.clearCache();
+    public boolean isEmpty() {
+        return ocupacao == 0;
     }
 
-
-    public void listarTodosOS() {
-        server.selectAll();
+    public OrdemServico getUltimo() {
+        return ordensServico.getUltimo();
     }
-
-
-    public void listarOS(Usuario usuario) {
-        server.listarOS(usuario);
-    }
-
 
     public int getOcupacao() {
         return ocupacao;
+    }
+
+    public int getTamanho() {
+        return ordensServico.getTamanho();
     }
 }

@@ -1,11 +1,13 @@
-package datastructures;
+package ApplicationServer.datastructures;
 
 import java.io.Serializable;
 import java.util.Iterator;
+import java.util.concurrent.locks.Lock;
+import java.util.concurrent.locks.ReentrantLock;
 
-import model.DAO.LogDAO;
-import model.entities.OrdemServico;
-import model.entities.Usuario;
+import ApplicationServer.model.DAO.LogDAO;
+import shared.entities.OrdemServico;
+import shared.entities.Usuario;
 
 public class Hash<T> implements Serializable, Iterable<T> {
     @SuppressWarnings("hiding")
@@ -22,6 +24,7 @@ public class Hash<T> implements Serializable, Iterable<T> {
     private Node<T>[] tabela;
     private int tamanho;
     private int ocupacao;
+    private final Lock lock = new ReentrantLock(); // Lock for thread safety
 
     @SuppressWarnings("unchecked")
     public Hash(int tamanho) {
@@ -67,190 +70,252 @@ public class Hash<T> implements Serializable, Iterable<T> {
     }
 
     public void inserir(int chave, T valor) {
-        int posicao = hash(chave);
+        lock.lock();
+        try {
+            int posicao = hash(chave);
 
-        if (tabela[posicao] == null) {
-            tabela[posicao] = new Node<>(chave, valor);
-            ocupacao++;
-        } else {
-            
-            // Se já existe a chave na posição inicial, atualiza o valor
-            if (tabela[posicao].chave == chave) {
-                LogDAO.addLog("[HASH UPDATE] Chave " + chave + " atualizada");
+            if (tabela[posicao] == null) {
+                tabela[posicao] = new Node<>(chave, valor);
+                ocupacao++;
+            } else {
+                // Se já existe a chave na posição inicial, atualiza o valor
+                if (tabela[posicao].chave == chave) {
+                    LogDAO.addLog("[HASH UPDATE] Chave " + chave + " atualizada");
 
-                tabela[posicao].valor = valor;
-                return;
-            }
-            
-            int i = 1;
-            while (tabela[hashColisao(chave, i)] != null) {
-                // Se já existe a chave, atualiza o valor
-                if (tabela[hashColisao(chave, i)].chave == chave) {
-                    LogDAO.addLog("[HASH UPDATE] Atualizando valor da chave " + chave);
-
-                    tabela[hashColisao(chave, i)].valor = valor;
+                    tabela[posicao].valor = valor;
                     return;
                 }
-                i++;
+
+                int i = 1;
+                while (tabela[hashColisao(chave, i)] != null) {
+                    // Se já existe a chave, atualiza o valor
+                    if (tabela[hashColisao(chave, i)].chave == chave) {
+                        LogDAO.addLog("[HASH UPDATE] Atualizando valor da chave " + chave);
+
+                        tabela[hashColisao(chave, i)].valor = valor;
+                        return;
+                    }
+                    i++;
+                }
+
+                LogDAO.addLog("[HASH COLLISION] Colisão na posição " + posicao + " com chave " + chave);
+
+                tabela[hashColisao(chave, i)] = new Node<>(chave, valor);
+                ocupacao++;
             }
-            
-            LogDAO.addLog("[HASH COLLISION] Colisão na posição " + posicao + " com chave " + chave);
 
-            tabela[hashColisao(chave, i)] = new Node<>(chave, valor);
-            ocupacao++;
-        }
-
-        
-        if (ocupacao >= tamanho) {
-            redimensionar(tamanho * 2);
+            if (ocupacao >= tamanho) {
+                redimensionar(tamanho * 2);
+            }
+        } finally {
+            lock.unlock();
         }
     }
 
     public T buscar(int chave) {
-        int posicao = hash(chave);
+        lock.lock();
+        try {
+            int posicao = hash(chave);
 
-        if (tabela[posicao] != null && tabela[posicao].chave == chave) {
-            return tabela[posicao].valor;
-        } else {
-            int i = 1;
-            while (tabela[hashColisao(chave, i)] != null && tabela[hashColisao(chave, i)].chave != chave) {
-                i++;
+            if (tabela[posicao] != null && tabela[posicao].chave == chave) {
+                return tabela[posicao].valor;
+            } else {
+                int i = 1;
+                while (tabela[hashColisao(chave, i)] != null && tabela[hashColisao(chave, i)].chave != chave) {
+                    i++;
+                }
+
+                if (tabela[hashColisao(chave, i)] != null) {
+                    return tabela[hashColisao(chave, i)].valor;
+                }
             }
 
-            if (tabela[hashColisao(chave, i)] != null) {
-                return tabela[hashColisao(chave, i)].valor;
-            }
+            return null;
+        } finally {
+            lock.unlock();
         }
-
-        return null;
     }
 
     public T remover(int chave) throws Exception {
-        int posicao = hash(chave);
+        lock.lock();
+        try {
+            int posicao = hash(chave);
 
-        if (tabela[posicao] != null && tabela[posicao].chave == chave) {
-            // copy to return
-            T value = tabela[posicao].valor;
-            tabela[posicao] = null;
-            ocupacao--;
-            return value;
-        } else {
-            int i = 1;
-            while (tabela[hashColisao(chave, i)] != null && tabela[hashColisao(chave, i)].chave != chave) {
-                i++;
-            }
-
-            if (tabela[hashColisao(chave, i)] != null) {
-                T value = tabela[hashColisao(chave, i)].valor;
-                tabela[hashColisao(chave, i)] = null;
+            if (tabela[posicao] != null && tabela[posicao].chave == chave) {
+                // copy to return
+                T value = tabela[posicao].valor;
+                tabela[posicao] = null;
                 ocupacao--;
                 return value;
-            }
-        }
+            } else {
+                int i = 1;
+                while (tabela[hashColisao(chave, i)] != null && tabela[hashColisao(chave, i)].chave != chave) {
+                    i++;
+                }
 
-        // Quem sobrar é exception
-        throw new Exception("Chave não encontrada");
+                if (tabela[hashColisao(chave, i)] != null) {
+                    T value = tabela[hashColisao(chave, i)].valor;
+                    tabela[hashColisao(chave, i)] = null;
+                    ocupacao--;
+                    return value;
+                }
+            }
+
+            // Quem sobrar é exception
+            throw new Exception("Chave não encontrada");
+        } finally {
+            lock.unlock();
+        }
     }
 
     public void redimensionar(int novoTamanho) {
-        novoTamanho = proximoPrimo(novoTamanho);
+        lock.lock();
+        try {
+            novoTamanho = proximoPrimo(novoTamanho);
 
-        LogDAO.addLog("[HASH RESIZE] Redimensionando tabela de " + tamanho + " para " + novoTamanho);
+            LogDAO.addLog("[HASH RESIZE] Redimensionando tabela de " + tamanho + " para " + novoTamanho);
 
-        @SuppressWarnings("unchecked")
-        Node<T>[] novaTabela = new Node[novoTamanho];
-        
-        for (int i = 0; i < tamanho; i++) {
-            if (tabela[i] != null) {
-                int chave = tabela[i].chave;
-                int posicao = chave % novoTamanho;
+            @SuppressWarnings("unchecked")
+            Node<T>[] novaTabela = new Node[novoTamanho];
 
-                if (novaTabela[posicao] == null) {
-                    novaTabela[posicao] = tabela[i];
-                } else {
-                    int j = 1;
-                    while (novaTabela[hashColisao(chave, j)] != null) {
-                        j++;
+            for (int i = 0; i < tamanho; i++) {
+                if (tabela[i] != null) {
+                    int chave = tabela[i].chave;
+                    int posicao = chave % novoTamanho;
+
+                    if (novaTabela[posicao] == null) {
+                        novaTabela[posicao] = tabela[i];
+                    } else {
+                        int j = 1;
+                        while (novaTabela[hashColisao(chave, j)] != null) {
+                            j++;
+                        }
+
+                        novaTabela[hashColisao(chave, j, novoTamanho)] = tabela[i];
                     }
-                    
-                    novaTabela[hashColisao(chave, j, novoTamanho)] = tabela[i];
                 }
             }
+
+            tabela = novaTabela;
+            tamanho = novoTamanho;
+        } finally {
+            lock.unlock();
         }
-        
-        tabela = novaTabela;
-        tamanho = novoTamanho;
     }
 
     public int getOcupacao() {
-        return ocupacao;
+        lock.lock();
+        try {
+            return ocupacao;
+        } finally {
+            lock.unlock();
+        }
     }
 
     public int getTamanho() {
-        return tamanho;
+        lock.lock();
+        try {
+            return tamanho;
+        } finally {
+            lock.unlock();
+        }
     }
 
     public boolean isEmpty() {
-        return ocupacao == 0;
+        lock.lock();
+        try {
+            return ocupacao == 0;
+        } finally {
+            lock.unlock();
+        }
     }
 
     public T getUltimo() {
-        Node<T> maior = tabela[0];
+        lock.lock();
+        try {
+            Node<T> maior = tabela[0];
 
-        for (int i = 1; i < tamanho; i++) {
-            if (maior == null) {
-                maior = tabela[i];
-            } else if (tabela[i] != null && tabela[i].chave > maior.chave) {
-                maior = tabela[i];
-            }
-        }
-
-        if (maior == null) {
-            return null;
-        }
-
-        return maior.valor;
-    }
-
-    public void mostrarValores() {
-        for (int i = 0; i < tamanho; i++) {
-            if (tabela[i] != null) {
-                System.out.println(tabela[i].valor);
-                System.out.println("---------------------------------");
-            }
-        }
-    }
-
-    public void listarOS(Usuario usuario) {
-        for (int i = 0; i < tamanho; i++) {
-            if (tabela[i] != null && tabela[i].valor instanceof OrdemServico) {
-                OrdemServico ordemServico = (OrdemServico) tabela[i].valor;
-                if (ordemServico.getUsuario().equals(usuario)) {
-                    System.out.println(ordemServico);
-                    System.out.println("---------------------------------");
+            for (int i = 1; i < tamanho; i++) {
+                if (maior == null) {
+                    maior = tabela[i];
+                } else if (tabela[i] != null && tabela[i].chave > maior.chave) {
+                    maior = tabela[i];
                 }
             }
+
+            if (maior == null) {
+                return null;
+            }
+
+            return maior.valor;
+        } finally {
+            lock.unlock();
+        }
+    }
+
+    public OrdemServico[] getAllOrdens() {
+        lock.lock();
+        try {
+            OrdemServico[] ordens = new OrdemServico[ocupacao];
+
+            int j = 0;
+            for (int i = 0; i < tamanho; i++) {
+                if (tabela[i] != null && tabela[i].valor instanceof OrdemServico) {
+                    ordens[j++] = (OrdemServico) tabela[i].valor;
+                }
+            }
+
+            return ordens;
+        } finally {
+            lock.unlock();
+        }
+    }
+
+    public OrdemServico[] getOrdensByUsuario(Usuario usuario) {
+        lock.lock();
+        try {
+            OrdemServico[] ordens = new OrdemServico[ocupacao];
+
+            int j = 0;
+            for (int i = 0; i < tamanho; i++) {
+                if (tabela[i] != null && tabela[i].valor instanceof OrdemServico) {
+                    OrdemServico ordem = (OrdemServico) tabela[i].valor;
+
+                    if (ordem.getUsuario().equals(usuario)) {
+                        ordens[j++] = ordem;
+                    }
+                }
+            }
+
+            return ordens;
+        } finally {
+            lock.unlock();
         }
     }
 
     public String toString() {
-        StringBuilder sb = new StringBuilder();
-        sb.append("[");
+        lock.lock();
+        try {
+            StringBuilder sb = new StringBuilder();
+            sb.append("[");
 
-        for (int i = 0; i < tamanho; i++) {
-            if (tabela[i] != null) {
-                sb.append(tabela[i].chave);
-            } else {
-                sb.append("null");
+            for (int i = 0; i < tamanho; i++) {
+                if (tabela[i] != null) {
+                    sb.append(tabela[i].chave);
+                } else {
+                    sb.append("null");
+                }
+
+                if (i < tamanho - 1) {
+                    sb.append(", ");
+                }
             }
 
-            if (i < tamanho - 1) {
-                sb.append(", ");
-            }
+            sb.append("]");
+            return sb.toString();
+        } finally {
+            lock.unlock();
         }
-
-        sb.append("]");
-        return sb.toString();
     }
 
     @Override
@@ -265,15 +330,20 @@ public class Hash<T> implements Serializable, Iterable<T> {
 
             @Override
             public T next() {
-                while (tabela[i] == null && i < tamanho) {
-                    i++;
-                }
+                lock.lock();
+                try {
+                    while (tabela[i] == null && i < tamanho) {
+                        i++;
+                    }
 
-                if (i >= tamanho) {
-                    return null;
+                    if (i >= tamanho) {
+                        return null;
+                    }
+
+                    return tabela[i++].valor;
+                } finally {
+                    lock.unlock();
                 }
-                
-                return tabela[i++].valor;
             }
         };
     }

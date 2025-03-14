@@ -5,7 +5,7 @@ import java.util.Date;
 
 public class LogDAO {
     static private String log;
-    private static final String ARQUIVO = "src/log.txt"; 
+    private static final String ARQUIVO = "src/ProxyServer/database/log.txt"; 
 
     public LogDAO() {
         loadLog();

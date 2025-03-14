@@ -8,7 +8,7 @@ import java.io.ObjectInputStream;
 import java.io.ObjectOutputStream;
 
 import ProxyServer.datastructures.CacheHeap;
-import ProxyServer.model.entities.OrdemServico;
+import shared.entities.OrdemServico;
 
 
 public class OrdemServicoCacheDAO {
@@ -39,23 +39,22 @@ public class OrdemServicoCacheDAO {
 
         if (ordemServico == null) {
             // Cache miss
+            LogDAO.addLog("[CACHE MISS] Ordem de Serviço " + codigo + " não encontrada");
             return null;
         }
 
+        LogDAO.addLog("[CACHE HIT] Ordem de Serviço " + codigo + " encontrada");
         return ordemServico;
     }
 
 
-    public OrdemServico[] getAllOrdens() {
-        return cache.getOrdens();
-    }
-
-    public OrdemServico[] getOrdensByUsuario(String cpf) {
-        return cache.getOrdensByUsuario(cpf);
-    }
-
-
     public void updateOrdemServico(OrdemServico ordemServico) {
+        if (cache.buscar(ordemServico.getCodigo()) == null) {
+            // Cache miss
+            LogDAO.addLog("[CACHE MISS] Ordem de Serviço " + ordemServico.getCodigo() + " não encontrada");
+            return;
+        }
+        
         cache.update(ordemServico);
         updateArquivo();
         LogDAO.addLog("[CACHE UPDATE] " + cache);
@@ -63,6 +62,12 @@ public class OrdemServicoCacheDAO {
 
 
     public void deleteOrdemServico(int codigo) {
+        if (cache.buscar(codigo) == null) {
+            // Cache miss
+            LogDAO.addLog("[CACHE MISS] Ordem de Serviço " + codigo + " não encontrada");
+            return;
+        }
+
         cache.remover(codigo);
         updateArquivo();
         LogDAO.addLog("[CACHE DELETE] " + cache);
@@ -86,17 +91,20 @@ public class OrdemServicoCacheDAO {
         if (!file.exists()) {
             try {
                 file.createNewFile();
+                LogDAO.addLog("[CACHE FILE] Cache file created.");
             } catch (IOException e) {
                 e.printStackTrace();
             }
         }
+
+        LogDAO.addLog("[CACHE FILE] Loading cache from file.");
 
         try (FileInputStream fileIn = new FileInputStream(ARQUIVO);
              ObjectInputStream objectIn = new ObjectInputStream(fileIn);){
             
             cache = (CacheHeap) objectIn.readObject();
         } catch (IOException | ClassNotFoundException e) {
-            System.out.println("Cache file not found. Creating new cache.");
+            LogDAO.addLog("[CACHE FILE] The cache is empty.");
         }
     }
 }

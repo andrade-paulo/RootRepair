@@ -8,7 +8,7 @@ import java.io.ObjectInputStream;
 import java.io.ObjectOutputStream;
 
 import ProxyServer.datastructures.AVL;
-import ProxyServer.model.entities.Usuario;
+import shared.entities.Usuario;
 
 public class UsuarioDAO {
     private AVL<Usuario> usuarios;
@@ -83,6 +83,9 @@ public class UsuarioDAO {
             if (!file.exists()) {
                 file.createNewFile();
             } else {
+                if (file.length() == 0) {
+                    return;
+                }
                 FileInputStream fileIn = new FileInputStream(ARQUIVO);
                 ObjectInputStream objectIn = new ObjectInputStream(fileIn);
                 usuarios = (AVL<Usuario>) objectIn.readObject();
