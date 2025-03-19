@@ -960,3 +960,8 @@
 2025-03-19 01:39:42: [MESSAGE] Usuário 333 comprimido com instrução SELECTBYUSER
 2025-03-19 01:39:45: [MESSAGE] Ordem de Serviço comprimida com instrução SELECTALL
 2025-03-19 01:40:20: [MESSAGE] Ordem de Serviço comprimida com instrução CLOSE
+2025-03-19 15:29:11: [LOCATION SERVER] Proxy running on 172.28.179.72:5001
+2025-03-19 15:29:18: [MESSAGE] Usuário 123 comprimido com instrução LOGIN
+2025-03-19 15:29:20: [MESSAGE] Usuário 123 comprimido com instrução INSERTUSER
+2025-03-19 15:29:24: [MESSAGE] Ordem de Serviço comprimida com instrução SELECTALL
+2025-03-19 15:29:30: [MESSAGE] Ordem de Serviço 1 comprimida com instrução SELECT

@@ -11,7 +11,7 @@ import shared.Message;
 import shared.entities.OrdemServico;
 
 public class ApplicationServer {
-    private static int port = 5003;
+    private static int port = 6000;
 
     protected static OrdemServicoDAO ordemServicoDAO = new OrdemServicoDAO();
     protected static LogDAO logDAO = new LogDAO();
@@ -104,11 +104,9 @@ public class ApplicationServer {
                     }
                 }
 
-            } catch (EOFException e) {
+            } catch (IOException | ClassNotFoundException e) {
                 System.out.println("Conexão encerrada");
                 LogDAO.addLog("[CONNECTION] Conexão encerrada com " + socket.getInetAddress().getHostAddress());
-            } catch (IOException | ClassNotFoundException e) {
-                e.printStackTrace();
             }
         }
 

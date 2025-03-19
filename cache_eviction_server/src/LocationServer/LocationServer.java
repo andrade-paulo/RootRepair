@@ -15,7 +15,7 @@ import shared.ProxyHandlerInterface;
 
 
 class LocationServer {
-    private static final int PORT = 5000;
+    private static final int PORT = 4000;
     private static final int RMI_PORT = 1099;
     private static final String RMI_NAME = "ProxyHandler";
 

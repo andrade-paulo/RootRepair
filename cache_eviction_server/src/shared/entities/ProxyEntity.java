@@ -1,6 +1,8 @@
-package LocationServer.ProxyHandler;
+package shared.entities;
 
-public class ProxyEntity {
+public class ProxyEntity implements java.io.Serializable {
+    private static final long serialVersionUID = 1L;
+
     private String address;
     private int port;
     private int heartbeatPort;
@@ -25,6 +27,6 @@ public class ProxyEntity {
 
     @Override
     public String toString() {
-        return address + ":" + port;
+        return address + ":" + port + " (heartbeat port: " + heartbeatPort + ")";
     }
 }

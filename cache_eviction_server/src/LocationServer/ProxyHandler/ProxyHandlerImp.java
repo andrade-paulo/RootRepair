@@ -1,6 +1,7 @@
 package LocationServer.ProxyHandler;
 
 import java.io.IOException;
+import java.io.ObjectOutputStream;
 import java.net.Socket;
 
 import java.rmi.RemoteException;
@@ -11,6 +12,7 @@ import java.util.List;
 import java.util.concurrent.atomic.AtomicInteger;
 
 import shared.ProxyHandlerInterface;
+import shared.entities.ProxyEntity;
 
 
 public class ProxyHandlerImp extends UnicastRemoteObject implements ProxyHandlerInterface {
@@ -82,10 +84,22 @@ public class ProxyHandlerImp extends UnicastRemoteObject implements ProxyHandler
 
     private boolean isProxyAlive(ProxyEntity proxy) {
         try (Socket socket = new Socket(proxy.getAddress(), proxy.getHeartbeatPort())) {
+            System.out.println("\nHeartbeat on port " + proxy.getHeartbeatPort());
+            sendProxiesList(socket);
             return true;
         } catch (IOException e) {
             // Se a conexão falhar, o proxy está indisponível
             return false;
+        }
+    }
+
+    private void sendProxiesList(Socket socket) throws IOException {
+        synchronized (proxies) {
+            try (ObjectOutputStream out = new ObjectOutputStream(socket.getOutputStream())) {
+                out.writeObject(proxies);
+            } catch (IOException e) {
+                e.printStackTrace();
+            }
         }
     }
 }

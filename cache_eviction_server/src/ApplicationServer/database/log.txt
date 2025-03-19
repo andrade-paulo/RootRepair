@@ -121,3 +121,20 @@
 2025-03-19 09:27:06: [CONNECTION] Conexão estabelecida com 127.0.0.1
 2025-03-19 15:21:16: [CONNECTION] Conexão estabelecida com 172.28.179.72
 2025-03-19 15:21:29: [CONNECTION] Conexão encerrada com 172.28.179.72
+2025-03-19 15:27:47: [CONNECTION] Conexão estabelecida com 172.28.179.72
+2025-03-19 15:29:24: [MESSAGE] 172.28.179.72 requisitou SELECTALL
+2025-03-19 15:29:24: [DB SELECT] Selecionando todas as Ordens de Serviço
+2025-03-19 15:29:30: [MESSAGE] 172.28.179.72 requisitou SELECT
+2025-03-19 15:29:30: [DB HIT] Ordem de Serviço 1 encontrada
+2025-03-19 15:29:45: [CONNECTION] Conexão encerrada com 172.28.179.72
+2025-03-19 17:38:34: [CONNECTION] Conexão estabelecida com 127.0.0.1
+2025-03-19 17:45:26: [CONNECTION] Conexão estabelecida com 127.0.0.1
+2025-03-19 17:46:21: [CONNECTION] Conexão estabelecida com 127.0.0.1
+2025-03-19 17:54:19: [CONNECTION] Conexão estabelecida com 127.0.0.1
+2025-03-19 17:55:43: [CONNECTION] Conexão estabelecida com 127.0.0.1
+2025-03-19 17:57:15: [CONNECTION] Conexão estabelecida com 127.0.0.1
+2025-03-19 17:58:02: [CONNECTION] Conexão estabelecida com 127.0.0.1
+2025-03-19 18:02:20: [CONNECTION] Conexão estabelecida com 127.0.0.1
+2025-03-19 18:04:08: [CONNECTION] Conexão estabelecida com 127.0.0.1
+2025-03-19 18:11:10: [CONNECTION] Conexão estabelecida com 127.0.0.1
+2025-03-19 18:11:21: [CONNECTION] Conexão encerrada com 127.0.0.1

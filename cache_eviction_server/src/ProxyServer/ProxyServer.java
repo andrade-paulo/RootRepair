@@ -4,30 +4,33 @@ import java.io.EOFException;
 import java.io.IOException;
 import java.io.ObjectInputStream;
 import java.io.ObjectOutputStream;
-
 import java.net.ServerSocket;
 import java.net.Socket;
-
 import java.rmi.registry.LocateRegistry;
 import java.rmi.registry.Registry;
-
+import java.rmi.NotBoundException;
+import java.rmi.RemoteException;
 import java.text.ParseException;
+import java.util.ArrayList;
+import java.util.Collections;
+import java.util.List;
 import java.util.Scanner;
 
 import shared.entities.Usuario;
 import shared.entities.OrdemServico;
 import shared.Message;
 import shared.ProxyHandlerInterface;
+import shared.entities.ProxyEntity;
 
 import ProxyServer.model.DAO.UsuarioDAO;
 import ProxyServer.model.DAO.LogDAO;
 import ProxyServer.model.DAO.OrdemServicoCacheDAO;
 
-
 public class ProxyServer {
     private static String adress = "localhost";
-    private static int proxyPort = 5001;
-    private static int heartbeatPort = 5002;
+    private static int proxyPort = 5010;
+    private static int heartbeatPort = 5011;
+    private static int rmiReplicaPort = 5012; // Porta RMI para replicação
 
     protected static OrdemServicoCacheDAO cacheDAO = new OrdemServicoCacheDAO();
     protected static UsuarioDAO usuarioDAO = new UsuarioDAO();
@@ -35,24 +38,26 @@ public class ProxyServer {
     protected static ObjectOutputStream appOutputStream;
     protected static ObjectInputStream appInputStream;
 
+    private static List<ProxyReplicaInterface> activeProxies = Collections.synchronizedList(new ArrayList<>());
+
     public static void main(String[] args) {
         System.out.println("\r\n" + //
-                "============================================================\r\n" + //
-                "   _____             _     _____                  _      \r\n" + //
-                "  |  __ \\           | |   |  __ \\                (_)     \r\n" + //
-                "  | |__) |___   ___ | |_  | |__) |___ _ __   __ _ _ _ __ \r\n" + //
-                "  |  _  // _ \\ / _ \\| __| |  _  // _ \\ '_ \\ / _ | | '__|\r\n" + //
-                "  | | \\ \\ (_) | (_) | |_  | | \\ \\  __/ |_) | (_| | | |   \r\n" + //
-                "  |_|  \\_\\___/ \\___/ \\__| |_|  \\_\\___| .__/ \\__,_|_|_|   \r\n" + //
-                "                                     | |                 \r\n" + //
-                "                                     |_|                 \r\n" + //
-                "      ___                    ___                      \r\n" + //
-                "     | _ \\_ _ _____ ___  _  / __| ___ _ ___ _____ _ _ \r\n" + //
-                "     |  _/ '_/ _ \\ \\ / || | \\__ \\/ -_) '_\\ V / -_) '_|\r\n" + //
-                "     |_| |_| \\___/_\\_\\\\_, | |___/\\___|_|  \\_/\\___|_|  \r\n" + //
-                "                      |__/                            \r\n" + //
-                "============================================================\r\n" + //
-                "\n");
+                            "============================================================\r\n" + //
+                            "   _____             _     _____                  _      \r\n" + //
+                            "  |  __ \\           | |   |  __ \\                (_)     \r\n" + //
+                            "  | |__) |___   ___ | |_  | |__) |___ _ __   __ _ _ _ __ \r\n" + //
+                            "  |  _  // _ \\ / _ \\| __| |  _  // _ \\ '_ \\ / _ | | '__|\r\n" + //
+                            "  | | \\ \\ (_) | (_) | |_  | | \\ \\  __/ |_) | (_| | | |   \r\n" + //
+                            "  |_|  \\_\\___/ \\___/ \\__| |_|  \\_\\___| .__/ \\__,_|_|_|   \r\n" + //
+                            "                                     | |                 \r\n" + //
+                            "                                     |_|                 \r\n" + //
+                            "      ___                    ___                      \r\n" + //
+                            "     | _ \\_ _ _____ ___  _  / __| ___ _ ___ _____ _ _ \r\n" + //
+                            "     |  _/ '_/ _ \\ \\ / || | \\__ \\/ -_) '_\\ V / -_) '_|\r\n" + //
+                            "     |_| |_| \\___/_\\_\\\\_, | |___/\\___|_|  \\_/\\___|_|  \r\n" + //
+                            "                      |__/                            \r\n" + //
+                            "============================================================\r\n" + //
+                            "\n");
 
         // Get the application server IP and port
         Scanner scanner = new Scanner(System.in);
@@ -62,7 +67,7 @@ public class ProxyServer {
             adress = args[0];
             proxyPort = Integer.parseInt(args[1]);
             heartbeatPort = Integer.parseInt(args[2]);
-        } 
+        }
 
         System.out.println("\n-=-=- Configuração do servidor de aplicação -=-=-");
         System.out.print("Digite o IP do servidor de aplicação: ");
@@ -82,6 +87,11 @@ public class ProxyServer {
         scanner.close();
 
         try {
+            // Registrar a interface RMI para replicação
+            ProxyReplicaImp replicaService = new ProxyReplicaImp();
+            Registry replicaRegistry = LocateRegistry.createRegistry(rmiReplicaPort);
+            replicaRegistry.rebind("ProxyReplica", replicaService);
+
             // Conectar ao LocationServer via RMI
             Registry registry = LocateRegistry.getRegistry(locationIP, locationRMIPort);
             ProxyHandlerInterface locationService = (ProxyHandlerInterface) registry.lookup("ProxyHandler");
@@ -112,22 +122,70 @@ public class ProxyServer {
     }
 
 
+    @SuppressWarnings("unchecked")
     private static void heartbeatAccess() {
         // Thread deamon com socket próprio para que o LocationServer possa realizar o heartbeat
         Thread heartbeatThread = new Thread(() -> {
-            try (ServerSocket heartbeatSocket = new ServerSocket(proxyPort + 1)) {
+            try (ServerSocket heartbeatSocket = new ServerSocket(heartbeatPort)) {
+                System.out.println("\nHeartbeat server running on port " + heartbeatPort);
                 while (true) {
                     Socket socket = heartbeatSocket.accept();
-                    System.out.println("\n-=- Heartbeat -=-\n");
+                    
+                    // Recebe lista de proxies ativos
+                    ObjectInputStream in = new ObjectInputStream(socket.getInputStream());
+                    List<ProxyEntity> proxyEntities = (List<ProxyEntity>) in.readObject();
+                    updateActiveProxies(proxyEntities);
+
+                    System.out.println("\n-=- Heartbeat -=-");
+                    System.out.println("Number of active proxies: " + activeProxies.size() + "\n");
+
                     socket.close();
                 }
-            } catch (IOException e) {
+            } catch (IOException | ClassNotFoundException | NotBoundException e) {
+                System.out.println("\nError: Could not receive heartbeat from LocationServer:");
                 e.printStackTrace();
             }
         });
 
         heartbeatThread.setDaemon(true);
         heartbeatThread.start();
+    }
+
+    
+    // Método para atualizar a lista de proxies ativos
+    public static void updateActiveProxies(List<ProxyEntity> proxyEntities) throws RemoteException, NotBoundException {
+        // Limpa a lista de proxies ativos
+        activeProxies.clear();
+
+        // Adiciona os proxies ativos à lista
+        for (ProxyEntity proxyEntity : proxyEntities) {
+            Registry registry = LocateRegistry.getRegistry(proxyEntity.getAddress(), proxyEntity.getPort());
+            ProxyReplicaInterface proxy = (ProxyReplicaInterface) registry.lookup("ProxyReplica");
+            activeProxies.add(proxy);
+        }
+    }
+
+
+    // Método para propagar atualizações para outros proxies
+    private static void propagateUpdate(OrdemServico ordem) {
+        for (ProxyReplicaInterface proxy : activeProxies) {
+            try {
+                proxy.updateCache(ordem);
+            } catch (RemoteException e) {
+                e.printStackTrace();
+            }
+        }
+    }
+
+
+    private static void propagateRemove(int codigo) {
+        for (ProxyReplicaInterface proxy : activeProxies) {
+            try {
+                proxy.removeFromCache(codigo);
+            } catch (RemoteException e) {
+                e.printStackTrace();
+            }
+        }
     }
 
 
@@ -137,7 +195,7 @@ public class ProxyServer {
 
         public ProxyHandler(Socket socket) {
             System.out.println("\n-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-");
-            System.out.println("Hello, " + socket.getInetAddress().getHostAddress());
+            System.out.println("Hello, " + socket.getInetAddress().getHostAddress() + ":" + socket.getPort());
             System.out.println("-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-");
             LogDAO.addLog("[CONNECTION] Cliente conectado de " + socket.getInetAddress().getHostAddress());
             this.socket = socket;
@@ -147,7 +205,7 @@ public class ProxyServer {
         public void run() {
             try (ObjectInputStream clientInputStream = new ObjectInputStream(socket.getInputStream());
                  ObjectOutputStream clientOutputStream = new ObjectOutputStream(socket.getOutputStream());) {
-                
+
                 while (conexao) {
                     Message message = (Message) clientInputStream.readObject();
                     String instrucao = message.getInstrucao();
@@ -250,8 +308,9 @@ public class ProxyServer {
             } else {
                 reply = new Message("REPLY");
                 cacheDAO.updateOrdemServico(message.getOrdem());
+                propagateUpdate(message.getOrdem()); // Propaga a atualização para outros proxies
             }
-            
+
             clientOutputStream.writeObject(reply);
             clientOutputStream.flush();
         }
@@ -266,8 +325,9 @@ public class ProxyServer {
             } else {
                 reply = new Message(appReply.getOrdem(), "REPLY");
                 cacheDAO.deleteOrdemServico(message.getCodigo());
+                propagateRemove(message.getCodigo()); // Propaga a remoção para outros proxies
             }
-            
+
             clientOutputStream.writeObject(reply);
             clientOutputStream.flush();
         }
@@ -280,7 +340,7 @@ public class ProxyServer {
             } catch (Exception e) {
                 reply = new Message("NOUFOUND");
             }
-            
+
             clientOutputStream.writeObject(reply);
             clientOutputStream.flush();
         }
@@ -296,7 +356,7 @@ public class ProxyServer {
             }
 
             clientOutputStream.writeObject(reply);
-            clientOutputStream.flush();            
+            clientOutputStream.flush();
         }
 
         private void handleClose() {
