@@ -94,3 +94,30 @@
 2025-03-14 15:20:01: [DB SELECT] Selecionando todas as Ordens de Serviço
 2025-03-14 15:24:23: [MESSAGE] 127.0.0.1 requisitou SELECTALL
 2025-03-14 15:24:23: [DB SELECT] Selecionando todas as Ordens de Serviço
+2025-03-19 01:34:28: [CONNECTION] Conexão estabelecida com 127.0.0.1
+2025-03-19 01:35:49: [CONNECTION] Conexão estabelecida com 127.0.0.1
+2025-03-19 01:36:58: [CONNECTION] Conexão estabelecida com 127.0.0.1
+2025-03-19 01:37:52: [MESSAGE] 127.0.0.1 requisitou SELECTALL
+2025-03-19 01:37:52: [DB SELECT] Selecionando todas as Ordens de Serviço
+2025-03-19 01:38:42: [MESSAGE] 127.0.0.1 requisitou INSERT
+2025-03-19 01:38:43: [DB INSERT] Ordem de Serviço 3, ocupação: 3/101
+2025-03-19 01:38:44: [MESSAGE] 127.0.0.1 requisitou SELECTALL
+2025-03-19 01:38:44: [DB SELECT] Selecionando todas as Ordens de Serviço
+2025-03-19 01:38:46: [MESSAGE] 127.0.0.1 requisitou SELECTALL
+2025-03-19 01:38:46: [DB SELECT] Selecionando todas as Ordens de Serviço
+2025-03-19 01:39:11: [MESSAGE] 127.0.0.1 requisitou UPDATE
+2025-03-19 01:39:11: [HASH UPDATE] Chave 1 atualizada
+2025-03-19 01:39:11: [DB UPDATE] Ordem de Serviço 1 atualizada
+2025-03-19 01:39:26: [MESSAGE] 127.0.0.1 requisitou SELECTALL
+2025-03-19 01:39:27: [DB SELECT] Selecionando todas as Ordens de Serviço
+2025-03-19 01:39:39: [MESSAGE] 127.0.0.1 requisitou SELECTBYUSER
+2025-03-19 01:39:39: [DB SELECT] Selecionando Ordens de Serviço do Usuário Henrique
+2025-03-19 01:39:42: [MESSAGE] 127.0.0.1 requisitou SELECTBYUSER
+2025-03-19 01:39:42: [DB SELECT] Selecionando Ordens de Serviço do Usuário Paulo
+2025-03-19 01:39:45: [MESSAGE] 127.0.0.1 requisitou SELECTALL
+2025-03-19 01:39:45: [DB SELECT] Selecionando todas as Ordens de Serviço
+2025-03-19 02:55:55: [CONNECTION] Conexão estabelecida com 127.0.0.1
+2025-03-19 09:25:50: [CONNECTION] Conexão estabelecida com 127.0.0.1
+2025-03-19 09:27:06: [CONNECTION] Conexão estabelecida com 127.0.0.1
+2025-03-19 15:21:16: [CONNECTION] Conexão estabelecida com 172.28.179.72
+2025-03-19 15:21:29: [CONNECTION] Conexão encerrada com 172.28.179.72

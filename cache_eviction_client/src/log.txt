@@ -950,3 +950,13 @@
 2025-03-14 15:25:52: [LOCATION SERVER] Proxy running on 127.0.0.1:5001
 2025-03-14 15:25:54: [MESSAGE] Usuário 333 comprimido com instrução LOGIN
 2025-03-14 15:25:55: [MESSAGE] Ordem de Serviço comprimida com instrução CLOSE
+2025-03-19 01:37:44: [LOCATION SERVER] Proxy running on localhost:5001
+2025-03-19 01:37:50: [MESSAGE] Usuário 333 comprimido com instrução LOGIN
+2025-03-19 01:37:52: [MESSAGE] Ordem de Serviço comprimida com instrução SELECTALL
+2025-03-19 01:38:46: [MESSAGE] Ordem de Serviço comprimida com instrução SELECTALL
+2025-03-19 01:39:15: [MESSAGE] Ordem de Serviço 1 comprimida com instrução SELECT
+2025-03-19 01:39:23: [MESSAGE] Ordem de Serviço 1 comprimida com instrução SELECT
+2025-03-19 01:39:26: [MESSAGE] Ordem de Serviço comprimida com instrução SELECTALL
+2025-03-19 01:39:42: [MESSAGE] Usuário 333 comprimido com instrução SELECTBYUSER
+2025-03-19 01:39:45: [MESSAGE] Ordem de Serviço comprimida com instrução SELECTALL
+2025-03-19 01:40:20: [MESSAGE] Ordem de Serviço comprimida com instrução CLOSE

@@ -11,7 +11,7 @@ import shared.Message;
 import shared.entities.OrdemServico;
 
 public class ApplicationServer {
-    private static final int PORT = 5002;
+    private static int port = 5003;
 
     protected static OrdemServicoDAO ordemServicoDAO = new OrdemServicoDAO();
     protected static LogDAO logDAO = new LogDAO();
@@ -34,8 +34,12 @@ public class ApplicationServer {
                             "              |_|  |_|                              \r\n" + //
                             "===========================================================\r\n");
 
-        try (ServerSocket serverSocket = new ServerSocket(PORT)) {
-            System.out.println("\nServidor de Aplicação rodando na porta " + PORT);
+        if (args.length > 0) {
+            port = Integer.parseInt(args[0]);
+        }
+
+        try (ServerSocket serverSocket = new ServerSocket(port)) {
+            System.out.println("\nServidor de Aplicação rodando na porta " + port);
 
             while (true) {
                 Socket socket = serverSocket.accept(); // Aguarda conexão do proxy server

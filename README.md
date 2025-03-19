@@ -20,4 +20,4 @@ To run the client, you need to run the following class:
 >Make sure all the components are running in the same network, as the system uses sockets and RMI to communicate between the servers and the client.
 
 ## Documentation
-<iframe style="border: 1px solid rgba(0, 0, 0, 0.1);" width="800" height="450" src="https://embed.figma.com/board/l9XCHE4ECMlqXk8n1a0jJV/Cache-Eviction---Whiteboard?node-id=0-1&embed-host=share" allowfullscreen></iframe>
+- [System's architecture diagram](https://www.figma.com/board/l9XCHE4ECMlqXk8n1a0jJV/Cache-Eviction---Whiteboard?node-id=110-262&t=jg87HPr0hWubt6l3-1)
