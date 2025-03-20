@@ -2,7 +2,8 @@ import java.io.ObjectInputStream;
 import java.io.ObjectOutputStream;
 
 import shared.Message;
-import modelo.entities.*;
+import shared.entities.OrdemServico;
+import shared.entities.Usuario;
 
 public class Controller {
     private static ObjectOutputStream out;
@@ -111,8 +112,8 @@ public class Controller {
         out.writeObject(request);
         out.flush();
 
-        Message response = (Message) in.readObject();
-        return response.getOrdensServicos();
+        OrdemServico[] response = (OrdemServico[]) in.readObject();
+        return response;
     }
 
 
@@ -121,7 +122,7 @@ public class Controller {
         out.writeObject(request);
         out.flush();
         
-        Message response = (Message) in.readObject();
-        return response.getOrdensServicos();
+        OrdemServico[] response = (OrdemServico[]) in.readObject();
+        return response;
     }
 }

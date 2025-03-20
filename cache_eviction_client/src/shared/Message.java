@@ -1,8 +1,8 @@
 package shared;
 
 import modelo.DAO.LogDAO;
-import modelo.entities.OrdemServico;
-import modelo.entities.Usuario;
+import shared.entities.OrdemServico;
+import shared.entities.Usuario;
 import shared.Huffman.ArvoreHuffman;
 
 import java.util.Date;

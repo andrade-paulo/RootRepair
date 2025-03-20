@@ -3,8 +3,8 @@ import java.util.List;
 
 import modelo.DAO.KMP;
 import modelo.DAO.LogDAO;
-import modelo.entities.OrdemServico;
-import modelo.entities.Usuario;
+import shared.entities.OrdemServico;
+import shared.entities.Usuario;
 
 
 public class View {
