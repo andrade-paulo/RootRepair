@@ -16,7 +16,8 @@ public class OrdemServicoDAO {
     private Hash<OrdemServico> ordensServico;
     private int ocupacao;
 
-    private final String ARQUIVO = "src/ApplicationServer/database/database.dat";
+    //private final String ARQUIVO = "src/ApplicationServer/database/database.dat";
+    private final String ARQUIVO = "ApplicationServer/database/database.dat";
     private final int TAMANHO_INICIAL = 100; 
     
     public OrdemServicoDAO() {

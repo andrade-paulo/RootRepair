@@ -999,3 +999,963 @@
 2025-03-20 01:15:58: [MESSAGE] Usuário 333 comprimido com instrução LOGIN
 2025-03-20 01:15:59: [MESSAGE] Ordem de Serviço comprimida com instrução SELECTALL
 2025-03-20 01:16:01: [MESSAGE] Ordem de Serviço comprimida com instrução CLOSE
+2025-03-20 07:26:30: [LOCATION SERVER] Proxy running on localhost:5010
+2025-03-20 07:26:33: [MESSAGE] Usuário 333 comprimido com instrução LOGIN
+2025-03-20 07:26:35: [MESSAGE] Ordem de Serviço comprimida com instrução SELECTALL
+2025-03-20 07:26:39: [MESSAGE] Ordem de Serviço 1 comprimida com instrução DELETE
+2025-03-20 07:26:40: [MESSAGE] Ordem de Serviço 1 comprimida com instrução DELETE
+2025-03-20 07:27:40: [LOCATION SERVER] Proxy running on localhost:5010
+2025-03-20 07:27:43: [MESSAGE] Usuário 333 comprimido com instrução LOGIN
+2025-03-20 07:27:44: [MESSAGE] Ordem de Serviço comprimida com instrução SELECTALL
+2025-03-20 07:27:48: [MESSAGE] Ordem de Serviço 2 comprimida com instrução DELETE
+2025-03-20 07:27:49: [MESSAGE] Ordem de Serviço 1 comprimida com instrução DELETE
+2025-03-20 07:28:41: [LOCATION SERVER] Proxy running on localhost:5010
+2025-03-20 07:28:44: [MESSAGE] Usuário 333 comprimido com instrução LOGIN
+2025-03-20 07:28:45: [MESSAGE] Ordem de Serviço comprimida com instrução SELECTALL
+2025-03-20 07:28:48: [MESSAGE] Ordem de Serviço 1 comprimida com instrução DELETE
+2025-03-20 07:28:50: [MESSAGE] Ordem de Serviço 3 comprimida com instrução DELETE
+2025-03-20 07:28:52: [MESSAGE] Ordem de Serviço comprimida com instrução SELECTALL
+2025-03-20 07:28:53: [MESSAGE] Usuário 333 comprimido com instrução SELECTBYUSER
+2025-03-20 07:28:54: [MESSAGE] Usuário 333 comprimido com instrução SELECTBYUSER
+2025-03-20 07:28:56: [MESSAGE] Ordem de Serviço comprimida com instrução SELECTALL
+2025-03-20 07:29:47: [MESSAGE] Ordem de Serviço comprimida com instrução CLOSE
+2025-03-20 07:29:53: [LOCATION SERVER] Proxy running on localhost:5010
+2025-03-20 07:29:56: [MESSAGE] Usuário 333 comprimido com instrução LOGIN
+2025-03-20 07:29:57: [MESSAGE] Ordem de Serviço comprimida com instrução SELECTALL
+2025-03-20 07:29:58: [MESSAGE] Usuário 333 comprimido com instrução SELECTBYUSER
+2025-03-20 07:30:15: [MESSAGE] Ordem de Serviço comprimida com instrução SELECTALL
+2025-03-20 07:33:57: [LOCATION SERVER] Proxy running on localhost:5010
+2025-03-20 07:34:00: [MESSAGE] Usuário 333 comprimido com instrução LOGIN
+2025-03-20 07:34:08: [MESSAGE] Ordem de Serviço 1 comprimida com instrução INSERT
+2025-03-20 07:34:09: [MESSAGE] Ordem de Serviço comprimida com instrução SELECTALL
+2025-03-20 07:34:13: [MESSAGE] Ordem de Serviço 1 comprimida com instrução SELECT
+2025-03-20 07:34:16: [MESSAGE] Ordem de Serviço 1 comprimida com instrução UPDATE
+2025-03-20 07:34:16: [MESSAGE] Ordem de Serviço comprimida com instrução SELECTALL
+2025-03-20 07:34:18: [MESSAGE] Ordem de Serviço 1 comprimida com instrução SELECT
+2025-03-20 07:34:19: [MESSAGE] Ordem de Serviço 2 comprimida com instrução SELECT
+2025-03-20 07:34:21: [MESSAGE] Ordem de Serviço 3 comprimida com instrução DELETE
+2025-03-20 07:34:22: [MESSAGE] Ordem de Serviço 4 comprimida com instrução SELECT
+2025-03-20 07:34:24: [MESSAGE] Usuário 333 comprimido com instrução SELECTBYUSER
+2025-03-20 07:34:36: [MESSAGE] Ordem de Serviço comprimida com instrução SELECTALL
+2025-03-20 07:38:25: [LOCATION SERVER] Proxy running on localhost:5010
+2025-03-20 07:38:28: [MESSAGE] Usuário 333 comprimido com instrução LOGIN
+2025-03-20 07:38:36: [MESSAGE] Ordem de Serviço comprimida com instrução SELECTALL
+2025-03-20 07:38:42: [MESSAGE] Ordem de Serviço comprimida com instrução SELECTALL
+2025-03-20 07:38:42: [LOCATION SERVER] Proxy running on localhost:5010
+2025-03-20 07:38:42: [LOCATION SERVER] Proxy running on localhost:5010
+2025-03-20 07:38:42: [LOCATION SERVER] Proxy running on localhost:5010
+2025-03-20 07:38:42: [LOCATION SERVER] Proxy running on localhost:5010
+2025-03-20 07:38:42: [LOCATION SERVER] Proxy running on localhost:5010
+2025-03-20 07:38:42: [LOCATION SERVER] Proxy running on localhost:5010
+2025-03-20 07:38:42: [LOCATION SERVER] Proxy running on localhost:5010
+2025-03-20 07:38:42: [LOCATION SERVER] Proxy running on localhost:5010
+2025-03-20 07:38:42: [LOCATION SERVER] Proxy running on localhost:5010
+2025-03-20 07:38:42: [LOCATION SERVER] Proxy running on localhost:5010
+2025-03-20 07:38:42: [LOCATION SERVER] Proxy running on localhost:5010
+2025-03-20 07:38:42: [LOCATION SERVER] Proxy running on localhost:5010
+2025-03-20 07:38:42: [LOCATION SERVER] Proxy running on localhost:5010
+2025-03-20 07:38:42: [LOCATION SERVER] Proxy running on localhost:5010
+2025-03-20 07:38:42: [LOCATION SERVER] Proxy running on localhost:5010
+2025-03-20 07:38:42: [LOCATION SERVER] Proxy running on localhost:5010
+2025-03-20 07:38:42: [LOCATION SERVER] Proxy running on localhost:5010
+2025-03-20 07:38:42: [LOCATION SERVER] Proxy running on localhost:5010
+2025-03-20 07:38:42: [LOCATION SERVER] Proxy running on localhost:5010
+2025-03-20 07:38:42: [LOCATION SERVER] Proxy running on localhost:5010
+2025-03-20 07:38:42: [LOCATION SERVER] Proxy running on localhost:5010
+2025-03-20 07:38:42: [LOCATION SERVER] Proxy running on localhost:5010
+2025-03-20 07:38:42: [LOCATION SERVER] Proxy running on localhost:5010
+2025-03-20 07:38:43: [LOCATION SERVER] Proxy running on localhost:5010
+2025-03-20 07:38:43: [LOCATION SERVER] Proxy running on localhost:5010
+2025-03-20 07:38:43: [LOCATION SERVER] Proxy running on localhost:5010
+2025-03-20 07:38:43: [LOCATION SERVER] Proxy running on localhost:5010
+2025-03-20 07:38:43: [LOCATION SERVER] Proxy running on localhost:5010
+2025-03-20 07:38:43: [LOCATION SERVER] Proxy running on localhost:5010
+2025-03-20 07:38:43: [LOCATION SERVER] Proxy running on localhost:5010
+2025-03-20 07:38:43: [LOCATION SERVER] Proxy running on localhost:5010
+2025-03-20 07:38:43: [LOCATION SERVER] Proxy running on localhost:5010
+2025-03-20 07:38:43: [LOCATION SERVER] Proxy running on localhost:5010
+2025-03-20 07:38:43: [LOCATION SERVER] Proxy running on localhost:5010
+2025-03-20 07:38:43: [LOCATION SERVER] Proxy running on localhost:5010
+2025-03-20 07:38:43: [LOCATION SERVER] Proxy running on localhost:5010
+2025-03-20 07:38:43: [LOCATION SERVER] Proxy running on localhost:5010
+2025-03-20 07:38:43: [LOCATION SERVER] Proxy running on localhost:5010
+2025-03-20 07:38:43: [LOCATION SERVER] Proxy running on localhost:5010
+2025-03-20 07:38:43: [LOCATION SERVER] Proxy running on localhost:5010
+2025-03-20 07:38:43: [LOCATION SERVER] Proxy running on localhost:5010
+2025-03-20 07:38:43: [LOCATION SERVER] Proxy running on localhost:5010
+2025-03-20 07:38:43: [LOCATION SERVER] Proxy running on localhost:5010
+2025-03-20 07:38:43: [LOCATION SERVER] Proxy running on localhost:5010
+2025-03-20 07:38:43: [LOCATION SERVER] Proxy running on localhost:5010
+2025-03-20 07:38:43: [LOCATION SERVER] Proxy running on localhost:5010
+2025-03-20 07:38:43: [LOCATION SERVER] Proxy running on localhost:5010
+2025-03-20 07:38:43: [LOCATION SERVER] Proxy running on localhost:5010
+2025-03-20 07:38:43: [LOCATION SERVER] Proxy running on localhost:5010
+2025-03-20 07:38:43: [LOCATION SERVER] Proxy running on localhost:5010
+2025-03-20 07:38:44: [LOCATION SERVER] Proxy running on localhost:5010
+2025-03-20 07:38:44: [LOCATION SERVER] Proxy running on localhost:5010
+2025-03-20 07:38:44: [LOCATION SERVER] Proxy running on localhost:5010
+2025-03-20 07:38:44: [LOCATION SERVER] Proxy running on localhost:5010
+2025-03-20 07:38:44: [LOCATION SERVER] Proxy running on localhost:5010
+2025-03-20 07:38:44: [LOCATION SERVER] Proxy running on localhost:5010
+2025-03-20 07:38:44: [LOCATION SERVER] Proxy running on localhost:5010
+2025-03-20 07:38:44: [LOCATION SERVER] Proxy running on localhost:5010
+2025-03-20 07:38:44: [LOCATION SERVER] Proxy running on localhost:5010
+2025-03-20 07:38:44: [LOCATION SERVER] Proxy running on localhost:5010
+2025-03-20 07:38:44: [LOCATION SERVER] Proxy running on localhost:5010
+2025-03-20 07:38:44: [LOCATION SERVER] Proxy running on localhost:5010
+2025-03-20 07:38:44: [LOCATION SERVER] Proxy running on localhost:5010
+2025-03-20 07:38:44: [LOCATION SERVER] Proxy running on localhost:5010
+2025-03-20 07:38:44: [LOCATION SERVER] Proxy running on localhost:5010
+2025-03-20 07:38:44: [LOCATION SERVER] Proxy running on localhost:5010
+2025-03-20 07:38:44: [LOCATION SERVER] Proxy running on localhost:5010
+2025-03-20 07:38:44: [LOCATION SERVER] Proxy running on localhost:5010
+2025-03-20 07:38:44: [LOCATION SERVER] Proxy running on localhost:5010
+2025-03-20 07:38:44: [LOCATION SERVER] Proxy running on localhost:5010
+2025-03-20 07:38:44: [LOCATION SERVER] Proxy running on localhost:5010
+2025-03-20 07:38:44: [LOCATION SERVER] Proxy running on localhost:5010
+2025-03-20 07:38:44: [LOCATION SERVER] Proxy running on localhost:5010
+2025-03-20 07:38:44: [LOCATION SERVER] Proxy running on localhost:5010
+2025-03-20 07:38:44: [LOCATION SERVER] Proxy running on localhost:5010
+2025-03-20 07:38:44: [LOCATION SERVER] Proxy running on localhost:5010
+2025-03-20 07:38:44: [LOCATION SERVER] Proxy running on localhost:5010
+2025-03-20 07:38:44: [LOCATION SERVER] Proxy running on localhost:5010
+2025-03-20 07:38:44: [LOCATION SERVER] Proxy running on localhost:5010
+2025-03-20 07:38:45: [LOCATION SERVER] Proxy running on localhost:5010
+2025-03-20 07:38:45: [LOCATION SERVER] Proxy running on localhost:5010
+2025-03-20 07:38:45: [LOCATION SERVER] Proxy running on localhost:5010
+2025-03-20 07:38:45: [LOCATION SERVER] Proxy running on localhost:5010
+2025-03-20 07:38:45: [LOCATION SERVER] Proxy running on localhost:5010
+2025-03-20 07:38:45: [LOCATION SERVER] Proxy running on localhost:5010
+2025-03-20 07:38:45: [LOCATION SERVER] Proxy running on localhost:5010
+2025-03-20 07:38:45: [LOCATION SERVER] Proxy running on localhost:5010
+2025-03-20 07:38:45: [LOCATION SERVER] Proxy running on localhost:5010
+2025-03-20 07:38:45: [LOCATION SERVER] Proxy running on localhost:5010
+2025-03-20 07:38:45: [LOCATION SERVER] Proxy running on localhost:5010
+2025-03-20 07:38:45: [LOCATION SERVER] Proxy running on localhost:5010
+2025-03-20 07:38:45: [LOCATION SERVER] Proxy running on localhost:5010
+2025-03-20 07:38:45: [LOCATION SERVER] Proxy running on localhost:5010
+2025-03-20 07:38:45: [LOCATION SERVER] Proxy running on localhost:5010
+2025-03-20 07:38:45: [LOCATION SERVER] Proxy running on localhost:5010
+2025-03-20 07:38:45: [LOCATION SERVER] Proxy running on localhost:5010
+2025-03-20 07:38:45: [LOCATION SERVER] Proxy running on localhost:5010
+2025-03-20 07:38:45: [LOCATION SERVER] Proxy running on localhost:5010
+2025-03-20 07:38:45: [LOCATION SERVER] Proxy running on localhost:5010
+2025-03-20 07:38:45: [LOCATION SERVER] Proxy running on localhost:5010
+2025-03-20 07:38:45: [LOCATION SERVER] Proxy running on localhost:5010
+2025-03-20 07:38:46: [LOCATION SERVER] Proxy running on localhost:5010
+2025-03-20 07:38:46: [LOCATION SERVER] Proxy running on localhost:5010
+2025-03-20 07:38:46: [LOCATION SERVER] Proxy running on localhost:5010
+2025-03-20 07:38:46: [LOCATION SERVER] Proxy running on localhost:5010
+2025-03-20 07:38:46: [LOCATION SERVER] Proxy running on localhost:5010
+2025-03-20 07:38:46: [LOCATION SERVER] Proxy running on localhost:5010
+2025-03-20 07:38:46: [LOCATION SERVER] Proxy running on localhost:5010
+2025-03-20 07:38:46: [LOCATION SERVER] Proxy running on localhost:5010
+2025-03-20 07:38:46: [LOCATION SERVER] Proxy running on localhost:5010
+2025-03-20 07:38:46: [LOCATION SERVER] Proxy running on localhost:5010
+2025-03-20 07:38:46: [LOCATION SERVER] Proxy running on localhost:5010
+2025-03-20 07:38:46: [LOCATION SERVER] Proxy running on localhost:5010
+2025-03-20 07:38:46: [LOCATION SERVER] Proxy running on localhost:5010
+2025-03-20 07:38:46: [LOCATION SERVER] Proxy running on localhost:5010
+2025-03-20 07:38:46: [LOCATION SERVER] Proxy running on localhost:5010
+2025-03-20 07:38:46: [LOCATION SERVER] Proxy running on localhost:5010
+2025-03-20 07:38:46: [LOCATION SERVER] Proxy running on localhost:5010
+2025-03-20 07:38:46: [LOCATION SERVER] Proxy running on localhost:5010
+2025-03-20 07:38:46: [LOCATION SERVER] Proxy running on localhost:5010
+2025-03-20 07:38:46: [LOCATION SERVER] Proxy running on localhost:5010
+2025-03-20 07:38:46: [LOCATION SERVER] Proxy running on localhost:5010
+2025-03-20 07:38:46: [LOCATION SERVER] Proxy running on localhost:5010
+2025-03-20 07:38:46: [LOCATION SERVER] Proxy running on localhost:5010
+2025-03-20 07:38:46: [LOCATION SERVER] Proxy running on localhost:5010
+2025-03-20 07:38:46: [LOCATION SERVER] Proxy running on localhost:5010
+2025-03-20 07:38:46: [LOCATION SERVER] Proxy running on localhost:5010
+2025-03-20 07:38:46: [LOCATION SERVER] Proxy running on localhost:5010
+2025-03-20 07:38:46: [LOCATION SERVER] Proxy running on localhost:5010
+2025-03-20 07:38:47: [LOCATION SERVER] Proxy running on localhost:5010
+2025-03-20 07:38:47: [LOCATION SERVER] Proxy running on localhost:5010
+2025-03-20 07:38:47: [LOCATION SERVER] Proxy running on localhost:5010
+2025-03-20 07:38:47: [LOCATION SERVER] Proxy running on localhost:5010
+2025-03-20 07:38:47: [LOCATION SERVER] Proxy running on localhost:5010
+2025-03-20 07:38:47: [LOCATION SERVER] Proxy running on localhost:5010
+2025-03-20 07:38:47: [LOCATION SERVER] Proxy running on localhost:5010
+2025-03-20 07:38:47: [LOCATION SERVER] Proxy running on localhost:5010
+2025-03-20 07:38:47: [LOCATION SERVER] Proxy running on localhost:5010
+2025-03-20 07:38:47: [LOCATION SERVER] Proxy running on localhost:5010
+2025-03-20 07:38:47: [LOCATION SERVER] Proxy running on localhost:5010
+2025-03-20 07:38:47: [LOCATION SERVER] Proxy running on localhost:5010
+2025-03-20 07:38:47: [LOCATION SERVER] Proxy running on localhost:5010
+2025-03-20 07:38:47: [LOCATION SERVER] Proxy running on localhost:5010
+2025-03-20 07:38:47: [LOCATION SERVER] Proxy running on localhost:5010
+2025-03-20 07:38:47: [LOCATION SERVER] Proxy running on localhost:5010
+2025-03-20 07:38:47: [LOCATION SERVER] Proxy running on localhost:5010
+2025-03-20 07:38:47: [LOCATION SERVER] Proxy running on localhost:5010
+2025-03-20 07:38:47: [LOCATION SERVER] Proxy running on localhost:5010
+2025-03-20 07:38:47: [LOCATION SERVER] Proxy running on localhost:5010
+2025-03-20 07:38:47: [LOCATION SERVER] Proxy running on localhost:5010
+2025-03-20 07:38:47: [LOCATION SERVER] Proxy running on localhost:5010
+2025-03-20 07:38:47: [LOCATION SERVER] Proxy running on localhost:5010
+2025-03-20 07:38:47: [LOCATION SERVER] Proxy running on localhost:5010
+2025-03-20 07:38:47: [LOCATION SERVER] Proxy running on localhost:5010
+2025-03-20 07:38:47: [LOCATION SERVER] Proxy running on localhost:5010
+2025-03-20 07:38:47: [LOCATION SERVER] Proxy running on localhost:5010
+2025-03-20 07:38:47: [LOCATION SERVER] Proxy running on localhost:5010
+2025-03-20 07:38:47: [LOCATION SERVER] Proxy running on localhost:5010
+2025-03-20 07:38:47: [LOCATION SERVER] Proxy running on localhost:5010
+2025-03-20 07:38:48: [LOCATION SERVER] Proxy running on localhost:5010
+2025-03-20 07:38:48: [LOCATION SERVER] Proxy running on localhost:5010
+2025-03-20 07:38:48: [LOCATION SERVER] Proxy running on localhost:5010
+2025-03-20 07:38:48: [LOCATION SERVER] Proxy running on localhost:5010
+2025-03-20 07:38:48: [LOCATION SERVER] Proxy running on localhost:5010
+2025-03-20 07:38:48: [LOCATION SERVER] Proxy running on localhost:5010
+2025-03-20 07:38:48: [LOCATION SERVER] Proxy running on localhost:5010
+2025-03-20 07:38:48: [LOCATION SERVER] Proxy running on localhost:5010
+2025-03-20 07:38:48: [LOCATION SERVER] Proxy running on localhost:5010
+2025-03-20 07:38:48: [LOCATION SERVER] Proxy running on localhost:5010
+2025-03-20 07:38:48: [LOCATION SERVER] Proxy running on localhost:5010
+2025-03-20 07:38:48: [LOCATION SERVER] Proxy running on localhost:5010
+2025-03-20 07:38:48: [LOCATION SERVER] Proxy running on localhost:5010
+2025-03-20 07:38:48: [LOCATION SERVER] Proxy running on localhost:5010
+2025-03-20 07:38:48: [LOCATION SERVER] Proxy running on localhost:5010
+2025-03-20 07:38:48: [LOCATION SERVER] Proxy running on localhost:5010
+2025-03-20 07:38:48: [LOCATION SERVER] Proxy running on localhost:5010
+2025-03-20 07:38:48: [LOCATION SERVER] Proxy running on localhost:5010
+2025-03-20 07:38:48: [LOCATION SERVER] Proxy running on localhost:5010
+2025-03-20 07:38:48: [LOCATION SERVER] Proxy running on localhost:5010
+2025-03-20 07:38:48: [LOCATION SERVER] Proxy running on localhost:5010
+2025-03-20 07:38:48: [LOCATION SERVER] Proxy running on localhost:5010
+2025-03-20 07:38:48: [LOCATION SERVER] Proxy running on localhost:5010
+2025-03-20 07:38:48: [LOCATION SERVER] Proxy running on localhost:5010
+2025-03-20 07:38:49: [LOCATION SERVER] Proxy running on localhost:5010
+2025-03-20 07:38:49: [LOCATION SERVER] Proxy running on localhost:5010
+2025-03-20 07:38:49: [LOCATION SERVER] Proxy running on localhost:5010
+2025-03-20 07:38:49: [LOCATION SERVER] Proxy running on localhost:5010
+2025-03-20 07:38:49: [LOCATION SERVER] Proxy running on localhost:5010
+2025-03-20 07:38:49: [LOCATION SERVER] Proxy running on localhost:5010
+2025-03-20 07:38:49: [LOCATION SERVER] Proxy running on localhost:5010
+2025-03-20 07:42:06: [LOCATION SERVER] Proxy running on localhost:5010
+2025-03-20 07:42:10: [MESSAGE] Usuário 333 comprimido com instrução LOGIN
+2025-03-20 07:42:11: [MESSAGE] Ordem de Serviço comprimida com instrução SELECTALL
+2025-03-20 07:42:36: [MESSAGE] Ordem de Serviço comprimida com instrução SELECTALL
+2025-03-20 07:43:50: [LOCATION SERVER] Proxy running on localhost:5010
+2025-03-20 07:43:53: [MESSAGE] Usuário 333 comprimido com instrução LOGIN
+2025-03-20 07:43:55: [MESSAGE] Ordem de Serviço comprimida com instrução SELECTALL
+2025-03-20 07:44:06: [MESSAGE] Ordem de Serviço comprimida com instrução SELECTALL
+2025-03-20 07:44:06: [LOCATION SERVER] Proxy running on :-1
+2025-03-20 07:45:52: [LOCATION SERVER] Proxy running on localhost:5010
+2025-03-20 07:45:55: [MESSAGE] Usuário 333 comprimido com instrução LOGIN
+2025-03-20 07:45:58: [MESSAGE] Ordem de Serviço comprimida com instrução SELECTALL
+2025-03-20 07:45:58: [LOCATION SERVER] Proxy running on localhost:5010
+2025-03-20 07:45:58: [LOCATION SERVER] Proxy running on localhost:5010
+2025-03-20 07:45:58: [LOCATION SERVER] Proxy running on localhost:5010
+2025-03-20 07:45:59: [LOCATION SERVER] Proxy running on localhost:5010
+2025-03-20 07:45:59: [LOCATION SERVER] Proxy running on localhost:5010
+2025-03-20 07:45:59: [LOCATION SERVER] Proxy running on localhost:5010
+2025-03-20 07:45:59: [LOCATION SERVER] Proxy running on localhost:5010
+2025-03-20 07:45:59: [LOCATION SERVER] Proxy running on localhost:5010
+2025-03-20 07:45:59: [LOCATION SERVER] Proxy running on localhost:5010
+2025-03-20 07:45:59: [LOCATION SERVER] Proxy running on localhost:5010
+2025-03-20 07:45:59: [LOCATION SERVER] Proxy running on localhost:5010
+2025-03-20 07:45:59: [LOCATION SERVER] Proxy running on localhost:5010
+2025-03-20 07:45:59: [LOCATION SERVER] Proxy running on localhost:5010
+2025-03-20 07:45:59: [LOCATION SERVER] Proxy running on localhost:5010
+2025-03-20 07:45:59: [LOCATION SERVER] Proxy running on localhost:5010
+2025-03-20 07:45:59: [LOCATION SERVER] Proxy running on localhost:5010
+2025-03-20 07:45:59: [LOCATION SERVER] Proxy running on localhost:5010
+2025-03-20 07:45:59: [LOCATION SERVER] Proxy running on localhost:5010
+2025-03-20 07:45:59: [LOCATION SERVER] Proxy running on localhost:5010
+2025-03-20 07:45:59: [LOCATION SERVER] Proxy running on localhost:5010
+2025-03-20 07:45:59: [LOCATION SERVER] Proxy running on localhost:5010
+2025-03-20 07:45:59: [LOCATION SERVER] Proxy running on localhost:5010
+2025-03-20 07:45:59: [LOCATION SERVER] Proxy running on localhost:5010
+2025-03-20 07:45:59: [LOCATION SERVER] Proxy running on localhost:5010
+2025-03-20 07:45:59: [LOCATION SERVER] Proxy running on localhost:5010
+2025-03-20 07:45:59: [LOCATION SERVER] Proxy running on localhost:5010
+2025-03-20 07:46:00: [LOCATION SERVER] Proxy running on localhost:5010
+2025-03-20 07:46:00: [LOCATION SERVER] Proxy running on localhost:5010
+2025-03-20 07:46:00: [LOCATION SERVER] Proxy running on localhost:5010
+2025-03-20 07:46:00: [LOCATION SERVER] Proxy running on localhost:5010
+2025-03-20 07:46:00: [LOCATION SERVER] Proxy running on localhost:5010
+2025-03-20 07:46:00: [LOCATION SERVER] Proxy running on localhost:5010
+2025-03-20 07:46:00: [LOCATION SERVER] Proxy running on localhost:5010
+2025-03-20 07:46:00: [LOCATION SERVER] Proxy running on localhost:5010
+2025-03-20 07:46:00: [LOCATION SERVER] Proxy running on localhost:5010
+2025-03-20 07:46:00: [LOCATION SERVER] Proxy running on localhost:5010
+2025-03-20 07:46:00: [LOCATION SERVER] Proxy running on localhost:5010
+2025-03-20 07:46:00: [LOCATION SERVER] Proxy running on localhost:5010
+2025-03-20 07:46:00: [LOCATION SERVER] Proxy running on localhost:5010
+2025-03-20 07:46:00: [LOCATION SERVER] Proxy running on localhost:5010
+2025-03-20 07:46:00: [LOCATION SERVER] Proxy running on localhost:5010
+2025-03-20 07:46:00: [LOCATION SERVER] Proxy running on localhost:5010
+2025-03-20 07:46:00: [LOCATION SERVER] Proxy running on localhost:5010
+2025-03-20 07:46:00: [LOCATION SERVER] Proxy running on localhost:5010
+2025-03-20 07:46:00: [LOCATION SERVER] Proxy running on localhost:5010
+2025-03-20 07:46:00: [LOCATION SERVER] Proxy running on localhost:5010
+2025-03-20 07:46:00: [LOCATION SERVER] Proxy running on localhost:5010
+2025-03-20 07:46:00: [LOCATION SERVER] Proxy running on localhost:5010
+2025-03-20 07:46:00: [LOCATION SERVER] Proxy running on localhost:5010
+2025-03-20 07:46:00: [LOCATION SERVER] Proxy running on localhost:5010
+2025-03-20 07:46:00: [LOCATION SERVER] Proxy running on localhost:5010
+2025-03-20 07:46:00: [LOCATION SERVER] Proxy running on localhost:5010
+2025-03-20 07:46:00: [LOCATION SERVER] Proxy running on localhost:5010
+2025-03-20 07:46:00: [LOCATION SERVER] Proxy running on localhost:5010
+2025-03-20 07:46:01: [LOCATION SERVER] Proxy running on localhost:5010
+2025-03-20 07:46:01: [LOCATION SERVER] Proxy running on localhost:5010
+2025-03-20 07:46:01: [LOCATION SERVER] Proxy running on localhost:5010
+2025-03-20 07:46:01: [LOCATION SERVER] Proxy running on localhost:5010
+2025-03-20 07:46:01: [LOCATION SERVER] Proxy running on localhost:5010
+2025-03-20 07:46:01: [LOCATION SERVER] Proxy running on localhost:5010
+2025-03-20 07:46:01: [LOCATION SERVER] Proxy running on localhost:5010
+2025-03-20 07:46:01: [LOCATION SERVER] Proxy running on localhost:5010
+2025-03-20 07:46:01: [LOCATION SERVER] Proxy running on localhost:5010
+2025-03-20 07:46:01: [LOCATION SERVER] Proxy running on localhost:5010
+2025-03-20 07:46:01: [LOCATION SERVER] Proxy running on localhost:5010
+2025-03-20 07:46:01: [LOCATION SERVER] Proxy running on localhost:5010
+2025-03-20 07:46:01: [LOCATION SERVER] Proxy running on localhost:5010
+2025-03-20 07:46:01: [LOCATION SERVER] Proxy running on localhost:5010
+2025-03-20 07:46:01: [LOCATION SERVER] Proxy running on localhost:5010
+2025-03-20 07:46:01: [LOCATION SERVER] Proxy running on localhost:5010
+2025-03-20 07:46:01: [LOCATION SERVER] Proxy running on localhost:5010
+2025-03-20 07:46:01: [LOCATION SERVER] Proxy running on localhost:5010
+2025-03-20 07:46:01: [LOCATION SERVER] Proxy running on localhost:5010
+2025-03-20 07:46:01: [LOCATION SERVER] Proxy running on localhost:5010
+2025-03-20 07:46:01: [LOCATION SERVER] Proxy running on localhost:5010
+2025-03-20 07:46:01: [LOCATION SERVER] Proxy running on localhost:5010
+2025-03-20 07:46:01: [LOCATION SERVER] Proxy running on localhost:5010
+2025-03-20 07:46:01: [LOCATION SERVER] Proxy running on localhost:5010
+2025-03-20 07:46:01: [LOCATION SERVER] Proxy running on localhost:5010
+2025-03-20 07:46:01: [LOCATION SERVER] Proxy running on localhost:5010
+2025-03-20 07:46:01: [LOCATION SERVER] Proxy running on localhost:5010
+2025-03-20 07:46:01: [LOCATION SERVER] Proxy running on localhost:5010
+2025-03-20 07:46:02: [LOCATION SERVER] Proxy running on localhost:5010
+2025-03-20 07:46:02: [LOCATION SERVER] Proxy running on localhost:5010
+2025-03-20 07:46:02: [LOCATION SERVER] Proxy running on localhost:5010
+2025-03-20 07:46:02: [LOCATION SERVER] Proxy running on localhost:5010
+2025-03-20 07:46:02: [LOCATION SERVER] Proxy running on localhost:5010
+2025-03-20 07:46:02: [LOCATION SERVER] Proxy running on localhost:5010
+2025-03-20 07:46:02: [LOCATION SERVER] Proxy running on localhost:5010
+2025-03-20 07:46:02: [LOCATION SERVER] Proxy running on localhost:5010
+2025-03-20 07:46:02: [LOCATION SERVER] Proxy running on localhost:5010
+2025-03-20 07:46:02: [LOCATION SERVER] Proxy running on :-1
+2025-03-20 07:46:39: [LOCATION SERVER] Proxy running on localhost:5010
+2025-03-20 07:46:42: [MESSAGE] Usuário 333 comprimido com instrução LOGIN
+2025-03-20 07:46:44: [MESSAGE] Ordem de Serviço comprimida com instrução SELECTALL
+2025-03-20 07:46:55: [MESSAGE] Ordem de Serviço comprimida com instrução SELECTALL
+2025-03-20 07:46:55: [LOCATION SERVER] Proxy running on :-1
+2025-03-20 07:51:05: [LOCATION SERVER] Proxy running on localhost:5010
+2025-03-20 07:51:07: [MESSAGE] Usuário 333 comprimido com instrução LOGIN
+2025-03-20 07:51:08: [MESSAGE] Ordem de Serviço comprimida com instrução SELECTALL
+2025-03-20 07:51:11: [MESSAGE] Ordem de Serviço comprimida com instrução SELECTALL
+2025-03-20 07:51:11: [LOCATION SERVER] Proxy running on localhost:5010
+2025-03-20 07:51:12: [LOCATION SERVER] Proxy running on localhost:5010
+2025-03-20 07:51:12: [LOCATION SERVER] Proxy running on localhost:5010
+2025-03-20 07:51:12: [LOCATION SERVER] Proxy running on localhost:5010
+2025-03-20 07:51:12: [LOCATION SERVER] Proxy running on localhost:5010
+2025-03-20 07:51:12: [LOCATION SERVER] Proxy running on localhost:5010
+2025-03-20 07:51:12: [LOCATION SERVER] Proxy running on localhost:5010
+2025-03-20 07:51:12: [LOCATION SERVER] Proxy running on localhost:5010
+2025-03-20 07:51:12: [LOCATION SERVER] Proxy running on localhost:5010
+2025-03-20 07:51:12: [LOCATION SERVER] Proxy running on localhost:5010
+2025-03-20 07:51:12: [LOCATION SERVER] Proxy running on localhost:5010
+2025-03-20 07:51:12: [LOCATION SERVER] Proxy running on localhost:5010
+2025-03-20 07:51:12: [LOCATION SERVER] Proxy running on localhost:5010
+2025-03-20 07:51:12: [LOCATION SERVER] Proxy running on localhost:5010
+2025-03-20 07:51:12: [LOCATION SERVER] Proxy running on localhost:5010
+2025-03-20 07:51:12: [LOCATION SERVER] Proxy running on localhost:5010
+2025-03-20 07:51:12: [LOCATION SERVER] Proxy running on localhost:5010
+2025-03-20 07:51:12: [LOCATION SERVER] Proxy running on localhost:5010
+2025-03-20 07:51:12: [LOCATION SERVER] Proxy running on :-1
+2025-03-20 07:53:13: [LOCATION SERVER] Proxy running on localhost:5010
+2025-03-20 07:53:16: [MESSAGE] Usuário 333 comprimido com instrução LOGIN
+2025-03-20 07:53:17: [MESSAGE] Ordem de Serviço comprimida com instrução SELECTALL
+2025-03-20 07:53:24: [MESSAGE] Ordem de Serviço comprimida com instrução SELECTALL
+2025-03-20 07:53:34: [LOCATION SERVER] Proxy running on :-1
+2025-03-20 08:00:00: [LOCATION SERVER] Proxy running on localhost:5010
+2025-03-20 08:00:03: [MESSAGE] Usuário 333 comprimido com instrução LOGIN
+2025-03-20 08:00:05: [MESSAGE] Ordem de Serviço comprimida com instrução SELECTALL
+2025-03-20 08:00:15: [MESSAGE] Ordem de Serviço comprimida com instrução SELECTALL
+2025-03-20 08:00:25: [LOCATION SERVER] Proxy running on :-1
+2025-03-20 08:01:36: [LOCATION SERVER] Proxy running on localhost:5010
+2025-03-20 08:01:38: [MESSAGE] Usuário 333 comprimido com instrução LOGIN
+2025-03-20 08:01:39: [MESSAGE] Ordem de Serviço comprimida com instrução SELECTALL
+2025-03-20 08:01:50: [MESSAGE] Ordem de Serviço comprimida com instrução SELECTALL
+2025-03-20 08:02:00: [LOCATION SERVER] Proxy running on :-1
+2025-03-20 08:02:39: [LOCATION SERVER] Proxy running on localhost:5010
+2025-03-20 08:02:43: [MESSAGE] Usuário 333 comprimido com instrução LOGIN
+2025-03-20 08:02:44: [MESSAGE] Ordem de Serviço comprimida com instrução SELECTALL
+2025-03-20 08:02:51: [MESSAGE] Ordem de Serviço comprimida com instrução SELECTALL
+2025-03-20 08:02:51: [LOCATION SERVER] Proxy running on localhost:5010
+2025-03-20 08:02:51: [LOCATION SERVER] Proxy running on localhost:5010
+2025-03-20 08:02:51: [LOCATION SERVER] Proxy running on localhost:5010
+2025-03-20 08:02:51: [LOCATION SERVER] Proxy running on localhost:5010
+2025-03-20 08:02:51: [LOCATION SERVER] Proxy running on localhost:5010
+2025-03-20 08:02:51: [LOCATION SERVER] Proxy running on localhost:5010
+2025-03-20 08:02:51: [LOCATION SERVER] Proxy running on localhost:5010
+2025-03-20 08:02:51: [LOCATION SERVER] Proxy running on localhost:5010
+2025-03-20 08:02:51: [LOCATION SERVER] Proxy running on localhost:5010
+2025-03-20 08:02:51: [LOCATION SERVER] Proxy running on localhost:5010
+2025-03-20 08:02:51: [LOCATION SERVER] Proxy running on localhost:5010
+2025-03-20 08:02:51: [LOCATION SERVER] Proxy running on localhost:5010
+2025-03-20 08:02:51: [LOCATION SERVER] Proxy running on localhost:5010
+2025-03-20 08:02:51: [LOCATION SERVER] Proxy running on localhost:5010
+2025-03-20 08:02:51: [LOCATION SERVER] Proxy running on localhost:5010
+2025-03-20 08:02:51: [LOCATION SERVER] Proxy running on localhost:5010
+2025-03-20 08:02:51: [LOCATION SERVER] Proxy running on localhost:5010
+2025-03-20 08:02:51: [LOCATION SERVER] Proxy running on localhost:5010
+2025-03-20 08:02:51: [LOCATION SERVER] Proxy running on localhost:5010
+2025-03-20 08:02:51: [LOCATION SERVER] Proxy running on localhost:5010
+2025-03-20 08:02:51: [LOCATION SERVER] Proxy running on localhost:5010
+2025-03-20 08:02:51: [LOCATION SERVER] Proxy running on localhost:5010
+2025-03-20 08:02:51: [LOCATION SERVER] Proxy running on localhost:5010
+2025-03-20 08:02:51: [LOCATION SERVER] Proxy running on localhost:5010
+2025-03-20 08:02:52: [LOCATION SERVER] Proxy running on localhost:5010
+2025-03-20 08:02:52: [LOCATION SERVER] Proxy running on localhost:5010
+2025-03-20 08:02:52: [LOCATION SERVER] Proxy running on localhost:5010
+2025-03-20 08:02:52: [LOCATION SERVER] Proxy running on localhost:5010
+2025-03-20 08:02:52: [LOCATION SERVER] Proxy running on localhost:5010
+2025-03-20 08:02:52: [LOCATION SERVER] Proxy running on localhost:5010
+2025-03-20 08:02:52: [LOCATION SERVER] Proxy running on localhost:5010
+2025-03-20 08:02:52: [LOCATION SERVER] Proxy running on localhost:5010
+2025-03-20 08:02:52: [LOCATION SERVER] Proxy running on localhost:5010
+2025-03-20 08:02:52: [LOCATION SERVER] Proxy running on localhost:5010
+2025-03-20 08:02:52: [LOCATION SERVER] Proxy running on localhost:5010
+2025-03-20 08:02:52: [LOCATION SERVER] Proxy running on localhost:5010
+2025-03-20 08:02:52: [LOCATION SERVER] Proxy running on localhost:5010
+2025-03-20 08:02:52: [LOCATION SERVER] Proxy running on localhost:5010
+2025-03-20 08:02:52: [LOCATION SERVER] Proxy running on localhost:5010
+2025-03-20 08:02:52: [LOCATION SERVER] Proxy running on localhost:5010
+2025-03-20 08:02:52: [LOCATION SERVER] Proxy running on localhost:5010
+2025-03-20 08:02:52: [LOCATION SERVER] Proxy running on localhost:5010
+2025-03-20 08:02:52: [LOCATION SERVER] Proxy running on localhost:5010
+2025-03-20 08:02:52: [LOCATION SERVER] Proxy running on localhost:5010
+2025-03-20 08:02:52: [LOCATION SERVER] Proxy running on localhost:5010
+2025-03-20 08:02:52: [LOCATION SERVER] Proxy running on localhost:5010
+2025-03-20 08:02:52: [LOCATION SERVER] Proxy running on localhost:5010
+2025-03-20 08:02:52: [LOCATION SERVER] Proxy running on localhost:5010
+2025-03-20 08:02:53: [LOCATION SERVER] Proxy running on localhost:5010
+2025-03-20 08:02:53: [LOCATION SERVER] Proxy running on localhost:5010
+2025-03-20 08:02:53: [LOCATION SERVER] Proxy running on localhost:5010
+2025-03-20 08:02:53: [LOCATION SERVER] Proxy running on localhost:5010
+2025-03-20 08:02:53: [LOCATION SERVER] Proxy running on localhost:5010
+2025-03-20 08:02:53: [LOCATION SERVER] Proxy running on localhost:5010
+2025-03-20 08:02:53: [LOCATION SERVER] Proxy running on localhost:5010
+2025-03-20 08:02:53: [LOCATION SERVER] Proxy running on localhost:5010
+2025-03-20 08:02:53: [LOCATION SERVER] Proxy running on localhost:5010
+2025-03-20 08:02:53: [LOCATION SERVER] Proxy running on :-1
+2025-03-20 08:04:45: [LOCATION SERVER] Proxy running on localhost:5010
+2025-03-20 08:04:47: [MESSAGE] Usuário 333 comprimido com instrução LOGIN
+2025-03-20 08:04:48: [MESSAGE] Ordem de Serviço comprimida com instrução SELECTALL
+2025-03-20 08:04:53: [MESSAGE] Ordem de Serviço comprimida com instrução SELECTALL
+2025-03-20 08:04:53: [LOCATION SERVER] Proxy running on localhost:5010
+2025-03-20 08:05:17: [LOCATION SERVER] Proxy running on localhost:5010
+2025-03-20 08:05:20: [MESSAGE] Usuário 3 comprimido com instrução LOGIN
+2025-03-20 08:05:29: [LOCATION SERVER] Proxy running on localhost:5010
+2025-03-20 08:05:31: [MESSAGE] Usuário 333 comprimido com instrução LOGIN
+2025-03-20 08:05:32: [MESSAGE] Ordem de Serviço comprimida com instrução SELECTALL
+2025-03-20 08:05:38: [MESSAGE] Ordem de Serviço comprimida com instrução SELECTALL
+2025-03-20 08:05:38: [LOCATION SERVER] Proxy running on localhost:5010
+2025-03-20 08:06:45: [LOCATION SERVER] Proxy running on 172.28.176.1:5000
+2025-03-20 08:06:48: [MESSAGE] Usuário 333 comprimido com instrução LOGIN
+2025-03-20 08:06:49: [MESSAGE] Ordem de Serviço comprimida com instrução SELECTALL
+2025-03-20 08:07:04: [MESSAGE] Ordem de Serviço comprimida com instrução SELECTALL
+2025-03-20 08:07:05: [LOCATION SERVER] Proxy running on localhost:5010
+2025-03-20 08:07:07: [MESSAGE] Ordem de Serviço comprimida com instrução SELECTALL
+2025-03-20 08:07:13: [MESSAGE] Ordem de Serviço comprimida com instrução CLOSE
+2025-03-20 08:07:58: [LOCATION SERVER] Proxy running on 172.28.176.1:5000
+2025-03-20 08:08:23: [MESSAGE] Usuário 333 comprimido com instrução LOGIN
+2025-03-20 08:08:24: [MESSAGE] Ordem de Serviço comprimida com instrução SELECTALL
+2025-03-20 08:08:28: [MESSAGE] Ordem de Serviço 1 comprimida com instrução INSERT
+2025-03-20 08:08:29: [MESSAGE] Ordem de Serviço comprimida com instrução SELECTALL
+2025-03-20 08:08:53: [MESSAGE] Ordem de Serviço comprimida com instrução SELECTALL
+2025-03-20 08:08:53: [LOCATION SERVER] Proxy running on localhost:5010
+2025-03-20 08:09:41: [MESSAGE] Ordem de Serviço comprimida com instrução SELECTALL
+2025-03-20 08:10:23: [MESSAGE] Ordem de Serviço comprimida com instrução SELECTALL
+2025-03-20 08:10:24: [LOCATION SERVER] Proxy running on 172.28.176.1:5000
+2025-03-20 08:10:46: [MESSAGE] Ordem de Serviço comprimida com instrução SELECTALL
+2025-03-20 08:10:52: [MESSAGE] Ordem de Serviço comprimida com instrução CLOSE
+2025-03-20 11:17:28: [LOCATION SERVER] Proxy running on localhost:5010
+2025-03-20 11:17:31: [MESSAGE] Usuário 333 comprimido com instrução LOGIN
+2025-03-20 11:17:32: [MESSAGE] Ordem de Serviço comprimida com instrução SELECTALL
+2025-03-20 11:17:34: [MESSAGE] Ordem de Serviço 1 comprimida com instrução INSERT
+2025-03-20 11:17:35: [MESSAGE] Ordem de Serviço 2 comprimida com instrução INSERT
+2025-03-20 11:17:35: [MESSAGE] Ordem de Serviço 3 comprimida com instrução INSERT
+2025-03-20 11:17:35: [MESSAGE] Ordem de Serviço 4 comprimida com instrução INSERT
+2025-03-20 11:17:35: [MESSAGE] Ordem de Serviço 5 comprimida com instrução INSERT
+2025-03-20 11:17:36: [MESSAGE] Ordem de Serviço 6 comprimida com instrução INSERT
+2025-03-20 11:17:36: [MESSAGE] Ordem de Serviço 7 comprimida com instrução INSERT
+2025-03-20 11:17:37: [MESSAGE] Ordem de Serviço 8 comprimida com instrução INSERT
+2025-03-20 11:17:37: [MESSAGE] Ordem de Serviço 9 comprimida com instrução INSERT
+2025-03-20 11:17:38: [MESSAGE] Ordem de Serviço 10 comprimida com instrução INSERT
+2025-03-20 11:17:38: [MESSAGE] Ordem de Serviço 11 comprimida com instrução INSERT
+2025-03-20 11:17:39: [MESSAGE] Ordem de Serviço 12 comprimida com instrução INSERT
+2025-03-20 11:17:39: [MESSAGE] Ordem de Serviço 13 comprimida com instrução INSERT
+2025-03-20 11:17:40: [MESSAGE] Ordem de Serviço 14 comprimida com instrução INSERT
+2025-03-20 11:17:40: [MESSAGE] Ordem de Serviço 15 comprimida com instrução INSERT
+2025-03-20 11:17:40: [MESSAGE] Ordem de Serviço 16 comprimida com instrução INSERT
+2025-03-20 11:17:41: [MESSAGE] Ordem de Serviço 17 comprimida com instrução INSERT
+2025-03-20 11:17:42: [MESSAGE] Ordem de Serviço 18 comprimida com instrução INSERT
+2025-03-20 11:17:43: [MESSAGE] Ordem de Serviço 19 comprimida com instrução INSERT
+2025-03-20 11:17:43: [MESSAGE] Ordem de Serviço 20 comprimida com instrução INSERT
+2025-03-20 11:17:44: [MESSAGE] Ordem de Serviço 21 comprimida com instrução INSERT
+2025-03-20 11:17:45: [MESSAGE] Ordem de Serviço 22 comprimida com instrução INSERT
+2025-03-20 11:17:45: [MESSAGE] Ordem de Serviço 23 comprimida com instrução INSERT
+2025-03-20 11:17:45: [MESSAGE] Ordem de Serviço 24 comprimida com instrução INSERT
+2025-03-20 11:17:46: [MESSAGE] Ordem de Serviço 25 comprimida com instrução INSERT
+2025-03-20 11:17:46: [MESSAGE] Ordem de Serviço 26 comprimida com instrução INSERT
+2025-03-20 11:17:47: [MESSAGE] Ordem de Serviço 27 comprimida com instrução INSERT
+2025-03-20 11:17:47: [MESSAGE] Ordem de Serviço 28 comprimida com instrução INSERT
+2025-03-20 11:17:47: [MESSAGE] Ordem de Serviço 29 comprimida com instrução INSERT
+2025-03-20 11:17:48: [MESSAGE] Ordem de Serviço 30 comprimida com instrução INSERT
+2025-03-20 11:17:48: [MESSAGE] Ordem de Serviço 31 comprimida com instrução INSERT
+2025-03-20 11:17:48: [MESSAGE] Ordem de Serviço 32 comprimida com instrução INSERT
+2025-03-20 11:17:49: [MESSAGE] Ordem de Serviço 33 comprimida com instrução INSERT
+2025-03-20 11:17:49: [MESSAGE] Ordem de Serviço 34 comprimida com instrução INSERT
+2025-03-20 11:17:50: [MESSAGE] Ordem de Serviço 35 comprimida com instrução INSERT
+2025-03-20 11:17:51: [MESSAGE] Ordem de Serviço 36 comprimida com instrução INSERT
+2025-03-20 11:17:51: [MESSAGE] Ordem de Serviço 37 comprimida com instrução INSERT
+2025-03-20 11:17:52: [MESSAGE] Ordem de Serviço 38 comprimida com instrução INSERT
+2025-03-20 11:17:52: [MESSAGE] Ordem de Serviço 39 comprimida com instrução INSERT
+2025-03-20 11:17:52: [MESSAGE] Ordem de Serviço 40 comprimida com instrução INSERT
+2025-03-20 11:17:53: [MESSAGE] Ordem de Serviço 41 comprimida com instrução INSERT
+2025-03-20 11:17:53: [MESSAGE] Ordem de Serviço 42 comprimida com instrução INSERT
+2025-03-20 11:17:54: [MESSAGE] Ordem de Serviço 43 comprimida com instrução INSERT
+2025-03-20 11:17:54: [MESSAGE] Ordem de Serviço 44 comprimida com instrução INSERT
+2025-03-20 11:17:54: [MESSAGE] Ordem de Serviço 45 comprimida com instrução INSERT
+2025-03-20 11:17:55: [MESSAGE] Ordem de Serviço 46 comprimida com instrução INSERT
+2025-03-20 11:17:55: [MESSAGE] Ordem de Serviço 47 comprimida com instrução INSERT
+2025-03-20 11:17:56: [MESSAGE] Ordem de Serviço 48 comprimida com instrução INSERT
+2025-03-20 11:17:57: [MESSAGE] Ordem de Serviço 49 comprimida com instrução INSERT
+2025-03-20 11:17:58: [MESSAGE] Ordem de Serviço 50 comprimida com instrução INSERT
+2025-03-20 11:17:59: [MESSAGE] Ordem de Serviço 51 comprimida com instrução INSERT
+2025-03-20 11:17:59: [MESSAGE] Ordem de Serviço 52 comprimida com instrução INSERT
+2025-03-20 11:18:00: [MESSAGE] Ordem de Serviço 53 comprimida com instrução INSERT
+2025-03-20 11:18:01: [MESSAGE] Ordem de Serviço 54 comprimida com instrução INSERT
+2025-03-20 11:18:01: [MESSAGE] Ordem de Serviço 55 comprimida com instrução INSERT
+2025-03-20 11:18:02: [MESSAGE] Ordem de Serviço 56 comprimida com instrução INSERT
+2025-03-20 11:18:02: [MESSAGE] Ordem de Serviço 57 comprimida com instrução INSERT
+2025-03-20 11:18:02: [MESSAGE] Ordem de Serviço 58 comprimida com instrução INSERT
+2025-03-20 11:18:03: [MESSAGE] Ordem de Serviço 59 comprimida com instrução INSERT
+2025-03-20 11:18:04: [MESSAGE] Ordem de Serviço 60 comprimida com instrução INSERT
+2025-03-20 11:18:04: [MESSAGE] Ordem de Serviço 61 comprimida com instrução INSERT
+2025-03-20 11:18:04: [MESSAGE] Ordem de Serviço 62 comprimida com instrução INSERT
+2025-03-20 11:18:05: [MESSAGE] Ordem de Serviço 63 comprimida com instrução INSERT
+2025-03-20 11:18:05: [MESSAGE] Ordem de Serviço 64 comprimida com instrução INSERT
+2025-03-20 11:18:06: [MESSAGE] Ordem de Serviço 65 comprimida com instrução INSERT
+2025-03-20 11:18:07: [MESSAGE] Ordem de Serviço 66 comprimida com instrução INSERT
+2025-03-20 11:18:07: [MESSAGE] Ordem de Serviço 67 comprimida com instrução INSERT
+2025-03-20 11:18:08: [MESSAGE] Ordem de Serviço 68 comprimida com instrução INSERT
+2025-03-20 11:18:08: [MESSAGE] Ordem de Serviço 69 comprimida com instrução INSERT
+2025-03-20 11:18:09: [MESSAGE] Ordem de Serviço 70 comprimida com instrução INSERT
+2025-03-20 11:18:10: [MESSAGE] Ordem de Serviço 71 comprimida com instrução INSERT
+2025-03-20 11:18:10: [MESSAGE] Ordem de Serviço 72 comprimida com instrução INSERT
+2025-03-20 11:18:11: [MESSAGE] Ordem de Serviço 73 comprimida com instrução INSERT
+2025-03-20 11:18:12: [MESSAGE] Ordem de Serviço 74 comprimida com instrução INSERT
+2025-03-20 11:18:14: [MESSAGE] Ordem de Serviço 75 comprimida com instrução INSERT
+2025-03-20 11:18:14: [MESSAGE] Ordem de Serviço 76 comprimida com instrução INSERT
+2025-03-20 11:18:14: [MESSAGE] Ordem de Serviço 77 comprimida com instrução INSERT
+2025-03-20 11:18:15: [MESSAGE] Ordem de Serviço 78 comprimida com instrução INSERT
+2025-03-20 11:18:15: [MESSAGE] Ordem de Serviço 79 comprimida com instrução INSERT
+2025-03-20 11:18:16: [MESSAGE] Ordem de Serviço 80 comprimida com instrução INSERT
+2025-03-20 11:18:26: [MESSAGE] Ordem de Serviço comprimida com instrução SELECTALL
+2025-03-20 11:18:27: [LOCATION SERVER] Proxy running on 172.28.176.1:5000
+2025-03-20 11:18:29: [MESSAGE] Ordem de Serviço comprimida com instrução SELECTALL
+2025-03-20 11:18:29: [LOCATION SERVER] Proxy running on localhost:5010
+2025-03-20 11:19:02: [MESSAGE] Ordem de Serviço comprimida com instrução CLOSE
+2025-03-20 11:19:09: [LOCATION SERVER] Proxy running on 172.28.176.1:5000
+2025-03-20 11:19:16: [MESSAGE] Usuário 333 comprimido com instrução LOGIN
+2025-03-20 11:19:16: [MESSAGE] Ordem de Serviço comprimida com instrução SELECTALL
+2025-03-20 11:19:16: [LOCATION SERVER] Proxy running on localhost:5010
+2025-03-20 11:19:37: [MESSAGE] Ordem de Serviço comprimida com instrução CLOSE
+2025-03-20 11:19:38: [LOCATION SERVER] Proxy running on :-1
+2025-03-20 11:20:44: [LOCATION SERVER] Proxy running on localhost:5010
+2025-03-20 11:20:47: [MESSAGE] Usuário 333 comprimido com instrução LOGIN
+2025-03-20 11:20:48: [MESSAGE] Ordem de Serviço comprimida com instrução SELECTALL
+2025-03-20 11:20:48: [LOCATION SERVER] Proxy running on 172.28.176.1:5000
+2025-03-20 11:21:12: [MESSAGE] Ordem de Serviço comprimida com instrução CLOSE
+2025-03-20 11:24:27: [LOCATION SERVER] Proxy running on 172.28.176.1:5000
+2025-03-20 11:24:32: [MESSAGE] Usuário 999 comprimido com instrução LOGIN
+2025-03-20 11:24:35: [MESSAGE] Ordem de Serviço comprimida com instrução SELECTALL
+2025-03-20 11:24:38: [MESSAGE] Ordem de Serviço 1 comprimida com instrução INSERT
+2025-03-20 11:24:42: [MESSAGE] Ordem de Serviço comprimida com instrução SELECTALL
+2025-03-20 11:24:48: [MESSAGE] Ordem de Serviço 2 comprimida com instrução INSERT
+2025-03-20 11:24:49: [MESSAGE] Ordem de Serviço 3 comprimida com instrução INSERT
+2025-03-20 11:24:49: [MESSAGE] Ordem de Serviço 4 comprimida com instrução INSERT
+2025-03-20 11:24:49: [MESSAGE] Ordem de Serviço 5 comprimida com instrução INSERT
+2025-03-20 11:24:50: [MESSAGE] Ordem de Serviço 6 comprimida com instrução INSERT
+2025-03-20 11:24:50: [MESSAGE] Ordem de Serviço 7 comprimida com instrução INSERT
+2025-03-20 11:24:51: [MESSAGE] Ordem de Serviço 8 comprimida com instrução INSERT
+2025-03-20 11:24:51: [MESSAGE] Ordem de Serviço 9 comprimida com instrução INSERT
+2025-03-20 11:24:52: [MESSAGE] Ordem de Serviço 10 comprimida com instrução INSERT
+2025-03-20 11:24:52: [MESSAGE] Ordem de Serviço 11 comprimida com instrução INSERT
+2025-03-20 11:24:53: [MESSAGE] Ordem de Serviço 12 comprimida com instrução INSERT
+2025-03-20 11:24:54: [MESSAGE] Ordem de Serviço 13 comprimida com instrução INSERT
+2025-03-20 11:24:55: [MESSAGE] Ordem de Serviço 14 comprimida com instrução INSERT
+2025-03-20 11:24:55: [MESSAGE] Ordem de Serviço 15 comprimida com instrução INSERT
+2025-03-20 11:24:56: [MESSAGE] Ordem de Serviço 16 comprimida com instrução INSERT
+2025-03-20 11:24:57: [MESSAGE] Ordem de Serviço 17 comprimida com instrução INSERT
+2025-03-20 11:24:57: [MESSAGE] Ordem de Serviço 18 comprimida com instrução INSERT
+2025-03-20 11:24:57: [MESSAGE] Ordem de Serviço 19 comprimida com instrução INSERT
+2025-03-20 11:24:58: [MESSAGE] Ordem de Serviço 20 comprimida com instrução INSERT
+2025-03-20 11:24:58: [MESSAGE] Ordem de Serviço 21 comprimida com instrução INSERT
+2025-03-20 11:24:59: [MESSAGE] Ordem de Serviço 22 comprimida com instrução INSERT
+2025-03-20 11:24:59: [MESSAGE] Ordem de Serviço 23 comprimida com instrução INSERT
+2025-03-20 11:25:00: [MESSAGE] Ordem de Serviço 24 comprimida com instrução INSERT
+2025-03-20 11:25:00: [MESSAGE] Ordem de Serviço 25 comprimida com instrução INSERT
+2025-03-20 11:25:01: [MESSAGE] Ordem de Serviço 26 comprimida com instrução INSERT
+2025-03-20 11:25:02: [MESSAGE] Ordem de Serviço 27 comprimida com instrução INSERT
+2025-03-20 11:25:03: [MESSAGE] Ordem de Serviço 28 comprimida com instrução INSERT
+2025-03-20 11:25:03: [MESSAGE] Ordem de Serviço 29 comprimida com instrução INSERT
+2025-03-20 11:25:03: [MESSAGE] Ordem de Serviço 30 comprimida com instrução INSERT
+2025-03-20 11:25:04: [MESSAGE] Ordem de Serviço 31 comprimida com instrução INSERT
+2025-03-20 11:25:05: [MESSAGE] Ordem de Serviço 32 comprimida com instrução INSERT
+2025-03-20 11:25:06: [MESSAGE] Ordem de Serviço 33 comprimida com instrução INSERT
+2025-03-20 11:25:07: [MESSAGE] Ordem de Serviço 34 comprimida com instrução INSERT
+2025-03-20 11:25:07: [MESSAGE] Ordem de Serviço 35 comprimida com instrução INSERT
+2025-03-20 11:25:08: [MESSAGE] Ordem de Serviço 36 comprimida com instrução INSERT
+2025-03-20 11:25:08: [MESSAGE] Ordem de Serviço 37 comprimida com instrução INSERT
+2025-03-20 11:25:09: [MESSAGE] Ordem de Serviço 38 comprimida com instrução INSERT
+2025-03-20 11:25:09: [MESSAGE] Ordem de Serviço 39 comprimida com instrução INSERT
+2025-03-20 11:25:09: [MESSAGE] Ordem de Serviço 40 comprimida com instrução INSERT
+2025-03-20 11:25:09: [MESSAGE] Ordem de Serviço 41 comprimida com instrução INSERT
+2025-03-20 11:25:10: [MESSAGE] Ordem de Serviço 42 comprimida com instrução INSERT
+2025-03-20 11:25:11: [MESSAGE] Ordem de Serviço 43 comprimida com instrução INSERT
+2025-03-20 11:25:11: [MESSAGE] Ordem de Serviço 44 comprimida com instrução INSERT
+2025-03-20 11:25:12: [MESSAGE] Ordem de Serviço 45 comprimida com instrução INSERT
+2025-03-20 11:25:13: [MESSAGE] Ordem de Serviço 46 comprimida com instrução INSERT
+2025-03-20 11:25:13: [MESSAGE] Ordem de Serviço 47 comprimida com instrução INSERT
+2025-03-20 11:25:14: [MESSAGE] Ordem de Serviço 48 comprimida com instrução INSERT
+2025-03-20 11:25:14: [MESSAGE] Ordem de Serviço 49 comprimida com instrução INSERT
+2025-03-20 11:25:15: [MESSAGE] Ordem de Serviço 50 comprimida com instrução INSERT
+2025-03-20 11:25:15: [MESSAGE] Ordem de Serviço 51 comprimida com instrução INSERT
+2025-03-20 11:25:15: [MESSAGE] Ordem de Serviço 52 comprimida com instrução INSERT
+2025-03-20 11:25:16: [MESSAGE] Ordem de Serviço 53 comprimida com instrução INSERT
+2025-03-20 11:25:16: [MESSAGE] Ordem de Serviço 54 comprimida com instrução INSERT
+2025-03-20 11:25:17: [MESSAGE] Ordem de Serviço 55 comprimida com instrução INSERT
+2025-03-20 11:25:17: [MESSAGE] Ordem de Serviço 56 comprimida com instrução INSERT
+2025-03-20 11:25:18: [MESSAGE] Ordem de Serviço 57 comprimida com instrução INSERT
+2025-03-20 11:25:19: [MESSAGE] Ordem de Serviço 58 comprimida com instrução INSERT
+2025-03-20 11:25:19: [MESSAGE] Ordem de Serviço 59 comprimida com instrução INSERT
+2025-03-20 11:25:20: [MESSAGE] Ordem de Serviço 60 comprimida com instrução INSERT
+2025-03-20 11:25:21: [MESSAGE] Ordem de Serviço 61 comprimida com instrução INSERT
+2025-03-20 11:25:22: [MESSAGE] Ordem de Serviço 62 comprimida com instrução INSERT
+2025-03-20 11:25:22: [MESSAGE] Ordem de Serviço 63 comprimida com instrução INSERT
+2025-03-20 11:25:23: [MESSAGE] Ordem de Serviço 64 comprimida com instrução INSERT
+2025-03-20 11:25:24: [MESSAGE] Ordem de Serviço 65 comprimida com instrução INSERT
+2025-03-20 11:25:24: [MESSAGE] Ordem de Serviço 66 comprimida com instrução INSERT
+2025-03-20 11:25:25: [MESSAGE] Ordem de Serviço 67 comprimida com instrução INSERT
+2025-03-20 11:25:26: [MESSAGE] Ordem de Serviço 68 comprimida com instrução INSERT
+2025-03-20 11:25:26: [MESSAGE] Ordem de Serviço 69 comprimida com instrução INSERT
+2025-03-20 11:25:26: [MESSAGE] Ordem de Serviço 70 comprimida com instrução INSERT
+2025-03-20 11:25:27: [MESSAGE] Ordem de Serviço 71 comprimida com instrução INSERT
+2025-03-20 11:25:27: [MESSAGE] Ordem de Serviço 72 comprimida com instrução INSERT
+2025-03-20 11:25:28: [MESSAGE] Ordem de Serviço 73 comprimida com instrução INSERT
+2025-03-20 11:25:29: [MESSAGE] Ordem de Serviço 74 comprimida com instrução INSERT
+2025-03-20 11:25:30: [MESSAGE] Ordem de Serviço 75 comprimida com instrução INSERT
+2025-03-20 11:25:30: [MESSAGE] Ordem de Serviço 76 comprimida com instrução INSERT
+2025-03-20 11:25:30: [MESSAGE] Ordem de Serviço 77 comprimida com instrução INSERT
+2025-03-20 11:25:31: [MESSAGE] Ordem de Serviço 78 comprimida com instrução INSERT
+2025-03-20 11:25:31: [MESSAGE] Ordem de Serviço 79 comprimida com instrução INSERT
+2025-03-20 11:25:32: [MESSAGE] Ordem de Serviço 80 comprimida com instrução INSERT
+2025-03-20 11:25:33: [MESSAGE] Ordem de Serviço 81 comprimida com instrução INSERT
+2025-03-20 11:26:09: [MESSAGE] Ordem de Serviço 82 comprimida com instrução INSERT
+2025-03-20 11:26:13: [MESSAGE] Ordem de Serviço 3 comprimida com instrução SELECT
+2025-03-20 11:26:16: [MESSAGE] Ordem de Serviço 10 comprimida com instrução SELECT
+2025-03-20 11:26:18: [MESSAGE] Usuário 999 comprimido com instrução SELECTBYUSER
+2025-03-20 11:26:19: [LOCATION SERVER] Proxy running on localhost:5010
+2025-03-20 11:26:23: [MESSAGE] Ordem de Serviço comprimida com instrução SELECTALL
+2025-03-20 11:26:23: [LOCATION SERVER] Proxy running on 172.28.176.1:5000
+2025-03-20 11:27:19: [MESSAGE] Ordem de Serviço 70 comprimida com instrução SELECT
+2025-03-20 11:43:22: [LOCATION SERVER] Proxy running on localhost:5010
+2025-03-20 11:43:25: [MESSAGE] Usuário 333 comprimido com instrução LOGIN
+2025-03-20 11:43:26: [MESSAGE] Ordem de Serviço comprimida com instrução SELECTALL
+2025-03-20 11:43:30: [MESSAGE] Ordem de Serviço 1 comprimida com instrução INSERT
+2025-03-20 11:43:30: [MESSAGE] Ordem de Serviço comprimida com instrução SELECTALL
+2025-03-20 11:45:13: [MESSAGE] Ordem de Serviço comprimida com instrução CLOSE
+2025-03-20 11:45:48: [LOCATION SERVER] Proxy running on localhost:5010
+2025-03-20 11:45:51: [MESSAGE] Usuário 333 comprimido com instrução LOGIN
+2025-03-20 11:45:51: [MESSAGE] Ordem de Serviço comprimida com instrução SELECTALL
+2025-03-20 11:46:08: [MESSAGE] Ordem de Serviço 1 comprimida com instrução INSERT
+2025-03-20 11:46:08: [MESSAGE] Ordem de Serviço 2 comprimida com instrução INSERT
+2025-03-20 11:46:08: [MESSAGE] Ordem de Serviço 3 comprimida com instrução INSERT
+2025-03-20 11:46:08: [MESSAGE] Ordem de Serviço 4 comprimida com instrução INSERT
+2025-03-20 11:46:08: [MESSAGE] Ordem de Serviço 5 comprimida com instrução INSERT
+2025-03-20 11:46:09: [MESSAGE] Ordem de Serviço 6 comprimida com instrução INSERT
+2025-03-20 11:46:09: [MESSAGE] Ordem de Serviço 7 comprimida com instrução INSERT
+2025-03-20 11:46:09: [MESSAGE] Ordem de Serviço 8 comprimida com instrução INSERT
+2025-03-20 11:46:10: [MESSAGE] Ordem de Serviço 9 comprimida com instrução INSERT
+2025-03-20 11:46:10: [MESSAGE] Ordem de Serviço 10 comprimida com instrução INSERT
+2025-03-20 11:46:11: [MESSAGE] Ordem de Serviço 11 comprimida com instrução INSERT
+2025-03-20 11:46:11: [MESSAGE] Ordem de Serviço 12 comprimida com instrução INSERT
+2025-03-20 11:46:12: [MESSAGE] Ordem de Serviço 13 comprimida com instrução INSERT
+2025-03-20 11:46:13: [MESSAGE] Ordem de Serviço 14 comprimida com instrução INSERT
+2025-03-20 11:46:13: [MESSAGE] Ordem de Serviço 15 comprimida com instrução INSERT
+2025-03-20 11:46:13: [MESSAGE] Ordem de Serviço 16 comprimida com instrução INSERT
+2025-03-20 11:46:14: [MESSAGE] Ordem de Serviço 17 comprimida com instrução INSERT
+2025-03-20 11:46:15: [MESSAGE] Ordem de Serviço 18 comprimida com instrução INSERT
+2025-03-20 11:46:15: [MESSAGE] Ordem de Serviço 19 comprimida com instrução INSERT
+2025-03-20 11:46:16: [MESSAGE] Ordem de Serviço 20 comprimida com instrução INSERT
+2025-03-20 11:46:17: [MESSAGE] Ordem de Serviço 21 comprimida com instrução INSERT
+2025-03-20 11:46:18: [MESSAGE] Ordem de Serviço 22 comprimida com instrução INSERT
+2025-03-20 11:46:18: [MESSAGE] Ordem de Serviço 23 comprimida com instrução INSERT
+2025-03-20 11:46:18: [MESSAGE] Ordem de Serviço 24 comprimida com instrução INSERT
+2025-03-20 11:46:19: [MESSAGE] Ordem de Serviço 25 comprimida com instrução INSERT
+2025-03-20 11:46:19: [MESSAGE] Ordem de Serviço 26 comprimida com instrução INSERT
+2025-03-20 11:46:20: [MESSAGE] Ordem de Serviço 27 comprimida com instrução INSERT
+2025-03-20 11:46:20: [MESSAGE] Ordem de Serviço 28 comprimida com instrução INSERT
+2025-03-20 11:46:21: [MESSAGE] Ordem de Serviço 29 comprimida com instrução INSERT
+2025-03-20 11:46:21: [MESSAGE] Ordem de Serviço 30 comprimida com instrução INSERT
+2025-03-20 11:46:21: [MESSAGE] Ordem de Serviço 31 comprimida com instrução INSERT
+2025-03-20 11:46:21: [MESSAGE] Ordem de Serviço 32 comprimida com instrução INSERT
+2025-03-20 11:46:22: [MESSAGE] Ordem de Serviço 33 comprimida com instrução INSERT
+2025-03-20 11:46:23: [MESSAGE] Ordem de Serviço 34 comprimida com instrução INSERT
+2025-03-20 11:46:23: [MESSAGE] Ordem de Serviço 35 comprimida com instrução INSERT
+2025-03-20 11:46:24: [MESSAGE] Ordem de Serviço 36 comprimida com instrução INSERT
+2025-03-20 11:46:24: [MESSAGE] Ordem de Serviço 37 comprimida com instrução INSERT
+2025-03-20 11:46:24: [MESSAGE] Ordem de Serviço 38 comprimida com instrução INSERT
+2025-03-20 11:46:25: [MESSAGE] Ordem de Serviço 39 comprimida com instrução INSERT
+2025-03-20 11:46:25: [MESSAGE] Ordem de Serviço 40 comprimida com instrução INSERT
+2025-03-20 11:46:26: [MESSAGE] Ordem de Serviço 41 comprimida com instrução INSERT
+2025-03-20 11:46:26: [MESSAGE] Ordem de Serviço 42 comprimida com instrução INSERT
+2025-03-20 11:46:27: [MESSAGE] Ordem de Serviço 43 comprimida com instrução INSERT
+2025-03-20 11:46:27: [MESSAGE] Ordem de Serviço 44 comprimida com instrução INSERT
+2025-03-20 11:46:27: [MESSAGE] Ordem de Serviço 45 comprimida com instrução INSERT
+2025-03-20 11:46:28: [MESSAGE] Ordem de Serviço 46 comprimida com instrução INSERT
+2025-03-20 11:46:28: [MESSAGE] Ordem de Serviço 47 comprimida com instrução INSERT
+2025-03-20 11:46:29: [MESSAGE] Ordem de Serviço 48 comprimida com instrução INSERT
+2025-03-20 11:46:30: [MESSAGE] Ordem de Serviço 49 comprimida com instrução INSERT
+2025-03-20 11:46:30: [MESSAGE] Ordem de Serviço 50 comprimida com instrução INSERT
+2025-03-20 11:46:30: [MESSAGE] Ordem de Serviço 51 comprimida com instrução INSERT
+2025-03-20 11:46:31: [MESSAGE] Ordem de Serviço 52 comprimida com instrução INSERT
+2025-03-20 11:46:32: [MESSAGE] Ordem de Serviço 53 comprimida com instrução INSERT
+2025-03-20 11:46:32: [MESSAGE] Ordem de Serviço 54 comprimida com instrução INSERT
+2025-03-20 11:46:33: [MESSAGE] Ordem de Serviço 55 comprimida com instrução INSERT
+2025-03-20 11:46:33: [MESSAGE] Ordem de Serviço 56 comprimida com instrução INSERT
+2025-03-20 11:46:34: [MESSAGE] Ordem de Serviço 57 comprimida com instrução INSERT
+2025-03-20 11:46:35: [MESSAGE] Ordem de Serviço 58 comprimida com instrução INSERT
+2025-03-20 11:46:35: [MESSAGE] Ordem de Serviço 59 comprimida com instrução INSERT
+2025-03-20 11:46:35: [MESSAGE] Ordem de Serviço 60 comprimida com instrução INSERT
+2025-03-20 11:46:36: [MESSAGE] Ordem de Serviço 61 comprimida com instrução INSERT
+2025-03-20 11:46:36: [MESSAGE] Ordem de Serviço 62 comprimida com instrução INSERT
+2025-03-20 11:46:37: [MESSAGE] Ordem de Serviço 63 comprimida com instrução INSERT
+2025-03-20 11:46:37: [MESSAGE] Ordem de Serviço 64 comprimida com instrução INSERT
+2025-03-20 11:46:38: [MESSAGE] Ordem de Serviço 65 comprimida com instrução INSERT
+2025-03-20 11:46:38: [MESSAGE] Ordem de Serviço 66 comprimida com instrução INSERT
+2025-03-20 11:46:39: [MESSAGE] Ordem de Serviço 67 comprimida com instrução INSERT
+2025-03-20 11:46:40: [MESSAGE] Ordem de Serviço 68 comprimida com instrução INSERT
+2025-03-20 11:46:40: [MESSAGE] Ordem de Serviço 69 comprimida com instrução INSERT
+2025-03-20 11:46:41: [MESSAGE] Ordem de Serviço 70 comprimida com instrução INSERT
+2025-03-20 11:46:42: [MESSAGE] Ordem de Serviço 71 comprimida com instrução INSERT
+2025-03-20 11:46:42: [MESSAGE] Ordem de Serviço 72 comprimida com instrução INSERT
+2025-03-20 11:46:43: [MESSAGE] Ordem de Serviço 73 comprimida com instrução INSERT
+2025-03-20 11:46:44: [MESSAGE] Ordem de Serviço 74 comprimida com instrução INSERT
+2025-03-20 11:46:44: [MESSAGE] Ordem de Serviço 75 comprimida com instrução INSERT
+2025-03-20 11:46:44: [MESSAGE] Ordem de Serviço 76 comprimida com instrução INSERT
+2025-03-20 11:46:45: [MESSAGE] Ordem de Serviço 77 comprimida com instrução INSERT
+2025-03-20 11:46:45: [MESSAGE] Ordem de Serviço 78 comprimida com instrução INSERT
+2025-03-20 11:46:46: [MESSAGE] Ordem de Serviço 79 comprimida com instrução INSERT
+2025-03-20 11:46:48: [MESSAGE] Ordem de Serviço 80 comprimida com instrução INSERT
+2025-03-20 11:47:02: [MESSAGE] Ordem de Serviço comprimida com instrução SELECTALL
+2025-03-20 11:47:02: [LOCATION SERVER] Proxy running on localhost:5010
+2025-03-20 11:49:25: [LOCATION SERVER] Proxy running on localhost:5010
+2025-03-20 11:49:28: [MESSAGE] Usuário 333 comprimido com instrução LOGIN
+2025-03-20 11:49:31: [MESSAGE] Usuário 333 comprimido com instrução INSERTUSER
+2025-03-20 11:49:31: [MESSAGE] Ordem de Serviço comprimida com instrução CLOSE
+2025-03-20 11:49:31: [LOCATION SERVER] Proxy running on localhost:5010
+2025-03-20 11:51:06: [LOCATION SERVER] Proxy running on localhost:5010
+2025-03-20 11:51:09: [MESSAGE] Usuário 333 comprimido com instrução LOGIN
+2025-03-20 11:51:10: [MESSAGE] Ordem de Serviço comprimida com instrução SELECTALL
+2025-03-20 11:51:14: [MESSAGE] Ordem de Serviço 1 comprimida com instrução INSERT
+2025-03-20 11:51:14: [MESSAGE] Ordem de Serviço comprimida com instrução SELECTALL
+2025-03-20 11:51:23: [MESSAGE] Ordem de Serviço 2 comprimida com instrução INSERT
+2025-03-20 11:51:23: [MESSAGE] Ordem de Serviço 3 comprimida com instrução INSERT
+2025-03-20 11:51:23: [MESSAGE] Ordem de Serviço 4 comprimida com instrução INSERT
+2025-03-20 11:51:24: [MESSAGE] Ordem de Serviço 5 comprimida com instrução INSERT
+2025-03-20 11:51:24: [MESSAGE] Ordem de Serviço 6 comprimida com instrução INSERT
+2025-03-20 11:51:25: [MESSAGE] Ordem de Serviço 7 comprimida com instrução INSERT
+2025-03-20 11:51:25: [MESSAGE] Ordem de Serviço 8 comprimida com instrução INSERT
+2025-03-20 11:51:26: [MESSAGE] Ordem de Serviço 9 comprimida com instrução INSERT
+2025-03-20 11:51:26: [MESSAGE] Ordem de Serviço 10 comprimida com instrução INSERT
+2025-03-20 11:51:26: [MESSAGE] Ordem de Serviço 11 comprimida com instrução INSERT
+2025-03-20 11:51:27: [MESSAGE] Ordem de Serviço 12 comprimida com instrução INSERT
+2025-03-20 11:51:27: [MESSAGE] Ordem de Serviço 13 comprimida com instrução INSERT
+2025-03-20 11:51:27: [MESSAGE] Ordem de Serviço 14 comprimida com instrução INSERT
+2025-03-20 11:51:28: [MESSAGE] Ordem de Serviço 15 comprimida com instrução INSERT
+2025-03-20 11:51:28: [MESSAGE] Ordem de Serviço 16 comprimida com instrução INSERT
+2025-03-20 11:51:29: [MESSAGE] Ordem de Serviço 17 comprimida com instrução INSERT
+2025-03-20 11:51:29: [MESSAGE] Ordem de Serviço 18 comprimida com instrução INSERT
+2025-03-20 11:51:30: [MESSAGE] Ordem de Serviço 19 comprimida com instrução INSERT
+2025-03-20 11:51:30: [MESSAGE] Ordem de Serviço 20 comprimida com instrução INSERT
+2025-03-20 11:51:30: [MESSAGE] Ordem de Serviço 21 comprimida com instrução INSERT
+2025-03-20 11:51:31: [MESSAGE] Ordem de Serviço 22 comprimida com instrução INSERT
+2025-03-20 11:51:31: [MESSAGE] Ordem de Serviço 23 comprimida com instrução INSERT
+2025-03-20 11:51:31: [MESSAGE] Ordem de Serviço 24 comprimida com instrução INSERT
+2025-03-20 11:51:32: [MESSAGE] Ordem de Serviço 25 comprimida com instrução INSERT
+2025-03-20 11:51:32: [MESSAGE] Ordem de Serviço 26 comprimida com instrução INSERT
+2025-03-20 11:51:32: [MESSAGE] Ordem de Serviço 27 comprimida com instrução INSERT
+2025-03-20 11:51:33: [MESSAGE] Ordem de Serviço 28 comprimida com instrução INSERT
+2025-03-20 11:51:33: [MESSAGE] Ordem de Serviço 29 comprimida com instrução INSERT
+2025-03-20 11:51:33: [MESSAGE] Ordem de Serviço 30 comprimida com instrução INSERT
+2025-03-20 11:51:33: [MESSAGE] Ordem de Serviço 31 comprimida com instrução INSERT
+2025-03-20 11:51:34: [MESSAGE] Ordem de Serviço 32 comprimida com instrução INSERT
+2025-03-20 11:51:34: [MESSAGE] Ordem de Serviço 33 comprimida com instrução INSERT
+2025-03-20 11:51:34: [MESSAGE] Ordem de Serviço 34 comprimida com instrução INSERT
+2025-03-20 11:51:35: [MESSAGE] Ordem de Serviço 35 comprimida com instrução INSERT
+2025-03-20 11:51:35: [MESSAGE] Ordem de Serviço 36 comprimida com instrução INSERT
+2025-03-20 11:51:36: [MESSAGE] Ordem de Serviço 37 comprimida com instrução INSERT
+2025-03-20 11:51:36: [MESSAGE] Ordem de Serviço 38 comprimida com instrução INSERT
+2025-03-20 11:51:37: [MESSAGE] Ordem de Serviço 39 comprimida com instrução INSERT
+2025-03-20 11:51:37: [MESSAGE] Ordem de Serviço 40 comprimida com instrução INSERT
+2025-03-20 11:51:38: [MESSAGE] Ordem de Serviço 41 comprimida com instrução INSERT
+2025-03-20 11:51:38: [MESSAGE] Ordem de Serviço 42 comprimida com instrução INSERT
+2025-03-20 11:51:38: [MESSAGE] Ordem de Serviço 43 comprimida com instrução INSERT
+2025-03-20 11:51:39: [MESSAGE] Ordem de Serviço 44 comprimida com instrução INSERT
+2025-03-20 11:51:39: [MESSAGE] Ordem de Serviço 45 comprimida com instrução INSERT
+2025-03-20 11:51:39: [MESSAGE] Ordem de Serviço 46 comprimida com instrução INSERT
+2025-03-20 11:51:40: [MESSAGE] Ordem de Serviço 47 comprimida com instrução INSERT
+2025-03-20 11:51:40: [MESSAGE] Ordem de Serviço 48 comprimida com instrução INSERT
+2025-03-20 11:51:41: [MESSAGE] Ordem de Serviço 49 comprimida com instrução INSERT
+2025-03-20 11:51:41: [MESSAGE] Ordem de Serviço 50 comprimida com instrução INSERT
+2025-03-20 11:51:42: [MESSAGE] Ordem de Serviço 51 comprimida com instrução INSERT
+2025-03-20 11:51:43: [MESSAGE] Ordem de Serviço 52 comprimida com instrução INSERT
+2025-03-20 11:51:43: [MESSAGE] Ordem de Serviço 53 comprimida com instrução INSERT
+2025-03-20 11:51:43: [MESSAGE] Ordem de Serviço 54 comprimida com instrução INSERT
+2025-03-20 11:51:44: [MESSAGE] Ordem de Serviço 55 comprimida com instrução INSERT
+2025-03-20 11:51:44: [MESSAGE] Ordem de Serviço 56 comprimida com instrução INSERT
+2025-03-20 11:51:44: [MESSAGE] Ordem de Serviço 57 comprimida com instrução INSERT
+2025-03-20 11:51:45: [MESSAGE] Ordem de Serviço 58 comprimida com instrução INSERT
+2025-03-20 11:51:45: [MESSAGE] Ordem de Serviço 59 comprimida com instrução INSERT
+2025-03-20 11:51:46: [MESSAGE] Ordem de Serviço 60 comprimida com instrução INSERT
+2025-03-20 11:51:47: [MESSAGE] Ordem de Serviço 61 comprimida com instrução INSERT
+2025-03-20 11:51:47: [MESSAGE] Ordem de Serviço 62 comprimida com instrução INSERT
+2025-03-20 11:51:48: [MESSAGE] Ordem de Serviço 63 comprimida com instrução INSERT
+2025-03-20 11:51:49: [MESSAGE] Ordem de Serviço 64 comprimida com instrução INSERT
+2025-03-20 11:51:49: [MESSAGE] Ordem de Serviço 65 comprimida com instrução INSERT
+2025-03-20 11:51:49: [MESSAGE] Ordem de Serviço 66 comprimida com instrução INSERT
+2025-03-20 11:51:50: [MESSAGE] Ordem de Serviço 67 comprimida com instrução INSERT
+2025-03-20 11:51:50: [MESSAGE] Ordem de Serviço 68 comprimida com instrução INSERT
+2025-03-20 11:51:51: [MESSAGE] Ordem de Serviço 69 comprimida com instrução INSERT
+2025-03-20 11:51:51: [MESSAGE] Ordem de Serviço 70 comprimida com instrução INSERT
+2025-03-20 11:51:52: [MESSAGE] Ordem de Serviço 71 comprimida com instrução INSERT
+2025-03-20 11:51:53: [MESSAGE] Ordem de Serviço 72 comprimida com instrução INSERT
+2025-03-20 11:51:53: [MESSAGE] Ordem de Serviço 73 comprimida com instrução INSERT
+2025-03-20 11:51:54: [MESSAGE] Ordem de Serviço 74 comprimida com instrução INSERT
+2025-03-20 11:51:54: [MESSAGE] Ordem de Serviço 75 comprimida com instrução INSERT
+2025-03-20 11:51:55: [MESSAGE] Ordem de Serviço 76 comprimida com instrução INSERT
+2025-03-20 11:51:55: [MESSAGE] Ordem de Serviço 77 comprimida com instrução INSERT
+2025-03-20 11:51:56: [MESSAGE] Ordem de Serviço 78 comprimida com instrução INSERT
+2025-03-20 11:51:56: [MESSAGE] Ordem de Serviço 79 comprimida com instrução INSERT
+2025-03-20 11:51:56: [MESSAGE] Ordem de Serviço 80 comprimida com instrução INSERT
+2025-03-20 11:51:57: [MESSAGE] Ordem de Serviço 81 comprimida com instrução INSERT
+2025-03-20 11:52:44: [MESSAGE] Ordem de Serviço comprimida com instrução SELECTALL
+2025-03-20 11:52:45: [LOCATION SERVER] Proxy running on localhost:5010
+2025-03-20 11:56:26: [LOCATION SERVER] Proxy running on localhost:5010
+2025-03-20 11:56:28: [MESSAGE] Usuário 333 comprimido com instrução LOGIN
+2025-03-20 11:56:29: [MESSAGE] Ordem de Serviço comprimida com instrução SELECTALL
+2025-03-20 11:56:30: [LOCATION SERVER] Proxy running on localhost:5010
+2025-03-20 11:57:19: [LOCATION SERVER] Proxy running on localhost:5010
+2025-03-20 11:57:22: [MESSAGE] Usuário 333 comprimido com instrução LOGIN
+2025-03-20 11:57:23: [MESSAGE] Ordem de Serviço comprimida com instrução SELECTALL
+2025-03-20 11:57:26: [MESSAGE] Ordem de Serviço 1 comprimida com instrução INSERT
+2025-03-20 11:57:28: [MESSAGE] Ordem de Serviço 2 comprimida com instrução INSERT
+2025-03-20 11:57:29: [MESSAGE] Ordem de Serviço 3 comprimida com instrução INSERT
+2025-03-20 11:57:29: [MESSAGE] Ordem de Serviço 4 comprimida com instrução INSERT
+2025-03-20 11:57:31: [MESSAGE] Ordem de Serviço comprimida com instrução SELECTALL
+2025-03-20 11:58:20: [MESSAGE] Ordem de Serviço comprimida com instrução CLOSE
+2025-03-20 12:00:40: [LOCATION SERVER] Proxy running on localhost:5010
+2025-03-20 12:00:43: [MESSAGE] Usuário 333 comprimido com instrução LOGIN
+2025-03-20 12:00:44: [MESSAGE] Ordem de Serviço comprimida com instrução SELECTALL
+2025-03-20 12:00:48: [MESSAGE] Ordem de Serviço 1 comprimida com instrução INSERT
+2025-03-20 12:00:49: [MESSAGE] Ordem de Serviço comprimida com instrução SELECTALL
+2025-03-20 12:00:49: [MESSAGE] Usuário 333 comprimido com instrução SELECTBYUSER
+2025-03-20 12:00:51: [MESSAGE] Ordem de Serviço 1 comprimida com instrução SELECT
+2025-03-20 12:00:52: [MESSAGE] Ordem de Serviço 2 comprimida com instrução SELECT
+2025-03-20 12:00:53: [MESSAGE] Ordem de Serviço 1 comprimida com instrução DELETE
+2025-03-20 12:00:55: [MESSAGE] Ordem de Serviço comprimida com instrução SELECTALL
+2025-03-20 12:01:01: [MESSAGE] Ordem de Serviço 2 comprimida com instrução INSERT
+2025-03-20 12:01:05: [MESSAGE] Ordem de Serviço 1 comprimida com instrução SELECT
+2025-03-20 12:01:07: [MESSAGE] Ordem de Serviço 1 comprimida com instrução UPDATE
+2025-03-20 12:01:09: [MESSAGE] Ordem de Serviço comprimida com instrução SELECTALL
+2025-03-20 12:01:20: [MESSAGE] Ordem de Serviço 3 comprimida com instrução INSERT
+2025-03-20 12:01:21: [MESSAGE] Ordem de Serviço 4 comprimida com instrução INSERT
+2025-03-20 12:01:21: [MESSAGE] Ordem de Serviço 5 comprimida com instrução INSERT
+2025-03-20 12:01:21: [MESSAGE] Ordem de Serviço 6 comprimida com instrução INSERT
+2025-03-20 12:01:22: [MESSAGE] Ordem de Serviço 7 comprimida com instrução INSERT
+2025-03-20 12:01:22: [MESSAGE] Ordem de Serviço 8 comprimida com instrução INSERT
+2025-03-20 12:01:23: [MESSAGE] Ordem de Serviço 9 comprimida com instrução INSERT
+2025-03-20 12:01:24: [MESSAGE] Ordem de Serviço 10 comprimida com instrução INSERT
+2025-03-20 12:01:24: [MESSAGE] Ordem de Serviço 11 comprimida com instrução INSERT
+2025-03-20 12:01:24: [MESSAGE] Ordem de Serviço 12 comprimida com instrução INSERT
+2025-03-20 12:01:25: [MESSAGE] Ordem de Serviço 13 comprimida com instrução INSERT
+2025-03-20 12:01:26: [MESSAGE] Ordem de Serviço 14 comprimida com instrução INSERT
+2025-03-20 12:01:26: [MESSAGE] Ordem de Serviço 15 comprimida com instrução INSERT
+2025-03-20 12:01:26: [MESSAGE] Ordem de Serviço 16 comprimida com instrução INSERT
+2025-03-20 12:01:27: [MESSAGE] Ordem de Serviço 17 comprimida com instrução INSERT
+2025-03-20 12:01:27: [MESSAGE] Ordem de Serviço 18 comprimida com instrução INSERT
+2025-03-20 12:01:27: [MESSAGE] Ordem de Serviço 19 comprimida com instrução INSERT
+2025-03-20 12:01:27: [MESSAGE] Ordem de Serviço 20 comprimida com instrução INSERT
+2025-03-20 12:01:28: [MESSAGE] Ordem de Serviço 21 comprimida com instrução INSERT
+2025-03-20 12:01:28: [MESSAGE] Ordem de Serviço 22 comprimida com instrução INSERT
+2025-03-20 12:01:29: [MESSAGE] Ordem de Serviço 23 comprimida com instrução INSERT
+2025-03-20 12:01:29: [MESSAGE] Ordem de Serviço 24 comprimida com instrução INSERT
+2025-03-20 12:01:29: [MESSAGE] Ordem de Serviço 25 comprimida com instrução INSERT
+2025-03-20 12:01:29: [MESSAGE] Ordem de Serviço 26 comprimida com instrução INSERT
+2025-03-20 12:01:30: [MESSAGE] Ordem de Serviço 27 comprimida com instrução INSERT
+2025-03-20 12:01:30: [MESSAGE] Ordem de Serviço 28 comprimida com instrução INSERT
+2025-03-20 12:01:31: [MESSAGE] Ordem de Serviço 29 comprimida com instrução INSERT
+2025-03-20 12:01:32: [MESSAGE] Ordem de Serviço 30 comprimida com instrução INSERT
+2025-03-20 12:01:32: [MESSAGE] Ordem de Serviço 31 comprimida com instrução INSERT
+2025-03-20 12:01:33: [MESSAGE] Ordem de Serviço 32 comprimida com instrução INSERT
+2025-03-20 12:01:33: [MESSAGE] Ordem de Serviço 33 comprimida com instrução INSERT
+2025-03-20 12:01:34: [MESSAGE] Ordem de Serviço 34 comprimida com instrução INSERT
+2025-03-20 12:01:34: [MESSAGE] Ordem de Serviço 35 comprimida com instrução INSERT
+2025-03-20 12:01:34: [MESSAGE] Ordem de Serviço 36 comprimida com instrução INSERT
+2025-03-20 12:01:35: [MESSAGE] Ordem de Serviço 37 comprimida com instrução INSERT
+2025-03-20 12:01:35: [MESSAGE] Ordem de Serviço 38 comprimida com instrução INSERT
+2025-03-20 12:01:36: [MESSAGE] Ordem de Serviço 39 comprimida com instrução INSERT
+2025-03-20 12:01:36: [MESSAGE] Ordem de Serviço 40 comprimida com instrução INSERT
+2025-03-20 12:01:36: [MESSAGE] Ordem de Serviço 41 comprimida com instrução INSERT
+2025-03-20 12:01:37: [MESSAGE] Ordem de Serviço 42 comprimida com instrução INSERT
+2025-03-20 12:01:37: [MESSAGE] Ordem de Serviço 43 comprimida com instrução INSERT
+2025-03-20 12:01:37: [MESSAGE] Ordem de Serviço 44 comprimida com instrução INSERT
+2025-03-20 12:01:38: [MESSAGE] Ordem de Serviço 45 comprimida com instrução INSERT
+2025-03-20 12:01:39: [MESSAGE] Ordem de Serviço 46 comprimida com instrução INSERT
+2025-03-20 12:01:39: [MESSAGE] Ordem de Serviço 47 comprimida com instrução INSERT
+2025-03-20 12:01:40: [MESSAGE] Ordem de Serviço 48 comprimida com instrução INSERT
+2025-03-20 12:01:40: [MESSAGE] Ordem de Serviço 49 comprimida com instrução INSERT
+2025-03-20 12:01:41: [MESSAGE] Ordem de Serviço 50 comprimida com instrução INSERT
+2025-03-20 12:01:41: [MESSAGE] Ordem de Serviço 51 comprimida com instrução INSERT
+2025-03-20 12:01:42: [MESSAGE] Ordem de Serviço 52 comprimida com instrução INSERT
+2025-03-20 12:01:43: [MESSAGE] Ordem de Serviço 53 comprimida com instrução INSERT
+2025-03-20 12:01:43: [MESSAGE] Ordem de Serviço 54 comprimida com instrução INSERT
+2025-03-20 12:01:43: [MESSAGE] Ordem de Serviço 55 comprimida com instrução INSERT
+2025-03-20 12:01:44: [MESSAGE] Ordem de Serviço 56 comprimida com instrução INSERT
+2025-03-20 12:01:44: [MESSAGE] Ordem de Serviço 57 comprimida com instrução INSERT
+2025-03-20 12:01:45: [MESSAGE] Ordem de Serviço 58 comprimida com instrução INSERT
+2025-03-20 12:01:45: [MESSAGE] Ordem de Serviço 59 comprimida com instrução INSERT
+2025-03-20 12:01:46: [MESSAGE] Ordem de Serviço 60 comprimida com instrução INSERT
+2025-03-20 12:01:46: [MESSAGE] Ordem de Serviço 61 comprimida com instrução INSERT
+2025-03-20 12:01:46: [MESSAGE] Ordem de Serviço 62 comprimida com instrução INSERT
+2025-03-20 12:01:47: [MESSAGE] Ordem de Serviço 63 comprimida com instrução INSERT
+2025-03-20 12:01:47: [MESSAGE] Ordem de Serviço 64 comprimida com instrução INSERT
+2025-03-20 12:01:47: [MESSAGE] Ordem de Serviço 65 comprimida com instrução INSERT
+2025-03-20 12:01:48: [MESSAGE] Ordem de Serviço 66 comprimida com instrução INSERT
+2025-03-20 12:01:49: [MESSAGE] Ordem de Serviço 67 comprimida com instrução INSERT
+2025-03-20 12:01:49: [MESSAGE] Ordem de Serviço 68 comprimida com instrução INSERT
+2025-03-20 12:01:50: [MESSAGE] Ordem de Serviço 69 comprimida com instrução INSERT
+2025-03-20 12:01:51: [MESSAGE] Ordem de Serviço 70 comprimida com instrução INSERT
+2025-03-20 12:01:52: [MESSAGE] Ordem de Serviço 71 comprimida com instrução INSERT
+2025-03-20 12:01:53: [MESSAGE] Ordem de Serviço 72 comprimida com instrução INSERT
+2025-03-20 12:01:54: [MESSAGE] Ordem de Serviço 73 comprimida com instrução INSERT
+2025-03-20 12:01:55: [MESSAGE] Ordem de Serviço 74 comprimida com instrução INSERT
+2025-03-20 12:01:56: [MESSAGE] Ordem de Serviço 75 comprimida com instrução INSERT
+2025-03-20 12:01:56: [MESSAGE] Ordem de Serviço 76 comprimida com instrução INSERT
+2025-03-20 12:01:57: [MESSAGE] Ordem de Serviço 77 comprimida com instrução INSERT
+2025-03-20 12:01:57: [MESSAGE] Ordem de Serviço 78 comprimida com instrução INSERT
+2025-03-20 12:01:58: [MESSAGE] Ordem de Serviço 79 comprimida com instrução INSERT
+2025-03-20 12:01:59: [MESSAGE] Ordem de Serviço 80 comprimida com instrução INSERT
+2025-03-20 12:02:00: [MESSAGE] Ordem de Serviço 81 comprimida com instrução INSERT
+2025-03-20 12:02:01: [MESSAGE] Ordem de Serviço 82 comprimida com instrução INSERT
+2025-03-20 12:02:43: [MESSAGE] Ordem de Serviço comprimida com instrução SELECTALL
+2025-03-20 12:02:44: [LOCATION SERVER] Proxy running on localhost:5010
+2025-03-20 12:06:48: [LOCATION SERVER] Proxy running on localhost:5010
+2025-03-20 12:06:51: [MESSAGE] Usuário 333 comprimido com instrução LOGIN
+2025-03-20 12:06:52: [MESSAGE] Ordem de Serviço comprimida com instrução SELECTALL
+2025-03-20 12:06:53: [LOCATION SERVER] Proxy running on localhost:5010

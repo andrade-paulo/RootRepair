@@ -6,7 +6,7 @@ import java.io.DataOutputStream;
 
 import java.net.ServerSocket;
 import java.net.Socket;
-
+import java.rmi.RemoteException;
 import java.rmi.registry.LocateRegistry;
 import java.rmi.registry.Registry;
 
@@ -87,8 +87,15 @@ class ClientHandler implements Runnable {
                 System.out.println("   -> Client's key is valid. Sending proxy location...");
 
                 // Send the location of the server to the client
-                out.writeUTF(proxyHandler.getNextProxyAddress());
-                out.writeInt(proxyHandler.getNextProxyPort());
+                try {
+                    out.writeUTF(proxyHandler.getNextProxyAddress());
+                    out.writeInt(proxyHandler.getNextProxyPort());
+                } catch (RemoteException e) {
+                    System.out.println("   -> WARNING! No proxies available");
+                    out.writeUTF("");
+                    out.writeInt(-1);
+                }
+                
             } else {
                 System.out.println("   -> WARNING! Client's key is not recognized: " + message);
             }
