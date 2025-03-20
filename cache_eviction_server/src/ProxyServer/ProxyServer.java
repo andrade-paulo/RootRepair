@@ -8,6 +8,7 @@ import java.net.ServerSocket;
 import java.net.Socket;
 import java.rmi.registry.LocateRegistry;
 import java.rmi.registry.Registry;
+import java.rmi.ConnectException;
 import java.rmi.NotBoundException;
 import java.rmi.RemoteException;
 import java.text.ParseException;
@@ -63,11 +64,14 @@ public class ProxyServer {
         Scanner scanner = new Scanner(System.in);
 
         // Pegar porta e endereco atraves dos args
-        if (args.length == 3) {
+        if (args.length == 4) {
             adress = args[0];
             proxyPort = Integer.parseInt(args[1]);
             heartbeatPort = Integer.parseInt(args[2]);
+            rmiReplicaPort = Integer.parseInt(args[3]);
         }
+
+        System.out.println("Proxy Server running on " + adress + ":" + proxyPort);
 
         System.out.println("\n-=-=- Configuração do servidor de aplicação -=-=-");
         System.out.print("Digite o IP do servidor de aplicação: ");
@@ -96,14 +100,15 @@ public class ProxyServer {
             Registry registry = LocateRegistry.getRegistry(locationIP, locationRMIPort);
             ProxyHandlerInterface locationService = (ProxyHandlerInterface) registry.lookup("ProxyHandler");
 
+            // Iniciar o heartbeat para monitorar a disponibilidade de outros proxies
+            heartbeatAccess();
             // Registrar o ProxyServer no LocationServer
-            locationService.registerProxy(adress, proxyPort, heartbeatPort);
+            locationService.registerProxy(adress, proxyPort, heartbeatPort, rmiReplicaPort);  
             System.out.println("Proxy registrado no LocationServer: " + adress + ":" + proxyPort);
 
             // Iniciar o servidor socket para aceitar conexões de clientes
             try (ServerSocket locationSocket = new ServerSocket(proxyPort);
                  Socket appSocket = new Socket(appIP, appPort);) {
-                heartbeatAccess();
                 System.out.println("\nInicialização completa!");
 
                 appOutputStream = new ObjectOutputStream(appSocket.getOutputStream());
@@ -111,6 +116,7 @@ public class ProxyServer {
 
                 while (true) {
                     Socket socket = locationSocket.accept(); // Aguarda conexão de clientes
+                    System.out.println("ENTROU NO SOCKET DE CLIENTE");
                     new Thread(new ProxyHandler(socket)).start(); // Inicia nova thread para cada cliente
                 }
             } catch (IOException e) {
@@ -126,26 +132,22 @@ public class ProxyServer {
     private static void heartbeatAccess() {
         // Thread deamon com socket próprio para que o LocationServer possa realizar o heartbeat
         Thread heartbeatThread = new Thread(() -> {
-            try (ServerSocket heartbeatSocket = new ServerSocket(heartbeatPort)) {
-                System.out.println("\nHeartbeat server running on port " + heartbeatPort);
-                while (true) {
-                    Socket socket = heartbeatSocket.accept();
-                    
-                    // Recebe lista de proxies ativos
-                    ObjectInputStream in = new ObjectInputStream(socket.getInputStream());
-                    List<ProxyEntity> proxyEntities = (List<ProxyEntity>) in.readObject();
+            while (true) {
+                try (ServerSocket heartbeatSocket = new ServerSocket(heartbeatPort);
+                     Socket locationSocket = heartbeatSocket.accept();
+                     ObjectInputStream locationInputStream = new ObjectInputStream(locationSocket.getInputStream());) {
+
+                    // Recebe a lista de proxies ativos
+                    List<ProxyEntity> proxyEntities = (List<ProxyEntity>) locationInputStream.readObject();
                     updateActiveProxies(proxyEntities);
-
-                    System.out.println("\n-=- Heartbeat -=-");
-                    System.out.println("Number of active proxies: " + activeProxies.size() + "\n");
-
-                    socket.close();
+                
+                } catch (NotBoundException | ConnectException e) {
+                    System.out.println("Queda de replica detectada\n");
+                } catch (IOException | ClassNotFoundException e) {
+                    e.printStackTrace();
                 }
-            } catch (IOException | ClassNotFoundException | NotBoundException e) {
-                System.out.println("\nError: Could not receive heartbeat from LocationServer:");
-                e.printStackTrace();
             }
-        });
+        } );
 
         heartbeatThread.setDaemon(true);
         heartbeatThread.start();
@@ -159,7 +161,7 @@ public class ProxyServer {
 
         // Adiciona os proxies ativos à lista
         for (ProxyEntity proxyEntity : proxyEntities) {
-            Registry registry = LocateRegistry.getRegistry(proxyEntity.getAddress(), proxyEntity.getPort());
+            Registry registry = LocateRegistry.getRegistry(proxyEntity.getAddress(), proxyEntity.getRmiReplicaPort());
             ProxyReplicaInterface proxy = (ProxyReplicaInterface) registry.lookup("ProxyReplica");
             activeProxies.add(proxy);
         }
@@ -172,7 +174,7 @@ public class ProxyServer {
             try {
                 proxy.updateCache(ordem);
             } catch (RemoteException e) {
-                e.printStackTrace();
+                System.out.println("Proxy inativo: " + proxy);
             }
         }
     }
@@ -183,9 +185,24 @@ public class ProxyServer {
             try {
                 proxy.removeFromCache(codigo);
             } catch (RemoteException e) {
-                e.printStackTrace();
+                System.out.println("Proxy inativo: " + proxy);
             }
         }
+    }
+
+    private static OrdemServico propagateSelect(int codigo) {
+        for (ProxyReplicaInterface proxy : activeProxies) {
+            try {
+                OrdemServico ordem = proxy.select(codigo);
+                if (ordem != null) {
+                    return ordem;
+                }
+            } catch (RemoteException e) {
+                System.out.println("Proxy inativo: " + proxy);
+            }
+        }
+
+        return null;
     }
 
 
@@ -258,23 +275,29 @@ public class ProxyServer {
         private void handleSelect(Message message, ObjectOutputStream clientOutputStream) throws IOException, ClassNotFoundException, ParseException {
             OrdemServico ordem = cacheDAO.getOrdemServico(message.getCodigo());
 
-            Message reply;
-            if (ordem != null) {
-                // Cache hit
-                reply = new Message(ordem, "REPLY");
-            } else {
+            Message reply = new Message("NOTFOUND");
+
+            if (ordem == null) {
+                // Proxy miss, search other proxies
+                ordem = propagateSelect(message.getCodigo());
+            }
+
+            if (ordem == null) {
                 // Cache miss, search application server
                 appOutputStream.writeObject(message);
                 Message replyFromApp = (Message) appInputStream.readObject();
 
-                if (replyFromApp.getInstrucao().equals("NOTFOUND")) {
-                    reply = new Message("NOTFOUND");
-                } else {
+                if (replyFromApp.getInstrucao().equals("REPLYWITHORDER")) {
                     reply = new Message(replyFromApp.getOrdem(), "REPLY");
                     cacheDAO.addOrdemServico(replyFromApp.getOrdem());
                 }
 
                 appOutputStream.flush();
+            }
+
+            if (ordem != null) {
+                // Encontrado
+                reply = new Message(ordem, "REPLY");
             }
 
             clientOutputStream.writeObject(reply);

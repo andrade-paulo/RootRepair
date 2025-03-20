@@ -140,6 +140,7 @@ public class View {
         
         System.out.print("Código da Ordem de Serviço: ");
         int codigo = Client.scanner.nextInt();
+        Client.scanner.nextLine();
 
         try {
             OrdemServico ordemServico = Controller.getOrdemServico(codigo);

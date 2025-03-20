@@ -40,23 +40,12 @@ public class Client {
         System.out.print("Enter the location server port: ");
         int locationServerPort = scanner.nextInt();
 
-        try (Socket locationSocket = new Socket(locationAdress, locationServerPort);
-             DataInputStream locationIn = new DataInputStream(locationSocket.getInputStream());
-             DataOutputStream locationOut = new DataOutputStream(locationSocket.getOutputStream())) {
-
-            locationOut.writeUTF("eW91IHNoYWxsIG5vdCBwYXNz");  // Send a key as request to the location server
-            proxyAdress = locationIn.readUTF();  // Read the proxy adress
-            proxyPort = locationIn.readInt();  // Read the proxy port
-
-            // Log the proxy adress and port
-            LogDAO.addLog("[LOCATION SERVER] Proxy running on " + proxyAdress + ":" + proxyPort);
-        } catch (IOException e) {
-            System.out.println("\nError. Could not connect to the location server.");
-            e.printStackTrace();
-        }
+        String newProxy = getNewProxy(locationAdress, locationServerPort);
+        proxyAdress = newProxy.split(":")[0];
+        proxyPort = Integer.parseInt(newProxy.split(":")[1]);
 
         // Initiate the system for the user
-        if (proxyPort != 0 && proxyAdress != "") {
+        while (proxyPort != 0 && proxyAdress != "") {
             try(Socket proxySocket = new Socket(proxyAdress, proxyPort);
             ObjectOutputStream proxyOut = new ObjectOutputStream(proxySocket.getOutputStream());
             ObjectInputStream proxyIn = new ObjectInputStream(proxySocket.getInputStream())) {
@@ -75,15 +64,42 @@ public class Client {
                 // Send close message to the proxy server
                 proxyOut.writeObject(new Message("CLOSE"));
                 proxyOut.flush();
+
+                // Close the loop
+                proxyPort = 0;
+                proxyAdress = "";
             } catch (IOException e) {
-                System.out.println("\nError. Could not connect to the proxy server.");
-                e.printStackTrace();
+                System.out.println("\nProxy server went down. Changing server...");
+                newProxy = getNewProxy(locationAdress, locationServerPort);
+                proxyAdress = newProxy.split(":")[0];
+                proxyPort = Integer.parseInt(newProxy.split(":")[1]);
             }
         }
 
         scanner.close();
     }
 
+    private static String getNewProxy(String locationAdress, int locationServerPort) {
+        String proxyAdress = "";
+        int proxyPort = 0;
+
+        try (Socket locationSocket = new Socket(locationAdress, locationServerPort);
+             DataInputStream locationIn = new DataInputStream(locationSocket.getInputStream());
+             DataOutputStream locationOut = new DataOutputStream(locationSocket.getOutputStream())) {
+
+            locationOut.writeUTF("eW91IHNoYWxsIG5vdCBwYXNz");  // Send a key as request to the location server
+            proxyAdress = locationIn.readUTF();  // Read the proxy adress
+            proxyPort = locationIn.readInt();  // Read the proxy port
+
+            // Log the proxy adress and port
+            LogDAO.addLog("[LOCATION SERVER] Proxy running on " + proxyAdress + ":" + proxyPort);
+        } catch (IOException e) {
+            System.out.println("\nError. Could not connect to the location server.");
+            e.printStackTrace();
+        }
+
+        return proxyAdress + ":" + proxyPort;
+    }
     
     /*@SuppressWarnings("unused")
     private static void popularDatabase() throws Exception {

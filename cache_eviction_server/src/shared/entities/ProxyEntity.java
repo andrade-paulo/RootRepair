@@ -6,11 +6,13 @@ public class ProxyEntity implements java.io.Serializable {
     private String address;
     private int port;
     private int heartbeatPort;
+    private int rmiReplicaPort;
 
-    public ProxyEntity(String address, int port, int heartbeatPort) {
+    public ProxyEntity(String address, int port, int heartbeatPort, int rmiReplicaPort) {
         this.address = address;
         this.port = port;
         this.heartbeatPort = heartbeatPort;
+        this.rmiReplicaPort = rmiReplicaPort;
     }
 
     public String getAddress() {
@@ -23,6 +25,10 @@ public class ProxyEntity implements java.io.Serializable {
 
     public int getHeartbeatPort() {
         return heartbeatPort;
+    }
+
+    public int getRmiReplicaPort() {
+        return rmiReplicaPort;
     }
 
     @Override

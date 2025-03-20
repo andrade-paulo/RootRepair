@@ -9,7 +9,7 @@ import shared.entities.OrdemServico;
 public class ProxyReplicaImp extends UnicastRemoteObject implements ProxyReplicaInterface {
     private static OrdemServicoCacheDAO cacheDAO = new OrdemServicoCacheDAO();
 
-    protected ProxyReplicaImp() throws RemoteException {
+    public ProxyReplicaImp() throws RemoteException {
         super();
     }
 
@@ -25,5 +25,13 @@ public class ProxyReplicaImp extends UnicastRemoteObject implements ProxyReplica
         // Remove da cache local
         cacheDAO.deleteOrdemServico(codigo);
         System.out.println("Cache removed for ordem: " + codigo);
+    }
+
+    @Override
+    public OrdemServico select(int codigo) throws RemoteException {
+        // Busca na cache local
+        OrdemServico ordem = cacheDAO.getOrdemServico(codigo);
+        System.out.println("Cache selected for ordem: " + codigo);
+        return ordem;
     }
 }

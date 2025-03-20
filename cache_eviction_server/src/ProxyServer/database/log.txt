@@ -1,3 +1,2 @@
-null2025-03-19 18:11:01: [CACHE FILE] Loading cache from file.
-2025-03-19 18:11:10: [CACHE FILE] Loading cache from file.
-2025-03-19 18:11:19: [CONNECTION] Cliente conectado de 127.0.0.1
+null2025-03-19 22:51:14: [CACHE FILE] Loading cache from file.
+2025-03-19 22:51:44: [CACHE FILE] Loading cache from file.

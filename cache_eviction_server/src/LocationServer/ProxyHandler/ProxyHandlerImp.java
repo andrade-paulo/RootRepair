@@ -25,9 +25,9 @@ public class ProxyHandlerImp extends UnicastRemoteObject implements ProxyHandler
     }
 
     @Override
-    public void registerProxy(String address, int port, int heartbeatPort) throws RemoteException {
+    public void registerProxy(String address, int port, int heartbeatPort, int rmiReplicaPort) throws RemoteException {
         synchronized (proxies) {
-            proxies.add(new ProxyEntity(address, port, heartbeatPort));
+            proxies.add(new ProxyEntity(address, port, heartbeatPort, rmiReplicaPort));
             System.out.println("Proxy registered: " + address + ":" + port);
         }
     }
@@ -84,7 +84,6 @@ public class ProxyHandlerImp extends UnicastRemoteObject implements ProxyHandler
 
     private boolean isProxyAlive(ProxyEntity proxy) {
         try (Socket socket = new Socket(proxy.getAddress(), proxy.getHeartbeatPort())) {
-            System.out.println("\nHeartbeat on port " + proxy.getHeartbeatPort());
             sendProxiesList(socket);
             return true;
         } catch (IOException e) {
