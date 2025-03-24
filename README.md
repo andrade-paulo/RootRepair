@@ -3,18 +3,31 @@ Root Repair is a distributed system designed to manage service orders for equipm
 
 This system was developed as a final project for the Distributed Systems course at UFERSA.
 
-## Stack
-The project is made with pure Java 21, so you don't need to install any dependencies.
+# Stack
+The project is made with pure Java 21, using only sockets and RMI, so you don't need to install any dependencies.
 
-## Running the system
+# Running the system
+## Server
 The system is divided into two parts: the **server** and the **client**. 
 
-To run the server, you need to run the each of the following classes, respectively:
+To start the server, you need to run the each of the following classes, respectively:
 - `cache_eviction_server/src/ApplicationServer/ApplicationServer.java`
-- `cache_eviction_server/src/ProxyServer/ProxyServer.java`
 - `cache_eviction_server/src/LocationServer/LocationServer.java`
 
-To run the client, you need to run the following class:
+To start the proxy, you need to run the following class:
+- `cache_eviction_server/src/ProxyServer/ProxyServer.java`
+  
+Note that the proxy can be replicated by running each instance in a different directory. You may change the access address and ports by passing as arguments:
+
+```bash
+path_to_proxy_replica/ProxyServer.java <address> <proxyPort> <heartbeatPort> <rmiReplicaPort>
+```
+
+>The heartbeatPort is used by the location server to check if the proxy is alive. The rmiReplicaPort is used to communicate with the other replicas.
+
+## Client
+
+To start the client, you need to run the following class:
 - `cache_eviction_client/src/Client/Client.java`
 
 >Make sure all the components are running in the same network, as the system uses sockets and RMI to communicate between the servers and the client.
