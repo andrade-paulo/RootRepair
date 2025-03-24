@@ -1,4 +1,4 @@
-package modelo.entities;
+package shared.entities;
 
 import java.io.Serializable;
 import java.util.Date;
@@ -11,7 +11,7 @@ public class OrdemServico implements Serializable{
     private Usuario usuario;
     private Date hora;
 
-    private static final long serialVersionUID = 2L;
+    private static final long serialVersionUID = 1L;
 
     public OrdemServico(String titulo, String descricao, Usuario usuario) {
         this.codigo = ++contador;
@@ -33,6 +33,10 @@ public class OrdemServico implements Serializable{
     public int getCodigo() {
         return codigo;
     }
+
+    public void setCodigo(int codigo) {
+        this.codigo = codigo;
+    }   
 
     public String getTitulo() {
         return titulo;

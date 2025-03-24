@@ -1,5 +1,7 @@
 package shared.Huffman;
 
+import java.util.Stack;
+
 public class ArvoreHuffman implements java.io.Serializable {
     private static final long serialVersionUID = 1L;
 
@@ -62,19 +64,37 @@ public class ArvoreHuffman implements java.io.Serializable {
         gerarCodigos(raiz, "");
     }
 
-    private void gerarCodigos(NodeHuffman no, String codigo) {
-        if (no == null) {
+    private void gerarCodigos(NodeHuffman raiz, String codigoInicial) {
+        if (raiz == null) {
             return;
         }
 
-        if (no.esquerda == null && no.direita == null && isCharValido(no.caractere)) {
-            caracteres[indice] = no.caractere;
-            codigos[indice] = codigo;
-            indice++;
-        }
+        Stack<NodeHuffman> pilhaNos = new Stack<>();
+        Stack<String> pilhaCodigos = new Stack<>();
 
-        gerarCodigos(no.esquerda, codigo + "0");
-        gerarCodigos(no.direita, codigo + "1");
+        pilhaNos.push(raiz);
+        pilhaCodigos.push(codigoInicial);
+
+        while (!pilhaNos.isEmpty()) {
+            NodeHuffman noAtual = pilhaNos.pop();
+            String codigoAtual = pilhaCodigos.pop();
+
+            if (noAtual.esquerda == null && noAtual.direita == null && isCharValido(noAtual.caractere)) {
+                caracteres[indice] = noAtual.caractere;
+                codigos[indice] = codigoAtual;
+                indice++;
+            }
+
+            if (noAtual.direita != null) {
+                pilhaNos.push(noAtual.direita);
+                pilhaCodigos.push(codigoAtual + "1");
+            }
+
+            if (noAtual.esquerda != null) {
+                pilhaNos.push(noAtual.esquerda);
+                pilhaCodigos.push(codigoAtual + "0");
+            }
+        }
     }
 
     public String comprimir(String texto) {
@@ -115,25 +135,45 @@ public class ArvoreHuffman implements java.io.Serializable {
         return textoDescomprimido.toString();
     }
 
-    public void imprimirCodigo(NodeHuffman no, String s) {
-        if (no == null) {
-            return;
-        }
 
-        if (no.esquerda == null && no.direita == null && isCharValido(no.caractere)) {
-            return;
-        }
-
-        imprimirCodigo(no.esquerda, s + "0");
-        imprimirCodigo(no.direita, s + "1");
+    public void imprimirCodigos() {
+        imprimirCodigoIterativo(raiz, "");
     }
+
+    private void imprimirCodigoIterativo(NodeHuffman raiz, String codigoInicial) {
+        if (raiz == null) {
+            return;
+        }
+
+        Stack<NodeHuffman> pilhaNos = new Stack<>();
+        Stack<String> pilhaCodigos = new Stack<>();
+
+        pilhaNos.push(raiz);
+        pilhaCodigos.push(codigoInicial);
+
+        while (!pilhaNos.isEmpty()) {
+            NodeHuffman noAtual = pilhaNos.pop();
+            String codigoAtual = pilhaCodigos.pop();
+
+            /*if (noAtual.esquerda == null && noAtual.direita == null && isCharValido(noAtual.caractere)) {
+                System.out.println(noAtual.caractere + ": " + codigoAtual);
+            }*/
+
+            if (noAtual.direita != null) {
+                pilhaNos.push(noAtual.direita);
+                pilhaCodigos.push(codigoAtual + "1");
+            }
+
+            if (noAtual.esquerda != null) {
+                pilhaNos.push(noAtual.esquerda);
+                pilhaCodigos.push(codigoAtual + "0");
+            }
+        }
+    }
+
 
     private boolean isCharValido(char c) {
         return (Character.isLetterOrDigit(c) || c == ' ' || c == ':' || c == '|' || c == '.' || c == ',');
-    }
-
-    public void imprimirCodigos() {
-        imprimirCodigo(raiz, "");
     }
 
     // Teste

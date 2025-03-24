@@ -1,4 +1,4 @@
-package modelo.entities;
+package shared.entities;
 
 import java.io.Serializable;
 
